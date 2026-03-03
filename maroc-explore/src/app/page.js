@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Header from './components/Header';
 import styles from './styles/Home.module.css';
@@ -18,7 +19,7 @@ export default function Home() {
   const [visibleImages, setVisibleImages] = useState([]);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
   const [activeFaq, setActiveFaq] = useState(null);
-  
+
   const destRef = useRef(null);
   const durationRef = useRef(null);
   const activityRef = useRef(null);
@@ -73,7 +74,7 @@ export default function Home() {
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       ),
       text: "Local Experts"
@@ -81,8 +82,8 @@ export default function Home() {
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          <path d="m9 12 2 2 4-4"/>
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="m9 12 2 2 4-4" />
         </svg>
       ),
       text: "100% Secure"
@@ -90,8 +91,8 @@ export default function Home() {
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M12 6v6l4 2"/>
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 6v6l4 2" />
         </svg>
       ),
       text: "Save Time"
@@ -99,8 +100,8 @@ export default function Home() {
     {
       icon: (
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-          <polyline points="9 22 9 12 15 12 15 22"/>
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
         </svg>
       ),
       text: "Best Stays"
@@ -431,13 +432,13 @@ export default function Home() {
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    
+
     if (selectedDestination) params.set('destination', selectedDestination);
     if (duration) params.set('duration', duration);
     if (activityType) params.set('activity', activityType);
     if (searchQuery) params.set('q', searchQuery);
     if (selectedCategory !== 'all') params.set('category', selectedCategory);
-    
+
     router.push(`/filter?${params.toString()}`);
   };
 
@@ -474,9 +475,9 @@ export default function Home() {
       <div className={styles.hero}>
         {/* Background Image */}
         <div className={styles.heroBackground}>
-          <img 
-            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1920 " 
-            alt="Morocco Landscape" 
+          <img
+            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1920 "
+            alt="Morocco Landscape"
             className={styles.heroBgImage}
           />
           <div className={styles.heroOverlay}></div>
@@ -492,14 +493,14 @@ export default function Home() {
           <h1 className={styles.heroTitle}>
             Explore <span className={styles.heroHighlight}>Morocco</span>
           </h1>
-          
+
           {/* Pill Search Bar - Now under the title */}
           <div className={styles.searchWrapper}>
             <div className={styles.searchPill}>
-              
+
               {/* Destination */}
               <div className={styles.pillSection} ref={destRef}>
-                <div 
+                <div
                   className={styles.pillContent}
                   onClick={() => {
                     setIsDestOpen(!isDestOpen);
@@ -518,7 +519,7 @@ export default function Home() {
                     {selectedDestObj ? selectedDestObj.name : 'Where to?'}
                   </span>
                 </div>
-                
+
                 {isDestOpen && (
                   <div className={styles.pillDropdown}>
                     <div className={styles.pillDropdownHeader}>Select City</div>
@@ -549,7 +550,7 @@ export default function Home() {
 
               {/* Duration */}
               <div className={styles.pillSection} ref={durationRef}>
-                <div 
+                <div
                   className={styles.pillContent}
                   onClick={() => {
                     setIsDurationOpen(!isDurationOpen);
@@ -567,7 +568,7 @@ export default function Home() {
                     {duration ? durations.find(d => d.value === duration)?.label : 'How long?'}
                   </span>
                 </div>
-                
+
                 {isDurationOpen && (
                   <div className={styles.pillDropdown}>
                     <div className={styles.pillDropdownHeader}>Select Duration</div>
@@ -601,7 +602,7 @@ export default function Home() {
 
               {/* Activity Type */}
               <div className={styles.pillSection} ref={activityRef}>
-                <div 
+                <div
                   className={styles.pillContent}
                   onClick={() => {
                     setIsActivityOpen(!isActivityOpen);
@@ -619,7 +620,7 @@ export default function Home() {
                     {selectedActivityObj ? selectedActivityObj.label : 'What type?'}
                   </span>
                 </div>
-                
+
                 {isActivityOpen && (
                   <div className={styles.pillDropdown}>
                     <div className={styles.pillDropdownHeader}>Select Activity Type</div>
@@ -703,37 +704,37 @@ export default function Home() {
             </h2>
             <div className={styles.whatWeDoText}>
               <p>
-                At <strong>Morocco Explore</strong>, we transform travel dreams into reality. 
-                From the golden dunes of the Sahara to the blue-washed streets of Chefchaouen, 
-                we curate immersive experiences that connect you with Morocco's rich tapestry 
+                At <strong>Morocco Explore</strong>, we transform travel dreams into reality.
+                From the golden dunes of the Sahara to the blue-washed streets of Chefchaouen,
+                we curate immersive experiences that connect you with Morocco's rich tapestry
                 of culture, history, and natural beauty.
               </p>
               <p>
                 Our expert local guides reveal hidden gems beyond the tourist trails—
-                whether it's sipping mint tea with Berber families, exploring ancient 
-                kasbahs, or riding camels into the sunset. Every journey is thoughtfully 
+                whether it's sipping mint tea with Berber families, exploring ancient
+                kasbahs, or riding camels into the sunset. Every journey is thoughtfully
                 designed to create lasting memories.
               </p>
             </div>
             <div className={styles.whatWeDoFeatures}>
               <div className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <span>Handpicked Experiences</span>
               </div>
               <div className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <span>24/7 Local Support</span>
               </div>
               <div className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                  <polyline points="22 4 12 14.01 9 11.01"/>
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <span>Authentic Encounters</span>
               </div>
@@ -742,10 +743,10 @@ export default function Home() {
               Start Your Adventure
             </button>
           </div>
-          
+
           <div className={styles.whatWeDoGallery}>
             {galleryImages.map((image, index) => (
-              <div 
+              <div
                 key={index}
                 data-index={index}
                 className={`${styles.galleryItem} ${styles[`gallery${image.span}`]} ${visibleImages.includes(index) ? styles.galleryItemVisible : ''}`}
@@ -772,8 +773,8 @@ export default function Home() {
           </div>
 
           {destinationContent.map((dest, index) => (
-            <article 
-              key={dest.id} 
+            <article
+              key={dest.id}
               className={`${styles.alternatingRow} ${index % 2 === 1 ? styles.alternatingRowReversed : ''}`}
             >
               {/* Image Column */}
@@ -790,7 +791,7 @@ export default function Home() {
               <div className={styles.alternatingContentCol}>
                 <div className={styles.alternatingContent}>
                   <h3 className={styles.alternatingDestinationName}>{dest.name}</h3>
-                  
+
                   <div className={styles.alternatingBlock}>
                     <h4>Historical Heritage</h4>
                     <p>{dest.history}</p>
@@ -807,7 +808,7 @@ export default function Home() {
                       {dest.activities.map((activity, idx) => (
                         <li key={idx}>
                           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                            <polyline points="20 6 9 17 4 12"/>
+                            <polyline points="20 6 9 17 4 12" />
                           </svg>
                           {activity}
                         </li>
@@ -821,25 +822,25 @@ export default function Home() {
                       {dest.activityLinks.map((actId, idx) => {
                         const actLabel = activityTypes.find(a => a.id === actId)?.label;
                         return (
-                          <button 
-                            key={idx} 
+                          <Link
+                            key={idx}
+                            href={`/activities/${actId}`}
                             className={styles.alternatingActivityTag}
-                            onClick={() => handleActivityFilter(actId)}
                           >
                             {actLabel}
-                          </button>
+                          </Link>
                         );
                       })}
                     </div>
                   </div>
 
-                  <button 
+                  <button
                     className={styles.alternatingCta}
                     onClick={() => handleDestinationClick(dest.id)}
                   >
                     Explore {dest.name} Tours
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                      <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                   </button>
                 </div>
@@ -852,7 +853,7 @@ export default function Home() {
       {/* Community & Testimonials Section */}
       <section className={styles.communitySection} ref={testimonialsRef}>
         <div className={styles.communityContainer}>
-          
+
           {/* Stats Bar */}
           <div className={styles.statsBar}>
             {stats.map((stat, index) => (
@@ -867,7 +868,7 @@ export default function Home() {
           <div className={styles.communityHeader}>
             <div className={styles.tripAdvisorBadge}>
               <svg viewBox="0 0 24 24" fill="currentColor" className={styles.tripAdvisorIcon}>
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
               </svg>
               <span>TripAdvisor Traveler's Choice 2024</span>
             </div>
@@ -882,8 +883,8 @@ export default function Home() {
             <div className={styles.testimonialCardLarge}>
               <div className={styles.testimonialHeader}>
                 <div className={styles.testimonialAuthor}>
-                  <img 
-                    src={testimonials[activeTestimonial].avatar} 
+                  <img
+                    src={testimonials[activeTestimonial].avatar}
                     alt={testimonials[activeTestimonial].name}
                     className={styles.testimonialAvatar}
                   />
@@ -895,7 +896,7 @@ export default function Home() {
                 <div className={styles.testimonialRating}>
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                     </svg>
                   ))}
                   <span className={styles.ratingText}>5.0</span>
@@ -904,13 +905,13 @@ export default function Home() {
 
               <div className={styles.testimonialBadge}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                 </svg>
                 Verified Traveler
               </div>
 
               <h3 className={styles.testimonialTitle}>{testimonials[activeTestimonial].title}</h3>
-              
+
               <p className={styles.testimonialText}>{testimonials[activeTestimonial].text}</p>
 
               <div className={styles.testimonialHighlights}>
@@ -943,8 +944,8 @@ export default function Home() {
           {/* Testimonials Grid */}
           <div className={styles.testimonialsGrid}>
             {testimonials.map((testimonial, index) => (
-              <article 
-                key={testimonial.id} 
+              <article
+                key={testimonial.id}
                 className={`${styles.testimonialCard} ${activeTestimonial === index ? styles.testimonialCardActive : ''}`}
                 onClick={() => setActiveTestimonial(index)}
               >
@@ -955,7 +956,7 @@ export default function Home() {
                     <div className={styles.testimonialCardRating}>
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                         </svg>
                       ))}
                     </div>
@@ -987,28 +988,28 @@ export default function Home() {
               Everything you need to know about traveling to Morocco with us
             </p>
           </div>
-          
+
           <div className={styles.faqList} itemScope itemType="https://schema.org/FAQPage">
             {faqData.map((faq, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className={`${styles.faqItem} ${activeFaq === index ? styles.faqItemActive : ''}`}
                 itemScope
                 itemProp="mainEntity"
                 itemType="https://schema.org/Question"
               >
-                <button 
-                  className={styles.faqQuestion} 
+                <button
+                  className={styles.faqQuestion}
                   onClick={() => toggleFaq(index)}
                   aria-expanded={activeFaq === index}
                   itemProp="name"
                 >
                   {faq.question}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="6 9 12 15 18 9"/>
+                    <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
-                <div 
+                <div
                   className={styles.faqAnswer}
                   itemScope
                   itemProp="acceptedAnswer"

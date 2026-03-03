@@ -12,7 +12,7 @@ function FilterContent() {
   const searchParams = useSearchParams();
   const [filteredTours, setFilteredTours] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   const [filters, setFilters] = useState({
     destination: '',
     duration: '',
@@ -61,7 +61,7 @@ function FilterContent() {
       activity: searchParams.get('activity') || '',
       q: searchParams.get('q') || ''
     };
-    
+
     setFilters(newFilters);
     setFilteredTours(getFilteredTours(newFilters));
   }, [searchParams]);
@@ -81,7 +81,7 @@ function FilterContent() {
 
   const getHeroImage = () => {
     if (filters.destination) {
-      const tour = toursActivitiesLib.find(t => 
+      const tour = toursActivitiesLib.find(t =>
         t.location.toLowerCase() === filters.destination.toLowerCase()
       );
       return tour?.image || 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600';
@@ -99,7 +99,7 @@ function FilterContent() {
   return (
     <div className={styles.page}>
       <Header />
-      
+
       {/* FULL WIDTH HERO */}
       <div className={styles.hero}>
         <img src={getHeroImage()} alt="Hero" className={styles.heroImage} />
@@ -107,18 +107,18 @@ function FilterContent() {
         <div className={styles.heroContent}>
           {/* Title: "Discover Morocco" by default, destination name when filtered */}
           <h1>
-            {hasActiveFilters && filters.destination 
-              ? getDestinationName(filters.destination) 
+            {hasActiveFilters && filters.destination
+              ? getDestinationName(filters.destination)
               : 'Discover Morocco'}
           </h1>
-          
+
           {/* Subtitle: Total count by default, filtered count when filtered */}
           <p>
-            {hasActiveFilters 
+            {hasActiveFilters
               ? `${filteredTours.length} amazing tour${filteredTours.length !== 1 ? 's' : ''} found`
               : `${toursActivitiesLib.length} amazing tour${toursActivitiesLib.length !== 1 ? 's' : ''} found`}
           </p>
-          
+
           {/* Active Filters Tags - only show when filters are active */}
           {hasActiveFilters && (
             <div className={styles.tags}>
@@ -157,7 +157,7 @@ function FilterContent() {
               <button onClick={clearFilters} className={styles.clearAll}>Clear all</button>
             </div>
           )}
-          
+
           {/* Back to Home - NOW AT BOTTOM */}
           <Link href="/" className={styles.backLinkBottom}>
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@ function FilterContent() {
       {/* CONTENT AREA: Sidebar + Tours */}
       <div className={styles.contentArea}>
         {/* Mobile Filter Toggle */}
-        <button 
+        <button
           className={styles.mobileFilterBtn}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -206,8 +206,8 @@ function FilterContent() {
               Search
             </label>
             <div className={styles.searchInput}>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 placeholder="Search tours..."
                 value={filters.q}
                 onChange={(e) => updateFilter('q', e.target.value)}
@@ -312,7 +312,7 @@ function FilterContent() {
                   <div className={styles.cardImage}>
                     <img src={tour.image} alt={tour.title} />
                     <div className={styles.cardOverlay}>
-                      <button className={styles.viewBtn}>View Details</button>
+                      <Link href={`/tours/${tour.slug}`} className={styles.viewBtn}>View Details</Link>
                     </div>
                     <span className={styles.durationTag}>{tour.duration}</span>
                     <span className={styles.priceTag}>€{tour.price}</span>

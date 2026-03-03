@@ -1,12 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { 
-  Menu, 
-  X, 
-  Compass, 
-  MapPin, 
-  Phone, 
+import Link from 'next/link';
+import {
+  Menu,
+  X,
+  Compass,
+  MapPin,
+  Phone,
   Facebook,
   Instagram
 } from 'lucide-react';
@@ -25,11 +26,13 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Destinations', href: '#destinations' },
-    { label: 'Experiences', href: '#experiences' },
-    { label: 'Culture', href: '#culture' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' }
+    { label: 'Home', href: '/' },
+    { label: 'Tours', href: '/tours' },
+    { label: 'Destinations', href: '/destinations' },
+    { label: 'Experiences', href: '/experiences' },
+    { label: 'Culture', href: '/culture' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' }
   ];
 
   return (
@@ -61,7 +64,7 @@ const Header = () => {
       <header className={`${styles.mainHeader} ${isScrolled ? styles.mainHeaderScrolled : styles.mainHeaderTop}`}>
         <div className={styles.headerContent}>
           {/* Logo */}
-          <div className={styles.logo}>
+          <Link href="/" className={styles.logo}>
             <div className={`${styles.logoIconWrapper} ${isScrolled ? styles.logoIconWrapperScrolled : styles.logoIconWrapperTransparent}`}>
               <Compass className={`${styles.logoIcon} ${isScrolled ? styles.logoIconScrolled : styles.logoIconTransparent}`} />
               <div className={styles.logoRing}></div>
@@ -75,37 +78,37 @@ const Header = () => {
                 Authentic Journeys
               </span>
             </div>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className={styles.desktopNav}>
             {navItems.map((item, index) => (
               <div key={index} className={styles.navItem}>
-                <a 
+                <Link
                   href={item.href}
                   className={`${styles.navLink} ${isScrolled ? styles.navLinkScrolled : styles.navLinkTransparent}`}
                 >
                   {item.label}
                   <span className={styles.navUnderline}></span>
-                </a>
+                </Link>
               </div>
             ))}
           </nav>
 
           {/* Right Actions */}
           <div className={styles.rightActions}>
-            <a 
-              href="https://facebook.com" 
-              target="_blank" 
+            <a
+              href="https://facebook.com"
+              target="_blank"
               rel="noopener noreferrer"
               className={`${styles.iconButton} ${isScrolled ? styles.iconButtonScrolled : styles.iconButtonTransparent}`}
             >
               <Facebook size={20} />
             </a>
-            
-            <a 
-              href="https://instagram.com" 
-              target="_blank" 
+
+            <a
+              href="https://instagram.com"
+              target="_blank"
               rel="noopener noreferrer"
               className={`${styles.iconButton} ${isScrolled ? styles.iconButtonScrolled : styles.iconButtonTransparent}`}
             >
@@ -122,7 +125,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className={styles.mobileMenuButton}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -139,30 +142,30 @@ const Header = () => {
           <div className={styles.mobileMenuContent}>
             {navItems.map((item, index) => (
               <div key={index} className={styles.mobileNavItem}>
-                <a 
+                <Link
                   href={item.href}
                   className={styles.mobileNavLink}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               </div>
             ))}
-            
+
             {/* Social Links in Mobile Menu */}
             <div className={styles.mobileSocialLinks}>
-              <a 
-                href="https://facebook.com" 
-                target="_blank" 
+              <a
+                href="https://facebook.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className={styles.mobileSocialLink}
               >
                 <Facebook size={20} />
                 <span>Facebook</span>
               </a>
-              <a 
-                href="https://instagram.com" 
-                target="_blank" 
+              <a
+                href="https://instagram.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className={styles.mobileSocialLink}
               >
