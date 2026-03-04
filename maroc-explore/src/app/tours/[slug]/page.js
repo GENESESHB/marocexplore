@@ -50,11 +50,14 @@ export default function TourDetailPage({ params }) {
                 <img src={tour.image} alt={tour.title} className={styles.heroImage} />
                 <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
+                    <h1 className={styles.title}>{tour.title}</h1>
+                    <div className={styles.breadcrumbs}>
+                        <Link href="/">Home</Link> &gt; <Link href="/tours">Tours</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
+                    </div>
                     <div className={styles.badges}>
                         <span className={styles.badge}>{tour.location}</span>
                         <span className={styles.badge}>{tour.duration}</span>
                     </div>
-                    <h1 className={styles.title}>{tour.title}</h1>
                     <div className={styles.meta}>
                         <span className={styles.rating}>★ {tour.rating} ({tour.reviews} reviews)</span>
                         <span className={styles.price}>From €{tour.price}</span>

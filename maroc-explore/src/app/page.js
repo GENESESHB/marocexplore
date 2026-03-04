@@ -476,7 +476,7 @@ export default function Home() {
         {/* Background Image */}
         <div className={styles.heroBackground}>
           <img
-            src="/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif"
+            src="/images/maroc_explore-img/chefchaouen/BLUE_city_trips_travel-morocco.avif"
             alt="Morocco Landscape"
             className={styles.heroBgImage}
           />
@@ -672,12 +672,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className={styles.scrollIndicator}>
-          <div className={styles.scrollMouse}>
-            <div className={styles.scrollDot}></div>
-          </div>
-        </div>
+
       </div>
 
       {/* Why Choose Us - Compact Section */}

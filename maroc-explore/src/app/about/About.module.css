@@ -4,7 +4,7 @@
 }
 
 .hero {
-    background: #0f172a;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('/images/maroc_explore-img/Ouarzazate/maroc-explore-ouarzazate-kasabat-aitbenhadou.avif') center/cover;
     color: white;
     padding: 160px 20px 100px;
     text-align: center;
@@ -75,7 +75,7 @@
 .missionList li {
     padding-left: 30px;
     position: relative;
-    fontSize: 1.05rem;
+    font-size: 1.05rem;
     color: #475569;
 }
 
@@ -83,7 +83,7 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #f97316;
+    color: #059669;
     font-weight: 800;
 }
 
@@ -116,9 +116,17 @@
     margin-bottom: 8px;
 }
 
-.teamMember p {
-    color: #64748b;
-    font-weight: 500;
+.teamMember p.role {
+    color: #059669;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.teamMember p.bio {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 @media (max-width: 1024px) {

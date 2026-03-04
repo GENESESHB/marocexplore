@@ -11,14 +11,21 @@ export default function TourTemplate({ tour }) {
         <div className={styles.page}>
             <Header />
 
-            {/* Header Section */}
-            <div className={styles.headerSection}>
-                <div className={styles.container}>
-                    <div className={styles.breadcrumb}>
-                        <Link href="/">Home</Link> &gt; <Link href="/tours">Tours</Link> &gt; <span>{tour.title}</span>
+            {/* Hero Cover Section */}
+            <div className={styles.hero}>
+                <img src={tour.image} alt={tour.title} className={styles.heroImage} />
+                <div className={styles.heroOverlay}></div>
+                <div className={styles.heroContent}>
+                    <h1 className={styles.heroTitle}>{tour.title}</h1>
+                    <div className={styles.breadcrumbs}>
+                        <Link href="/">Home</Link> &gt; <Link href="/tours">Tours</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
                     </div>
-                    <h1 className={styles.title}>{tour.title}</h1>
+                </div>
+            </div>
 
+            {/* Header Meta Section */}
+            <div className={styles.headerMetaSection}>
+                <div className={styles.container}>
                     <div className={styles.headerMeta}>
                         <div className={styles.rating}>
                             <Star className={styles.tripAdvisorBubble} fill="#f97316" color="#f97316" size={18} />

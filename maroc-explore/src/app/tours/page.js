@@ -17,7 +17,11 @@ export default function ToursPage() {
 
             {/* Hero Section */}
             <div className={styles.hero}>
+                <div className={styles.heroOverlay}></div>
                 <div className={styles.heroContent}>
+                    <div className={styles.breadcrumbs}>
+                        <Link href="/">Home</Link> &gt; <span className={styles.activeCrumb}>Tours</span>
+                    </div>
                     <h1>Discover Morocco</h1>
                     <p>Authentic journeys, cultural classes, and unforgettable adventures curated just for you.</p>
                 </div>

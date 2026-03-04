@@ -11,16 +11,87 @@
     padding: 0 20px;
 }
 
-/* Header Section */
-.headerSection {
-    background: white;
-    padding: 100px 0 20px;
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 60px;
+    /* Accounts for transparent header */
 }
 
-.breadcrumb {
-    font-size: 0.9rem;
-    color: #64748b;
-    margin-bottom: 15px;
+.heroImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.heroOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #e2e8f0;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.breadcrumbs a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #6ee7b7;
+}
+
+.activeCrumb {
+    color: #6ee7b7;
+    font-weight: 600;
+}
+
+/* Header Meta Section */
+.headerMetaSection {
+    background: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .breadcrumb a {
@@ -37,6 +108,8 @@
     font-weight: 800;
     margin: 0 0 15px 0;
     color: #0f172a;
+    display: none;
+    /* Hidden since we use hero title now */
 }
 
 .headerMeta {
@@ -701,6 +774,19 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        height: 320px;
+        padding-top: 50px;
+    }
+
+    .heroTitle {
+        font-size: 2.2rem;
+    }
+
+    .breadcrumbs {
+        font-size: 0.85rem;
+    }
+
     .galleryGrid {
         grid-template-columns: 1fr;
         grid-template-rows: 250px 150px;

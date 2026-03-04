@@ -46,10 +46,10 @@ const Footer = () => {
                 <div className={styles.footerLinks}>
                     <h3 className={styles.footerHeading}>Popular Tours</h3>
                     <ul className={styles.linkList}>
-                        <li><Link href="/tours">Sahara Desert Expeditions</Link></li>
-                        <li><Link href="/tours">Atlas Mountains Treks</Link></li>
-                        <li><Link href="/tours">Imperial Cities Tour</Link></li>
-                        <li><Link href="/tours">Essaouira Day Trip</Link></li>
+                        <li><Link href="/filter?category=desert">Sahara Desert Expeditions</Link></li>
+                        <li><Link href="/tours/atlas-mountains-trek">Atlas Mountains Treks</Link></li>
+                        <li><Link href="/filter?category=city">Imperial Cities Tour</Link></li>
+                        <li><Link href="/filter?destination=essaouira">Essaouira Day Trip</Link></li>
                     </ul>
                 </div>
 

@@ -1,4 +1,6 @@
 import Header from '../components/Header';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
 import styles from './About.module.css';
 
 export const metadata = {
@@ -7,6 +9,42 @@ export const metadata = {
 };
 
 export default function AboutPage() {
+    const aboutTestimonials = [
+        {
+            id: 1,
+            name: "Eleanor Rigby",
+            location: "Sydney, Australia",
+            avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+            title: "Expert guides that felt like family",
+            text: "Learning about the history of Fes from Fatima was incredible. She didn't just show us the sites; she shared her passion and her family's heritage with us. It felt incredibly authentic.",
+            experience: "Fes Cultural Immersion"
+        },
+        {
+            id: 2,
+            name: "David Chen",
+            location: "Vancouver, Canada",
+            avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+            title: "The real Moroccan experience",
+            text: "We wanted a tour that respected the local communities. Maroc Explore's dedication to sustainable tourism and deep Atlas Mountain connections gave us exactly that.",
+            experience: "Atlas Mountains Trek"
+        }
+    ];
+
+    const aboutFaqs = [
+        {
+            question: "How long has Maroc Explore been operating?",
+            answer: "We have been crafting authentic Moroccan journeys for over 15 years, starting as a small family operation and growing into a leading boutique agency."
+        },
+        {
+            question: "Are your guides certified professionals?",
+            answer: "Yes, absolutely. All our guides are licensed by the Moroccan Ministry of Tourism and possess deep historical and cultural knowledge of the regions they cover."
+        },
+        {
+            question: "What makes your tours 'sustainable'?",
+            answer: "We partner directly with local Amazigh families, cooperatives, and small-scale artisans, ensuring that the revenue from our tours directly benefits the local economy and preserves traditional ways of life."
+        }
+    ];
+
     return (
         <div className={styles.page}>
             <Header />
@@ -23,14 +61,17 @@ export default function AboutPage() {
                     <div className={styles.textContent}>
                         <h2>Our Story</h2>
                         <p>
-                            Founded in Marrakech by a group of passionate local guides, Maroc Explore was born from a simple realization: the true beauty of Morocco lies beyond the typical tourist trails. We wanted to share the Morocco we know and love—the hidden riads, the silent majesty of the desert, and the vibrant traditions of Amazigh communities.
+                            Founded in Marrakech by a group of passionate local guides, Maroc Explore was born from a simple realization: the true beauty of Morocco lies far beyond the typical, crowded tourist trails. We wanted to share the authentic Morocco we know and love—the hidden, tranquil riads, the silent, awe-inspiring majesty of the Sahara desert, and the vibrant, welcoming traditions of the Amazigh communities.
                         </p>
                         <p>
-                            Over the last 15 years, we've grown from a small family operation into a leading boutique travel agency, but our core mission remains unchanged: to provide authentic, respectful, and deeply immersive journeys that benefit both our travelers and local communities.
+                            Over the last 15 years, we've grown from a small family operation into a leading boutique travel agency, but our core mission remains completely unchanged: to provide authentic, respectful, and deeply immersive journeys that benefit both our travelers and the local communities we visit. From navigating the bustling, aromatic souks of Fes to sipping fresh mint tea under a canopy of Saharan stars, we handle every detail with meticulous care and passion.
+                        </p>
+                        <p>
+                            Today, our team consists of over 50 local experts, drivers, and cultural guides. We pride ourselves on our deep local connections, ensuring that every itinerary is crafted with insider knowledge and an unwavering commitment to quality, safety, and sustainable tourism.
                         </p>
                     </div>
                     <div className={styles.imageContent}>
-                        <img src="/images/maroc_explore-img/marrakech/marrakech-tours.avif" alt="Our Story" />
+                        <img src="/images/maroc_explore-img/marrakech/marrakech-tours-trips-jamaaelfna.avif" alt="Our Story" />
                     </div>
                 </section>
 
@@ -47,30 +88,20 @@ export default function AboutPage() {
                         </ul>
                     </div>
                     <div className={styles.imageContent}>
-                        <img src="/images/maroc_explore-img/fes/maroc-explore-fes-architecte-mosque.avif" alt="Our Mission" />
+                        <img src="/images/maroc_explore-img/Ouarzazate/maroc-explore-ouarzazate.avif" alt="Our Mission" />
                     </div>
                 </section>
 
-                <section className={styles.teamSection}>
-                    <h2>Meet the Experts</h2>
-                    <div className={styles.teamGrid}>
-                        <div className={styles.teamMember}>
-                            <img src="/images/maroc_explore-img/merzouga/maroc-explore-trips-to-ride-camls.jpg" alt="Ahmed" />
-                            <h3>Ahmed</h3>
-                            <p>Founder & Lead Desert Guide</p>
-                        </div>
-                        <div className={styles.teamMember}>
-                            <img src="/images/maroc_explore-img/chefchaouen/MAROC-EXPLORE-chefchaouen.avif" alt="Fatima" />
-                            <h3>Fatima</h3>
-                            <p>Cultural Heritage Specialist</p>
-                        </div>
-                        <div className={styles.teamMember}>
-                            <img src="/images/maroc_explore-img/casablanca/MAROC-EXPLORE-CASABLANCA-ART.avif" alt="Mohamed" />
-                            <h3>Mohamed</h3>
-                            <p>Atlas Mountains Expert</p>
-                        </div>
-                    </div>
-                </section>
+                <Testimonials
+                    customTestimonials={aboutTestimonials}
+                    title="What Travelers Say About Us"
+                    subtitle="Our Reputation"
+                />
+                <FAQ
+                    customFaqs={aboutFaqs}
+                    title="About Maroc Explore"
+                    subtitle="Learn more about our agency and values."
+                />
             </div>
         </div>
     );

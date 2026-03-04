@@ -1,10 +1,8 @@
 .footer {
-    background-color: #0f172a;
-    /* Slate 900 */
+    background-color: #064e3b;
     color: #f8fafc;
-    /* Slate 50 */
     padding-top: 4rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(110, 231, 183, 0.2);
 }
 
 .footerContainer {
@@ -33,7 +31,7 @@
 }
 
 .logoIconWrapper {
-    background: var(--primary, #d97706);
+    background: #6ee7b7;
     border-radius: 50%;
     padding: 0.5rem;
     display: flex;
@@ -42,7 +40,7 @@
 }
 
 .logoIcon {
-    color: white;
+    color: #064e3b;
 }
 
 .logoText {
@@ -58,7 +56,7 @@
 }
 
 .logoHighlight {
-    color: var(--primary, #d97706);
+    color: #6ee7b7;
 }
 
 .brandDescription {
@@ -86,7 +84,8 @@
 }
 
 .socialIcon:hover {
-    background-color: var(--primary, #d97706);
+    background-color: #6ee7b7;
+    color: #064e3b;
     transform: translateY(-3px);
 }
 
@@ -108,7 +107,7 @@
     bottom: -0.5rem;
     width: 40px;
     height: 2px;
-    background-color: var(--primary, #d97706);
+    background-color: #6ee7b7;
 }
 
 .linkList {
@@ -132,14 +131,14 @@
 .linkList li a::before {
     content: '→';
     margin-right: 0.5rem;
-    color: var(--primary, #d97706);
+    color: #6ee7b7;
     opacity: 0;
     transform: translateX(-10px);
     transition: all 0.3s ease;
 }
 
 .linkList li a:hover {
-    color: var(--primary, #d97706);
+    color: #6ee7b7;
     transform: translateX(5px);
 }
 
@@ -168,17 +167,15 @@
 }
 
 .contactIcon {
-    color: var(--primary, #d97706);
+    color: #6ee7b7;
     flex-shrink: 0;
     margin-top: 0.25rem;
 }
 
-/* Footer Bottom */
 .footerBottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(110, 231, 183, 0.2);
     padding: 1.5rem 0;
-    background-color: #020617;
-    /* Slate 950 */
+    background-color: #022c22;
 }
 
 .footerBottomContent {

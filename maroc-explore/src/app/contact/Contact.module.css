@@ -4,7 +4,7 @@
 }
 
 .hero {
-    background: #f97316;
+    background: linear-gradient(rgba(249, 115, 22, 0.8), rgba(249, 115, 22, 0.9)), url('/images/maroc_explore-img/marrakech/marrakech-tours-trip-archetecte.avif') center/cover;
     color: white;
     padding: 160px 20px 100px;
     text-align: center;
@@ -60,8 +60,8 @@
 }
 
 .iconWrapper {
-    background: #fff7ed;
-    color: #f97316;
+    background: #ecfdf5;
+    color: #059669;
     padding: 12px;
     border-radius: 12px;
     display: flex;
@@ -122,7 +122,7 @@
 .submitBtn {
     margin-top: 10px;
     padding: 16px;
-    background: #0f172a;
+    background: #064e3b;
     color: white;
     border: none;
     border-radius: 10px;
@@ -133,12 +133,74 @@
 }
 
 .submitBtn:hover {
-    background: #1e293b;
+    background: #047857;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(6, 78, 59, 0.15);
+}
+
+.faqSection {
+    margin-top: 100px;
+    padding-top: 80px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.faqHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.faqHeader h2 {
+    font-size: 2.5rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.faqHeader p {
+    font-size: 1.15rem;
+    color: #475569;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.faqItem {
+    background: #f8fafc;
+    padding: 32px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+}
+
+.faqItem:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.faqIcon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.faqItem h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 16px;
+}
+
+.faqItem p {
+    color: #475569;
+    line-height: 1.7;
 }
 
 @media (max-width: 1024px) {
+    .faqGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
     .contactGrid {
         grid-template-columns: 1fr;
         gap: 60px;
