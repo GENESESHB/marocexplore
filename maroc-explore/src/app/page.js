@@ -110,27 +110,27 @@ export default function Home() {
 
   const galleryImages = [
     {
-      src: "https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800 ",
+      src: "/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif",
       alt: "Sahara Desert",
       span: "large"
     },
     {
-      src: "https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800 ",
+      src: "/images/maroc_explore-img/marrakech/marrakech-tours.avif",
       alt: "Marrakech Medina",
       span: "tall"
     },
     {
-      src: "https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800 ",
+      src: "/images/maroc_explore-img/marrakech/marrakech-colors-culter.avif",
       alt: "Atlas Mountains",
       span: "normal"
     },
     {
-      src: "https://images.unsplash.com/photo-1553244619-cfd23e3e4ed5?w=800 ",
+      src: "/images/maroc_explore-img/chefchaouen/chefchaouen-culter-blue-city-tours.avif",
       alt: "Blue City Chefchaouen",
       span: "normal"
     },
     {
-      src: "https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800 ",
+      src: "/images/maroc_explore-img/rabat/maroc-explore-rabat-archetict-maroc-designe.avif",
       alt: "Moroccan Architecture",
       span: "wide"
     }
@@ -141,7 +141,7 @@ export default function Home() {
     {
       id: 'marrakech',
       name: 'Marrakech',
-      image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800',
+      image: '/images/maroc_explore-img/marrakech/marrakech-tours-trip-archetecte.avif',
       tagline: 'The Red City',
       history: `Founded in 1070 by the Almoravid dynasty, Marrakech served as the capital of multiple empires. The iconic red sandstone walls built in the 12th century give it the nickname "The Red City." The medina, a UNESCO World Heritage site, contains the famous Jemaa el-Fnaa square, which has been the city's cultural heart for centuries.`,
       amazigh: `Marrakech sits at the crossroads of Amazigh (Berber) and Arab cultures. The surrounding High Atlas Mountains are home to numerous Amazigh communities who have preserved their distinct language (Tamazight), traditions, and craftsmanship. The city's famous souks feature Amazigh carpets, jewelry, and leather goods, each telling stories of tribal identity and mountain life.`,
@@ -151,7 +151,7 @@ export default function Home() {
     {
       id: 'fes',
       name: 'Fes',
-      image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800',
+      image: '/images/maroc_explore-img/fes/maroc-explore-fes-dar-debagh.avif',
       tagline: 'The Spiritual Heart',
       history: `Founded in 789 AD by Idris I, Fes is Morocco's oldest imperial city. It is home to Al-Qarawiyyin University, founded in 859 AD, recognized by UNESCO as the world's oldest existing educational institution. Fes el-Bali is the world's largest car-free urban area and a UNESCO World Heritage site with over 9,000 narrow alleyways.`,
       amazigh: `Fes has historically been a center of Amazigh culture and learning. The city's founding by the Idrisid dynasty established deep connections with Amazigh tribes of the Middle Atlas. The traditional crafts of Fes—zellige tilework, metalwork, and wood carving—incorporate Amazigh geometric patterns and symbolism.`,
@@ -161,7 +161,7 @@ export default function Home() {
     {
       id: 'tanger',
       name: 'Tanger',
-      image: 'https://images.unsplash.com/photo-1553244619-cfd23e3e4ed5?w=800',
+      image: '/images/maroc_explore-img/tanger/maroc-explore-tanger.avif',
       tagline: 'Gateway Between Continents',
       history: `Tangier's strategic location at the entrance to the Mediterranean has made it one of the most coveted cities in history. Founded by the Phoenicians in the 10th century BC, it has been ruled by Romans, Vandals, Byzantines, Arabs, Portuguese, Spanish, and British before becoming an international zone (1923-1956).`,
       amazigh: `The Tangier region is deeply rooted in Amazigh heritage, particularly the Ghomara and Sanhaja tribes. The Rif Mountains surrounding the city maintain strong Amazigh traditions, including the celebration of Yennayer (Amazigh New Year). The nearby village of Jajouka preserves ancient Sufi-Amazigh musical traditions.`,
@@ -171,7 +171,7 @@ export default function Home() {
     {
       id: 'rabat',
       name: 'Rabat',
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800',
+      image: '/images/maroc_explore-img/rabat/maroc-explore-rabat.avif',
       tagline: 'The Capital of Light',
       history: `Founded in the 12th century by the Almohad dynasty as a military fortress, Rabat became Morocco's capital in 1912. The city is a UNESCO World Heritage site, recognized for its unique blend of historic and modern urban planning. Key sites include the Hassan Tower and the Kasbah of the Udayas.`,
       amazigh: `Rabat serves as an important center for Amazigh cultural preservation. The city hosts the Royal Institute of Amazigh Culture (IRCAM), established in 2001 to promote Tamazight language and heritage. The Andalusian influence in Rabat's medina reflects the historical migration of Amazigh populations from Spain.`,
@@ -181,7 +181,7 @@ export default function Home() {
     {
       id: 'agadir',
       name: 'Agadir',
-      image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800',
+      image: '/images/maroc_explore-img/agadir/agadir-maroc-cocher-du-solie.avif',
       tagline: 'The Pearl of the South',
       history: `Agadir was originally a Portuguese fortress built in 1500, but the modern city was reconstructed after a devastating earthquake in 1960. Today, it stands as Morocco's premier beach resort with modern infrastructure and year-round sunshine. The remnants of the old kasbah sit on a hilltop offering panoramic views.`,
       amazigh: `Agadir is the cultural capital of the Souss-Massa region, home to the Shilha (Tashelhit)-speaking Amazigh people. The city hosts the annual Timitar Festival, celebrating Amazigh music. The Amazigh Heritage Museum showcases 2,000+ pieces of traditional jewelry, costumes, and tools.`,
@@ -191,7 +191,7 @@ export default function Home() {
     {
       id: 'casablanca',
       name: 'Casablanca',
-      image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800',
+      image: '/images/maroc_explore-img/casablanca/CASABLANCA-MOSQUE-HASSAN-2-view-from-ather-sied.avif',
       tagline: 'The White House',
       history: `Casablanca transformed from a small Berber settlement into Morocco's economic powerhouse during the French Protectorate (1912-1956). The city boasts the world's third-largest mosque, Hassan II Mosque, completed in 1993, featuring the world's tallest minaret (210m) and a retractable roof.`,
       amazigh: `While Casablanca is a modern metropolis, it serves as a hub for Amazigh migration from the Atlas and Rif regions. The city hosts numerous cultural centers promoting Tamazight language and arts. The Royal Theater often features Amazigh theater productions and music concerts.`,
@@ -201,7 +201,7 @@ export default function Home() {
     {
       id: 'chefchaouen',
       name: 'Chefchaouen',
-      image: 'https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=800',
+      image: '/images/maroc_explore-img/chefchaouen/BLUE_city_trips_travel-morocco.avif',
       tagline: 'The Blue Pearl',
       history: `Founded in 1471 by Moulay Ali Ben Rachid as a fortress to defend against Portuguese invasions, Chefchaouen became a refuge for Muslim and Jewish families expelled from Andalusia. The famous blue-washed buildings began in the 1930s, possibly introduced by Jewish refugees, transforming the city into one of the world's most photographed destinations.`,
       amazigh: `Chefchaouen is deeply rooted in the Jebala region's Amazigh culture. The city maintains strong traditions of weaving, particularly the distinctive striped blankets (handira) and wool garments. The surrounding mountains are home to cannabis cultivation (kif), a traditional agricultural practice.`,
@@ -211,7 +211,7 @@ export default function Home() {
     {
       id: 'essaouira',
       name: 'Essaouira',
-      image: 'https://images.unsplash.com/photo-1553244619-cfd23e3e4ed5?w=800',
+      image: '/images/maroc_explore-img/essaouira/maroc-explore-essaouira-view.avif',
       tagline: 'The Wind City',
       history: `Originally known as Mogador, Essaouira was a Phoenician trading post as early as the 7th century BC. The modern fortified city was built in the 18th century by Sultan Sidi Mohammed Ben Abdallah, designed by European architects. The city became an important Jewish trading center before declining in the 20th century.`,
       amazigh: `Essaouira is the spiritual home of Gnawa music, a genre born from the fusion of sub-Saharan African, Amazigh, and Arab influences. The city hosts the annual Gnawa and World Music Festival. The surrounding countryside maintains strong Amazigh (Chiadma tribe) traditions, particularly in argan oil production.`,
@@ -221,7 +221,7 @@ export default function Home() {
     {
       id: 'merzouga',
       name: 'Merzouga',
-      image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800',
+      image: '/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif',
       tagline: 'Gateway to the Sahara',
       history: `Merzouga is a small village on the edge of the Erg Chebbi dunes, the largest sand sea in Morocco, stretching 50km north to south. The area was once a seasonal lake that attracted traders and nomads. Today, it represents the quintessential Sahara experience with dunes reaching heights of 150 meters.`,
       amazigh: `Merzouga is the heartland of the Ait Atta Amazigh nomads and Tuareg-influenced cultures of the Sahara. The region maintains strong traditions of desert hospitality. Traditional music features the imzad (single-string violin) and poetic recitations in Tamazight. The annual Date Festival celebrates with Amazigh music and camel races.`,
@@ -231,7 +231,7 @@ export default function Home() {
     {
       id: 'ouarzazate',
       name: 'Ouarzazate',
-      image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800',
+      image: '/images/maroc_explore-img/Ouarzazate/maroc-explore-ouarzazate.avif',
       tagline: 'The Door of the Desert',
       history: `Known as the "Door of the Desert," Ouarzazate was a small crossing point for African traders before becoming a French garrison town in the 1920s. The city gained international fame as a filming location for movies including "Lawrence of Arabia," "Gladiator," and "Game of Thrones." The Atlas Studios are the world's largest film studios by area.`,
       amazigh: `Ouarzazate is the administrative and cultural center of the Souss-Massa-Draa region, home to numerous Amazigh tribes including the Ait Benhaddou. The area is famous for its distinctive kasbah architecture, built from adobe and decorated with Amazigh geometric patterns. The city hosts the International Film Festival, showcasing Amazigh cinema.`,
@@ -476,7 +476,7 @@ export default function Home() {
         {/* Background Image */}
         <div className={styles.heroBackground}>
           <img
-            src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1920 "
+            src="/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif"
             alt="Morocco Landscape"
             className={styles.heroBgImage}
           />

@@ -1,4 +1,5 @@
 import './styles/globals.css';
+import Footer from './components/Footer';
 
 export const metadata = {
   title: 'Maroc Explore - Authentic Moroccan Tours & Sahara Desert Expeditions',
@@ -9,7 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

@@ -30,7 +30,7 @@ export default function AboutPage() {
                         </p>
                     </div>
                     <div className={styles.imageContent}>
-                        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800" alt="Our Story" />
+                        <img src="/images/maroc_explore-img/marrakech/marrakech-tours.avif" alt="Our Story" />
                     </div>
                 </section>
 
@@ -47,7 +47,7 @@ export default function AboutPage() {
                         </ul>
                     </div>
                     <div className={styles.imageContent}>
-                        <img src="https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800" alt="Our Mission" />
+                        <img src="/images/maroc_explore-img/fes/maroc-explore-fes-architecte-mosque.avif" alt="Our Mission" />
                     </div>
                 </section>
 
@@ -55,17 +55,17 @@ export default function AboutPage() {
                     <h2>Meet the Experts</h2>
                     <div className={styles.teamGrid}>
                         <div className={styles.teamMember}>
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ahmed" />
+                            <img src="/images/maroc_explore-img/merzouga/maroc-explore-trips-to-ride-camls.jpg" alt="Ahmed" />
                             <h3>Ahmed</h3>
                             <p>Founder & Lead Desert Guide</p>
                         </div>
                         <div className={styles.teamMember}>
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Fatima" />
+                            <img src="/images/maroc_explore-img/chefchaouen/MAROC-EXPLORE-chefchaouen.avif" alt="Fatima" />
                             <h3>Fatima</h3>
                             <p>Cultural Heritage Specialist</p>
                         </div>
                         <div className={styles.teamMember}>
-                            <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Mohamed" />
+                            <img src="/images/maroc_explore-img/casablanca/MAROC-EXPLORE-CASABLANCA-ART.avif" alt="Mohamed" />
                             <h3>Mohamed</h3>
                             <p>Atlas Mountains Expert</p>
                         </div>

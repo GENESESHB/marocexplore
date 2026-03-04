@@ -6,8 +6,7 @@
 
 .hero {
     height: 400px;
-    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
-        url('https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600') center/cover;
+    background: url('/images/maroc_explore-img/merzouga/maroc-explore-camp-desert-morocco-adventure.avif') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;

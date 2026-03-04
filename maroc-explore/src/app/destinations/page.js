@@ -12,44 +12,72 @@ export default function DestinationsPage() {
         {
             id: 'marrakech',
             name: 'Marrakech',
-            tagline: 'The vibrant heart of the south',
+            tagline: 'The Red City',
             description: 'Experience the magic of the Red City. A sensory explosion of color, sound, and scent in the legendary medina.',
-            image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800'
+            image: '/images/maroc_explore-img/marrakech/marrakech-tours-trip-archetecte.avif'
         },
         {
             id: 'fes',
             name: 'Fes',
-            tagline: 'The spiritual and intellectual capital',
+            tagline: 'The Spiritual Heart',
             description: 'Step back in time in the largest living medieval city in the world. Home to the world\'s oldest university.',
-            image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800'
+            image: '/images/maroc_explore-img/fes/maroc-explore-fes-dar-debagh.avif'
         },
         {
-            id: 'merzouga',
-            name: 'The Sahara',
-            tagline: 'Golden dunes and infinite horizons',
-            description: 'Adventure deep into the Erg Chebbi dunes. Experience the profound silence and spectacular stars of Merzouga.',
-            image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800'
+            id: 'tanger',
+            name: 'Tanger',
+            tagline: 'Gateway Between Continents',
+            description: 'Tangier\'s strategic location at the entrance to the Mediterranean has made it one of the most coveted cities in history.',
+            image: '/images/maroc_explore-img/tanger/maroc-explore-tanger.avif'
+        },
+        {
+            id: 'rabat',
+            name: 'Rabat',
+            tagline: 'The Capital of Light',
+            description: 'Founded in the 12th century by the Almohad dynasty, Rabat is a UNESCO World Heritage site blending history and modern planning.',
+            image: '/images/maroc_explore-img/rabat/maroc-explore-rabat-archetict-maroc-designe.avif'
+        },
+        {
+            id: 'agadir',
+            name: 'Agadir',
+            tagline: 'The Pearl of the South',
+            description: 'Morocco\'s premier beach resort with modern infrastructure, panoramic kasbah views, and year-round sunshine.',
+            image: '/images/maroc_explore-img/agadir/agadir-maroc-cocher-du-solie.avif'
+        },
+        {
+            id: 'casablanca',
+            name: 'Casablanca',
+            tagline: 'The White House',
+            description: 'Morocco\'s economic powerhouse, featuring the iconic Hassan II Mosque with the world\'s tallest minaret.',
+            image: '/images/maroc_explore-img/casablanca/CASABLANCA-MOSQUE-HASSAN-2-view-from-ather-sied.avif'
         },
         {
             id: 'chefchaouen',
             name: 'Chefchaouen',
-            tagline: 'The serene Blue Pearl',
+            tagline: 'The Blue Pearl',
             description: 'Nestled in the Rif Mountains, this blue-washed city offers a tranquil escape and breathtaking mountain views.',
-            image: 'https://images.unsplash.com/photo-1564507592333-c60657eea523?w=800'
+            image: '/images/maroc_explore-img/chefchaouen/BLUE_city_trips_travel-morocco.avif'
         },
         {
             id: 'essaouira',
             name: 'Essaouira',
-            tagline: 'The windy city of the Atlantic',
+            tagline: 'The Wind City',
             description: 'A fortified coastal town with blue-and-white houses, a bustling port, and a laid-back artistic soul.',
-            image: 'https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800'
+            image: '/images/maroc_explore-img/essaouira/maroc-explore-essaouira-view.avif'
         },
         {
-            id: 'atlas',
-            name: 'Atlas Mountains',
-            tagline: 'Majestic peaks and Berber life',
-            description: 'Hike through terraced valleys and stay in traditional Amazigh gites in the shadow of Mount Toubkal.',
-            image: 'https://images.unsplash.com/photo-1553244619-cfd23e3e4ed5?w=800'
+            id: 'merzouga',
+            name: 'Merzouga',
+            tagline: 'Gateway to the Sahara',
+            description: 'Adventure deep into the Erg Chebbi dunes. Experience the profound silence and spectacular stars of the Sahara.',
+            image: '/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif'
+        },
+        {
+            id: 'ouarzazate',
+            name: 'Ouarzazate',
+            tagline: 'The Door of the Desert',
+            description: 'Famous for its distinctive kasbah architecture and international film studios on the edge of the desert.',
+            image: '/images/maroc_explore-img/Ouarzazate/maroc-explore-ouarzazate.avif'
         }
     ];
 

@@ -5,11 +5,11 @@ export const toursActivitiesLib = [
     title: 'Sahara Desert Expedition',
     category: 'desert',
     activity: 'adventure',
-    image: 'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=800',
+    image: '/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1542401886-65d6c61db217?w=1200',
-      'https://images.unsplash.com/photo-1539667468225-8df6675ca531?w=1200',
-      'https://images.unsplash.com/photo-1489493887464-892be6d1daae?w=1200'
+      '/images/maroc_explore-img/merzouga/maroc-explore-merzouga-trip-dunes.jpg',
+      '/images/maroc_explore-img/merzouga/maroc-explore-merzouga-trip-camel-ride.avif',
+      '/images/maroc_explore-img/merzouga/maroc-explore-trips-to-ride-camls.jpg'
     ],
     price: 299,
     duration: '3 Days',
@@ -24,9 +24,9 @@ export const toursActivitiesLib = [
     description: 'Experience the magic of the Sahara with camel treks, desert camping, and stunning sunsets over the dunes.',
     fullDescription: 'Embark on a soul-stirring journey through the golden dunes of the Sahara Desert. This 3-day expedition from Marrakech takes you through the High Atlas Mountains, ancient Kasbahs, and deep into the heart of the Erg Chebbi desert. Disconnect from the modern world and find peace in the absolute silence of the Sahara. You will benefit from a true digital detox while connecting with ancient Berber traditions and sleeping under a breathtaking canopy of millions of stars. This is more than a trip; it\'s a rejuvenating escape that will leave you with a profound sense of awe and life-long memories.',
     itinerary: [
-      { day: 1, title: 'Marrakech to Dades Valley via High Atlas', content: 'Drive through the winding Tizi n\'Tichka pass in the High Atlas Mountains. Benefit from guided visits to the UNESCO World Heritage site of Ait Ben Haddou, learning its rich cinematic history.' },
-      { day: 2, title: 'Dades Valley to the Merzouga Dunes', content: 'Explore the towering limestone walls of the Todra Gorges. Upon reaching Merzouga, embark on a sunset camel trek into the Erg Chebbi dunes. Benefit from an authentic Berber campfire dinner and traditional drumming under the stars.' },
-      { day: 3, title: 'Merzouga to Marrakech', content: 'Wake up early to witness a breathtaking desert sunrise—a truly meditative and visually stunning experience. Trek back on camels before beginning the scenic, changing landscape journey back to Marrakech.' }
+      { day: 1, title: 'Marrakech to Dades Valley via High Atlas', content: 'Morning departure from your riad in Marrakech. Drive through the winding Tizi n\'Tichka pass (2260m altitude) in the High Atlas Mountains. Stop for panoramic photos and visit the UNESCO World Heritage site of Ait Ben Haddou, an ancient fortified village with rich cinematic history. Enjoy a traditional Tagine lunch before continuing through the "Road of a Thousand Kasbahs" to reach the stunning Dades Valley for your overnight stay in a boutique guesthouse.' },
+      { day: 2, title: 'Dades Valley to the Merzouga Dunes', content: 'After a hearty breakfast, explore the towering limestone walls of the Todra Gorges, reaching up to 300 meters high. Walk through the palm groves before driving towards the Sahara. Upon reaching Merzouga, meet your camel caravan and embark on a mesmerizing 1.5-hour sunset camel trek into the Erg Chebbi dunes. Arrive at your luxury desert camp, enjoy authentic Berber mint tea, an exquisite campfire dinner, and traditional drumming under a crystal clear starry sky.' },
+      { day: 3, title: 'Merzouga to Marrakech', content: 'Wake up early to witness a breathtaking desert sunrise—a truly meditative and visually stunning experience over the shifting sand dunes. Enjoy a full Moroccan breakfast at the camp. Trek back on camels or by 4x4 to the main road, before beginning the scenic, changing landscape journey back to Marrakech, passing through the Draa Valley and Agdz. Drop-off at your riad in the early evening.' }
     ],
     highlights: ['Camel Trek in the Dunes', 'Luxury Desert Camping', 'Digital Detox & Silence', 'Berber Campfire Dinner', 'UNESCO Ait Ben Haddou', 'High Atlas Mountains'],
     included: ['Transport in Air-Conditioned 4x4 or Minibus', 'Professional Multilingual Guide', '2 Nights Accommodation', 'Daily Breakfast and Authentic Dinner', 'Sunset Camel Trek'],
@@ -38,11 +38,11 @@ export const toursActivitiesLib = [
     title: 'Marrakech Medina Tour',
     category: 'city',
     activity: 'cultural',
-    image: 'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800',
+    image: '/images/maroc_explore-img/marrakech/marrakech-tours-trips-jamaaelfna.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200',
-      'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200',
-      'https://images.unsplash.com/photo-1509233725247-49e657c54213?w=1200'
+      '/images/maroc_explore-img/marrakech/marrakech-colors-culter.avif',
+      '/images/maroc_explore-img/marrakech/marrakech-tours.avif',
+      '/images/maroc_explore-img/marrakech/marrakech-tours-trip-archetecte.avif'
     ],
     price: 89,
     duration: '1 Day',
@@ -57,12 +57,12 @@ export const toursActivitiesLib = [
     description: 'Navigate the labyrinthine streets of the old medina, visit historic palaces, and experience the vibrant souks.',
     fullDescription: 'Discover the "Red City" with our expert local guides. This immersive walking tour takes you through the heart of Marrakech\'s Medina, a UNESCO World Heritage site. By booking this tour, you will greatly benefit from the deep knowledge of our local experts who will help you safely navigate the maze-like streets, avoid common tourist traps, and uncover hidden architectural gems that most independent visitors completely miss. Enjoy the sights, sounds, and smells without the stress of getting lost!',
     itinerary: [
-      { time: '09:00', activity: 'Meet at the iconic Koutoubia Mosque for an architectural introduction' },
-      { time: '10:30', activity: 'Visit the stunning Bahia Palace and learn about the intricate Islamic geometry and tilework' },
-      { time: '12:00', activity: 'Explore the historic Jewish Quarter (Mellah) and its spice markets' },
-      { time: '13:00', activity: 'Enjoy a relaxing, traditional Moroccan lunch in a hidden Riad (benefit from escaping the street noise)' },
-      { time: '14:30', activity: 'Guided Souk Walk—learn how to bargain effectively and spot authentic artisanal goods' },
-      { time: '16:30', activity: 'Jemaa el-Fnaa experience to witness snake charmers and storytellers as evening falls' }
+      { time: '09:00', activity: 'Meet your expert local guide at the iconic Koutoubia Mosque. Introductory briefing on the rich history of Marrakech and its architectural significance.' },
+      { time: '10:30', activity: 'Visit the stunning 19th-century Bahia Palace. Explore the vast courtyards, lush gardens, and learn about the intricate Islamic geometry, cedar wood carvings, and zellige tilework.' },
+      { time: '12:00', activity: 'Walk through the historical Jewish Quarter (Mellah), exploring the spice markets and learning about the historic coexistence of different communities in Morocco.' },
+      { time: '13:00', activity: 'Enjoy a relaxing, traditional Moroccan lunch featuring aromatic tagines and fresh salads in a hidden, tranquil Riad—a peaceful escape from the bustling street noise.' },
+      { time: '14:30', activity: 'Immersive Guided Souk Walk. Navigate the artisan quarters including leather workers, metal smiths, and carpet weavers. Learn how to bargain effectively and identify authentic goods.' },
+      { time: '16:30', activity: 'Emerge into the legendary Jemaa el-Fnaa square as the evening vibe starts. Witness snake charmers, acrobats, and storytellers coming to life at dusk.' }
     ],
     highlights: ['Skip-the-line at Bahia Palace', 'Expert Navigation of Souks', 'Avoid Tourist Traps', 'Learn Bargaining Skills', 'Jemaa el-Fnaa Evening Vibe'],
     included: ['Certified Local Guide', 'Entrance fees to Bahia Palace', 'Traditional Mint Tea & Pastry Tasting'],
@@ -72,14 +72,7 @@ export const toursActivitiesLib = [
     id: 3,
     slug: 'atlas-mountains-trek',
     title: 'Atlas Mountains Trek',
-    category: 'mountain',
-    activity: 'adventure',
-    image: 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=800',
-    gallery: [
-      'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200',
-      'https://images.unsplash.com/photo-1504198453319-5ce911baf2ef?w=1200',
-      'https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?w=1200'
-    ],
+    image: '/images/maroc_explore-img/marrakech/marrakech-colors-culter.avif',
     price: 149,
     duration: '2 Days',
     durationDays: 2,
@@ -93,8 +86,8 @@ export const toursActivitiesLib = [
     description: 'Trek through breathtaking mountain landscapes, visit Berber villages, and enjoy panoramic views.',
     fullDescription: 'Escape the heat of the city and head into the cool, crisp air of the High Atlas Mountains. This 2-day trek takes you through terraced valleys, along rushing rivers, and into remote Berber villages where tradition still reigns supreme. You will greatly benefit from rejuvenating your mind and body with fresh mountain air and rewarding physical activity. Furthermore, you\'ll experience authentic interactions with isolated Berber communities, gaining a profound appreciation for their sustainable, traditional way of life.',
     itinerary: [
-      { day: 1, title: 'Imlil to Tizi Mzik Pass', content: 'Depart from the Imlil valley, climbing steadily through juniper forests to the Tizi Mzik pass. Benefit from spectacular panoramic photography opportunities before descending into the Azzaden valley to share dinner with a local family.' },
-      { day: 2, title: 'Azzaden Valley to Imlil', content: 'Trek through traditional Berber villages, learn firsthand about local, sustainable agriculture, and return to Imlil via a different, equally scenic route before your transfer back to Marrakech.' }
+      { day: 1, title: 'Marrakech to Imlil & Tizi Mzik Pass', content: 'Pick-up from Marrakech and drive to the stunning Imlil valley (1,740m). Begin your trek climbing steadily through fragrant juniper and pine forests to the Tizi Mzik pass (2,489m). Benefit from spectacular panoramic photography opportunities of the Imlil and Azzaden valleys. Descend into the picturesque Azzaden valley, known for its terraced agriculture, and arrive at a traditional Berber village to share an authentic home-cooked dinner with a local family. Overnight in a cozy Gite.' },
+      { day: 2, title: 'Azzaden Valley to Imlil and return', content: 'Wake up to fresh mountain air and enjoy a traditional Berber breakfast. Trek down the beautiful Azzaden Valley, passing through several ancient, traditional Berber villages. Learn firsthand about local, sustainable agriculture, irrigation systems, and daily life in the high mountains. Stop for a picnic lunch near a mountain stream before returning to Imlil via a different, equally scenic route. Meet your driver for the transfer back to Marrakech.' }
     ],
     highlights: ['Physical & Mental Rejuvenation', 'Fresh Mountain Air', 'Authentic Berber Hospitality', 'Sustainable Tourism', 'Panoramic Photography'],
     included: ['Transport from Marrakech', 'Professional Mountain Guide', 'Mule for luggage', '1 Night in Authentic Berber Gite', 'All Wholesome Meals'],
@@ -106,11 +99,11 @@ export const toursActivitiesLib = [
     title: 'Authentic Henna Art Session',
     category: 'city',
     activity: 'cultural',
-    image: 'https://images.unsplash.com/photo-1516053303025-5d9f5173d216?w=800',
+    image: '/images/maroc_explore-img/marrakech/marrakech-colors-culter.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1516053303025-5d9f5173d216?w=1200',
-      'https://images.unsplash.com/photo-1596467677215-0565823ca86e?w=1200',
-      'https://images.unsplash.com/photo-1493238792000-8113da705763?w=1200'
+      '/images/maroc_explore-img/marrakech/marrakech-tours-trips-jamaaelfna.avif',
+      '/images/maroc_explore-img/marrakech/marrakech-tours-trip-archetecte.avif',
+      '/images/maroc_explore-img/marrakech/marrakech-tours.avif'
     ],
     price: 45,
     duration: '3 Hours',
@@ -125,10 +118,10 @@ export const toursActivitiesLib = [
     description: 'Learn the ancient art of Henna (tatoige) with a local Nakacha in a traditional riad.',
     fullDescription: 'Henna (tatoige) is more than just body art; it\'s a symbolic tradition used to celebrate special occasions and protect against the "evil eye." You will deeply benefit from this meaningful cultural exchange in a private, relaxing riad setting, far away from the chaotic street vendors. You will learn the ancient symbolism behind Moroccan motifs, empowering you to understand the rich visual language of this beautiful art form, all while receiving a stunning, organic henna design from a professional.',
     itinerary: [
-      { time: '10:00 AM', activity: 'Welcome & Mint Tea in a quiet, luxurious Riad setting' },
-      { time: '10:30 AM', activity: 'Educational Workshop: Learn the history and protective symbolism of specific henna patterns' },
-      { time: '11:00 AM', activity: 'Application Session: Receive a professional design tailored to your preferences' },
-      { time: '12:30 PM', activity: 'Drying Time & Tasting of Traditional Moroccan Sweets' }
+      { time: '10:00 AM', activity: 'Welcome arrival at a quiet, luxurious Riad setting hidden from the medina chaos. Sip on freshly poured Mint Tea and taste local dates.' },
+      { time: '10:30 AM', activity: 'Educational Workshop: The Nakacha (Henna Artist) explains the deep-rooted history, regional differences, and protective symbolism of specific henna geometric patterns and floral motifs.' },
+      { time: '11:00 AM', activity: 'Application Session: Receive a professional, freehand design tailored precisely to your preferences using 100% natural, organic, safe henna mixed with rose water or lemon.' },
+      { time: '12:30 PM', activity: 'Drying Time & Tasting: While your beautiful design sets, relax in the Riad courtyard and enjoy a tasting of assorted Traditional Moroccan Sweets (like classic almond Briouats or Gazelle Horns).' }
     ],
     highlights: ['Meaningful Cultural Exchange', 'Learn Pattern Meaning & Symbolism', 'Relaxing Private Setup', 'Organic, Safe Henna', 'Traditional Moroccan Pastries'],
     included: ['All Organic Henna Materials', 'Private Riad Access', 'Mint Tea and Premium Pastries', 'Professional Nakacha (Artist)'],
@@ -140,11 +133,11 @@ export const toursActivitiesLib = [
     title: 'Cooking Class: Msemen & Briwate',
     category: 'city',
     activity: 'cultural',
-    image: 'https://images.unsplash.com/photo-1541518763669-279f00ed51aa?w=800',
+    image: '/images/maroc_explore-img/fes/maroc-explore-fes-dar-debagh.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1541518763669-279f00ed51aa?w=1200',
-      'https://images.unsplash.com/photo-1505253716362-af9e7ec1bcd5?w=1200',
-      'https://images.unsplash.com/photo-1511910849309-0dffb8785146?w=1200'
+      '/images/maroc_explore-img/fes/MAROC-EXPLORE-fes.avif',
+      '/images/maroc_explore-img/fes/maroc-explore-fes-ceramique-plaque.avif',
+      '/images/maroc_explore-img/fes/maroc-explore-fes-architecte-mosque.avif'
     ],
     price: 65,
     duration: '4 Hours',
@@ -159,10 +152,10 @@ export const toursActivitiesLib = [
     description: 'Master the art of folding Msemen and filling Briwate in a genuine family kitchen.',
     fullDescription: 'Join a welcoming Moroccan family in their home for an immersive, hands-on cooking experience. You will benefit incredibly from this intimate learning environment, discovering the secrets of making "Msemen" (Moroccan layered crepes) and "Briouats" (savory or sweet stuffed pastries). You will take these secret family recipes and intricate folding techniques back home, allowing you to easily impress your friends and recreate the fragrant magic of Morocco in your very own kitchen!',
     itinerary: [
-      { time: '10:00 AM', activity: 'Arrival at the Host Family Kitchen and traditional welcome' },
-      { time: '10:30 AM', activity: 'Masterclass: Secret Dough Preparation & Complex Folding Techniques for Msemen' },
-      { time: '11:30 AM', activity: 'Flavor Balancing: Stuffing and perfectly cooking the Briwates' },
-      { time: '01:00 PM', activity: 'Shared Degustation: Sit down with the family to enjoy your creations over endless mint tea' }
+      { time: '10:00 AM', activity: 'Arrival at the Host Family Kitchen in the heart of the Fes medina. Experience a warm, traditional Moroccan welcome from your local hosts.' },
+      { time: '10:30 AM', activity: 'Masterclass Part 1: Hands-on Secret Dough Preparation. Learn the precise kneading and resting techniques required to create the perfectly flaky, multi-layered Msemen (Moroccan crepes).' },
+      { time: '11:30 AM', activity: 'Masterclass Part 2: Flavor Balancing and Stuffing techniques. Learn how to season the fillings and master the famous triangular folding method for crispy Briwates.' },
+      { time: '01:00 PM', activity: 'Shared Degustation: Sit down with the host family to enjoy the delicious fruits of your labor over endless glasses of sweet mint tea. A true cultural immersion through food.' }
     ],
     highlights: ['Take Home Secret Recipes', 'Hands-on Folding Techniques', 'Genuine Family Interaction', 'Recreate Morocco at Home', 'Delicious Lunch Included'],
     included: ['All Fresh Ingredients', 'Use of Cooking Equipment', 'A Full Meal/Tasting of your creations', 'Unlimited Tea and Water'],
@@ -174,11 +167,11 @@ export const toursActivitiesLib = [
     title: 'Experience a Moroccan Celebration',
     category: 'city',
     activity: 'cultural',
-    image: 'https://images.unsplash.com/photo-1519741497674-611481863552?w=800',
+    image: '/images/maroc_explore-img/casablanca/maroc-explore-casablanca-hasan2-mosque.avif',
     gallery: [
-      'https://images.unsplash.com/photo-1519741497674-611481863552?w=1200',
-      'https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=1200',
-      'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=1200'
+      '/images/maroc_explore-img/casablanca/MAROC-EXPLORE-CASABLANCA-ART.avif',
+      '/images/maroc_explore-img/casablanca/MAROC-EXPLORE-casablanca-view.avif',
+      '/images/maroc_explore-img/casablanca/casablanca-maroc-exlore-view.avif'
     ],
     price: 150,
     duration: 'Evening',
@@ -193,11 +186,11 @@ export const toursActivitiesLib = [
     description: 'Be an honored guest at a traditional Moroccan wedding or Sbou (naming ceremony).',
     fullDescription: 'Moroccan celebrations are legendary for their extravagance, music, and food. You will uniquely benefit from rare, exclusive access to a genuine Moroccan celebration alongside a local family. This is not a staged show for tourists, but a real life event! Whether it\'s a vibrant wedding with multiple dress changes or a Sbou (ceremony for a new baby), you will experience the legendary warmth of Moroccan hospitality firsthand and forge unforgettable cross-cultural connections.',
     itinerary: [
-      { time: '07:00 PM', activity: 'Pick-up and traditional Costume Fitting (Kaftan or Djellaba provided)' },
-      { time: '08:00 PM', activity: 'Arrival at the Venue & Welcome Ceremony (milk and dates)' },
-      { time: '09:30 PM', activity: 'Immerse in Traditional Live Music, Dancing, and Cultural Rites' },
-      { time: '11:00 PM', activity: 'Grand Feast: Enjoy a multi-course traditional Moroccan banquet' },
-      { time: '01:00 AM', activity: 'Departure or continue celebrating into the early morning hours' }
+      { time: '07:00 PM', activity: 'Exclusive Pick-up from your hotel and transfer to a specialized boutique for traditional Costume Fitting. Choose from a stunning array of elegant Kaftans or Djellabas to wear for the evening.' },
+      { time: '08:00 PM', activity: 'Arrival at the exquisitely decorated Venue & Grand Welcome Ceremony. Be greeted as an honored guest with the traditional offering of milk and stuffed dates to the sound of live welcoming music.' },
+      { time: '09:30 PM', activity: 'Immerse deeply in the festivities: Traditional Live Music spanning different Moroccan regions, energetic Dancing, and observing vital Cultural Rites associated with the celebration (e.g., the Amaria for a wedding).' },
+      { time: '11:00 PM', activity: 'Grand Feast: Sit down to enjoy a lavish, multi-course traditional Moroccan banquet featuring giant pastillas, slow-roasted meats, complex tagines, and endless varieties of fresh salads and fruits.' },
+      { time: '01:00 AM', activity: 'Departure or continue celebrating into the early morning hours alongside your new Moroccan friends, before a safe private transfer back to your accommodation.' }
     ],
     highlights: ['Exclusive Inside Access', 'Real Authentic Event (Not Staged)', 'Forge Cultural Connections', 'Traditional Attire Provided', 'Multi-course Festive Feast'],
     included: ['Premium Traditional Outfit Rental', 'Massive Feast/Dinner', 'Local Guide/Cultural Interpreter', 'Private Transport to Venue'],

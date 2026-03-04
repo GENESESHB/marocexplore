@@ -4,7 +4,8 @@
 }
 
 .hero {
-    background: #7c2d12;
+    background: linear-gradient(rgba(124, 45, 18, 0.7), rgba(124, 45, 18, 0.7)),
+        url('/images/maroc_explore-img/fes/maroc-explore-fes-dar-debagh.avif') center/cover;
     color: white;
     padding: 160px 20px 100px;
     text-align: center;

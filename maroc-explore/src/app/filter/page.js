@@ -84,9 +84,9 @@ function FilterContent() {
       const tour = toursActivitiesLib.find(t =>
         t.location.toLowerCase() === filters.destination.toLowerCase()
       );
-      return tour?.image || 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600';
+      return tour?.image || '/images/maroc_explore-img/merzouga/maroc-explore-merzouga-trip-camel-ride.avif';
     }
-    return 'https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600';
+    return '/images/maroc_explore-img/merzouga/maroc-explore-merzouga-trip-camel-ride.avif';
   };
 
   const getDestinationName = (id) => filterOptions.destinations.find(d => d.id === id)?.name || id;
