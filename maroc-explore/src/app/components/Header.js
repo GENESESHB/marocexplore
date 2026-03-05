@@ -68,12 +68,13 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className={styles.logo}>
             <Image
-              src="/images/logo-marocexplore.png"
+              src="/images/logo-marocexplore-v2.png"
               alt="Maroc Explore Logo"
               width={180}
               height={60}
               className={`${styles.logoImage} ${isScrolled ? styles.logoImageScrolled : styles.logoImageTransparent}`}
               priority
+              unoptimized={true}
             />
           </Link>
 
