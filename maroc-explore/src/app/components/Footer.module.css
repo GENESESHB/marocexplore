@@ -10,7 +10,8 @@
     margin: 0 auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    /* Allocated '2fr' (twice as much width) to the third column for Popular Tours */
+    grid-template-columns: 2fr 1fr 2fr 1.5fr;
     gap: 3rem;
     margin-bottom: 4rem;
 }
@@ -195,10 +196,20 @@
     }
 }
 
+.twoColumnList {
+    display: flex;
+    gap: 2rem;
+}
+
 @media (max-width: 640px) {
     .footerContainer {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+
+    .twoColumnList {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .footerBottomContent {

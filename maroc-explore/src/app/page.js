@@ -476,7 +476,7 @@ export default function Home() {
         {/* Background Image */}
         <div className={styles.heroBackground}>
           <img
-            src="/images/maroc_explore-img/chefchaouen/BLUE_city_trips_travel-morocco.avif"
+            src="/images/maroc_explore-img/chefchaouen/chefchaouen-culter-blue-city-tours.avif"
             alt="Morocco Landscape"
             className={styles.heroBgImage}
           />

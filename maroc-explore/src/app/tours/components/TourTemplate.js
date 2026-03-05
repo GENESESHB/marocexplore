@@ -277,7 +277,7 @@ export default function TourTemplate({ tour }) {
                                     <div className={styles.supportBox}>
                                         <h4>Need help booking?</h4>
                                         <p>Call us or WhatsApp</p>
-                                        <a href="tel:+212600000000">+212 600-000-000</a>
+                                        <a href="tel:+212675576139">+212 675576139</a>
                                     </div>
                                 </div>
                             </div>

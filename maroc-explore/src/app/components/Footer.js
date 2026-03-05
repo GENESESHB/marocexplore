@@ -15,7 +15,7 @@ const Footer = () => {
                 <div className={styles.footerBrand}>
                     <Link href="/" className={styles.logo}>
                         <Image
-                            src="/images/logo-marocexplore.avif"
+                            src="/images/logo-marocexplore.png"
                             alt="Maroc Explore Logo"
                             width={180}
                             height={60}
@@ -48,12 +48,26 @@ const Footer = () => {
                 {/* Popular Tours Section */}
                 <div className={styles.footerLinks}>
                     <h3 className={styles.footerHeading}>Popular Tours</h3>
-                    <ul className={styles.linkList}>
-                        <li><Link href="/filter?category=desert">Sahara Desert Expeditions</Link></li>
-                        <li><Link href="/tours/atlas-mountains-trek">Atlas Mountains Treks</Link></li>
-                        <li><Link href="/filter?category=city">Imperial Cities Tour</Link></li>
-                        <li><Link href="/filter?destination=essaouira">Essaouira Day Trip</Link></li>
-                    </ul>
+                    <div className={styles.twoColumnList}>
+                        <ul className={styles.linkList} style={{ flex: 1 }}>
+                            <li><Link href="/tours/sahara-desert-expedition">Sahara Desert Expedition</Link></li>
+                            <li><Link href="/tours/marrakech-medina-tour">Marrakech Medina Tour</Link></li>
+                            <li><Link href="/tours/atlas-mountains-trek">Atlas Mountains Trek</Link></li>
+                            <li><Link href="/tours/chefchaouen-blue-pearl-walk">Chefchaouen Blue Pearl Walk</Link></li>
+                            <li><Link href="/tours/fez-el-bali-time-travel">Fes El Bali Time Travel</Link></li>
+                            <li><Link href="/tours/essaouira-coastal-retreat">Essaouira Coastal Retreat</Link></li>
+                            <li><Link href="/tours/agadir-surf-sun-experience">Agadir Surf & Sun Experience</Link></li>
+                        </ul>
+                        <ul className={styles.linkList} style={{ flex: 1 }}>
+                            <li><Link href="/tours/ouarzazate-cinematic-history">Ouarzazate Cinematic History</Link></li>
+                            <li><Link href="/tours/meknes-imperial-heritage">Meknes Imperial Heritage</Link></li>
+                            <li><Link href="/tours/rabat-capital-explorer">Rabat Capital Explorer</Link></li>
+                            <li><Link href="/tours/traditional-henna-art-session">Traditional Henna Art Session</Link></li>
+                            <li><Link href="/tours/moroccan-cooking-msemen-briwate">Moroccan Cooking: Msemen & Briwate</Link></li>
+                            <li><Link href="/tours/moroccan-celebration-sbou-wedding">Moroccan Celebration: Sbou & Wedding</Link></li>
+                            <li><Link href="/tours/amazigh-cultural-immersion">Amazigh Cultural Immersion</Link></li>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Contact Section */}

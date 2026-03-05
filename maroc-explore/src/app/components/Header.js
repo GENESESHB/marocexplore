@@ -68,7 +68,7 @@ const Header = () => {
           {/* Logo */}
           <Link href="/" className={styles.logo}>
             <Image
-              src="/images/logo-marocexplore.avif"
+              src="/images/logo-marocexplore.png"
               alt="Maroc Explore Logo"
               width={180}
               height={60}
