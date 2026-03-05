@@ -15,11 +15,12 @@ const Footer = () => {
                 <div className={styles.footerBrand}>
                     <Link href="/" className={styles.logo}>
                         <Image
-                            src="/images/logo-marocexplore.png"
+                            src="/images/logo-marocexplore-v2.png"
                             alt="Maroc Explore Logo"
                             width={180}
                             height={60}
                             className={styles.logoImage}
+                            unoptimized={true}
                         />
                     </Link>
                     <p className={styles.brandDescription}>
