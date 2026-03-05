@@ -337,7 +337,7 @@ function FilterContent() {
                         <strong>{tour.rating}</strong>
                         <small>({tour.reviews})</small>
                       </div>
-                      <button className={styles.bookBtn}>Book Now</button>
+                      <Link href={`/tours/${tour.slug}`} className={styles.bookBtn}>Book Now</Link>
                     </div>
                   </div>
                 </div>

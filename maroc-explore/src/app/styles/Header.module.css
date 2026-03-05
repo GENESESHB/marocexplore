@@ -125,97 +125,19 @@
   cursor: pointer;
 }
 
-.logoIconWrapper {
-  position: relative;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.logoImage {
+  height: 3.5rem;
+  width: auto;
   transition: all 0.3s ease;
+  object-fit: contain;
 }
 
-.logoIconWrapperScrolled {
-  background-color: #065f46;
+.logoImageScrolled {
+  height: 3rem;
 }
 
-.logoIconWrapperTransparent {
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(4px);
-}
-
-.logo:hover .logoIconWrapper {
-  transform: scale(1.1) rotate(12deg);
-}
-
-.logoIcon {
-  width: 1.75rem;
-  height: 1.75rem;
-}
-
-.logoIconScrolled {
-  color: white;
-}
-
-.logoIconTransparent {
-  color: #ffffff;
-}
-
-.logoRing {
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  border: 2px solid rgba(110, 231, 183, 0.3);
-  animation: spin 10s linear infinite;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.logoText {
-  display: flex;
-  flex-direction: column;
-}
-
-.logoTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  transition: color 0.3s;
-}
-
-.logoTitleScrolled {
-  color: #064e3b;
-}
-
-.logoTitleTransparent {
-  color: white;
-}
-
-.logoHighlight {
-  color: #6ee7b7;
-}
-
-.logoTagline {
-  font-size: 0.75rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  transition: color 0.3s;
-}
-
-.logoTaglineScrolled {
-  color: #065f46;
-}
-
-.logoTaglineTransparent {
-  color: #a7f3d0;
+.logoImageTransparent {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
 /* Navigation */
@@ -298,22 +220,28 @@
   padding: 0.5rem;
   border-radius: 9999px;
   border: none;
-  background: none;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconButton:hover {
-  transform: scale(1.1);
+  transform: translateY(-3px) scale(1.1);
 }
 
 .iconButtonScrolled {
   color: #4b5563;
+  background: #f3f4f6;
 }
 
 .iconButtonScrolled:hover {
-  background-color: #ecfdf5;
-  color: #065f46;
+  background-color: #10b981;
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4);
 }
 
 .iconButtonTransparent {
@@ -321,7 +249,8 @@
 }
 
 .iconButtonTransparent:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #10b981;
+  box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.4);
 }
 
 .bookButton {
@@ -337,6 +266,8 @@
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
 }
 
 .bookButton:hover {
@@ -402,21 +333,26 @@
   top: 100%;
   left: 0;
   right: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  transition: all 0.5s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   max-height: 0;
   opacity: 0;
+  visibility: hidden;
 }
 
 .mobileMenuOpen {
-  max-height: 80vh;
+  max-height: 90vh;
   opacity: 1;
+  visibility: visible;
 }
 
 .mobileMenuContent {
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
 }
 
 .mobileNavItem {
@@ -444,14 +380,46 @@
 }
 
 .mobileBookButton {
+  display: block;
+  text-align: center;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   background: linear-gradient(to right, #065f46, #047857);
   color: white;
-  padding: 0.75rem;
+  padding: 1rem;
   border-radius: 0.75rem;
   font-weight: 600;
+  font-size: 1.1rem;
   border: none;
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mobileBookButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.15);
+}
+
+.mobileSocialLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ecfdf5;
+}
+
+.mobileSocialLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.mobileSocialLink:hover {
+  color: #065f46;
 }

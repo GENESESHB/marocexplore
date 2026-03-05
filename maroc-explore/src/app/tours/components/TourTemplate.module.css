@@ -181,6 +181,8 @@
 
 .mainImage {
     height: 100%;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .mainImage img {
@@ -194,12 +196,17 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 10px;
+    height: 100%;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .topImage,
 .bottomImage {
     height: 100%;
     position: relative;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .sideImages img {

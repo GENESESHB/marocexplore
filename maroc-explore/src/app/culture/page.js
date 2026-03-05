@@ -11,7 +11,7 @@ export default function CulturePage() {
         {
             title: 'Amazigh Heritage',
             description: 'The indigenous people of North Africa, the Amazigh (Berber) people have a history stretching back millennia. Their language, Tamazight, and their unique artistic expressions in jewelry and weaving are foundational to Moroccan identity.',
-            image: '/images/maroc_explore-img/merzouga/maroc-explore-trips-to-ride-camls.jpg'
+            image: '/images/maroc_explore-img/amazigh/maroc-explore-tamazight-travel-berber.avif'
         },
         {
             title: 'Traditional Crafts',

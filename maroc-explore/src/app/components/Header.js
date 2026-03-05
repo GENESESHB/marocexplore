@@ -5,12 +5,14 @@ import Link from 'next/link';
 import {
   Menu,
   X,
-  Compass,
   MapPin,
   Phone,
   Facebook,
-  Instagram
+  Instagram,
+  Twitter,
+  MessageCircle
 } from 'lucide-react';
+import Image from 'next/image';
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
@@ -43,7 +45,7 @@ const Header = () => {
           <div className={styles.topBarLeft}>
             <span className={styles.topBarItem}>
               <Phone size={14} />
-              <span>+212 622283559</span>
+              <span>+212 675576139</span>
             </span>
             <span className={`${styles.topBarItem} ${styles.topBarItemHidden}`}>
               <MapPin size={14} />
@@ -65,19 +67,14 @@ const Header = () => {
         <div className={styles.headerContent}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
-            <div className={`${styles.logoIconWrapper} ${isScrolled ? styles.logoIconWrapperScrolled : styles.logoIconWrapperTransparent}`}>
-              <Compass className={`${styles.logoIcon} ${isScrolled ? styles.logoIconScrolled : styles.logoIconTransparent}`} />
-              <div className={styles.logoRing}></div>
-            </div>
-            <div className={styles.logoText}>
-              <span className={`${styles.logoTitle} ${isScrolled ? styles.logoTitleScrolled : styles.logoTitleTransparent}`}>
-                MAROC
-                <span className={styles.logoHighlight}>EXPLORE</span>
-              </span>
-              <span className={`${styles.logoTagline} ${isScrolled ? styles.logoTaglineScrolled : styles.logoTaglineTransparent}`}>
-                Authentic Journeys
-              </span>
-            </div>
+            <Image
+              src="/images/logo-marocexplore.avif"
+              alt="Maroc Explore Logo"
+              width={180}
+              height={60}
+              className={`${styles.logoImage} ${isScrolled ? styles.logoImageScrolled : styles.logoImageTransparent}`}
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -103,7 +100,7 @@ const Header = () => {
               rel="noopener noreferrer"
               className={`${styles.iconButton} ${isScrolled ? styles.iconButtonScrolled : styles.iconButtonTransparent}`}
             >
-              <Facebook size={20} />
+              <Facebook size={18} />
             </a>
 
             <a
@@ -112,16 +109,25 @@ const Header = () => {
               rel="noopener noreferrer"
               className={`${styles.iconButton} ${isScrolled ? styles.iconButtonScrolled : styles.iconButtonTransparent}`}
             >
-              <Instagram size={20} />
+              <Instagram size={18} />
             </a>
 
-            <button className={styles.bookButton}>
+            <a
+              href="https://wa.me/212675576139"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`${styles.iconButton} ${isScrolled ? styles.iconButtonScrolled : styles.iconButtonTransparent}`}
+            >
+              <MessageCircle size={18} />
+            </a>
+
+            <Link href="/filter" className={styles.bookButton}>
               <span className={styles.bookButtonContent}>
                 Book Now
                 <span className={styles.bookButtonArrow}>→</span>
               </span>
               <div className={styles.bookButtonOverlay}></div>
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -174,9 +180,9 @@ const Header = () => {
               </a>
             </div>
 
-            <button className={styles.mobileBookButton}>
+            <Link href="/filter" className={styles.mobileBookButton} onClick={() => setIsMobileMenuOpen(false)}>
               Book Your Journey
-            </button>
+            </Link>
           </div>
         </div>
       </header>

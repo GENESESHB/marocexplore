@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { toursActivitiesLib } from '../../lib/toursActivitiesLib';
 import Header from '../../components/Header';
+import TourTemplate from '../components/TourTemplate';
 import styles from './TourDetail.module.css';
 
 export async function generateMetadata({ params }) {
-    const { slug } = params;
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
     const tour = toursActivitiesLib.find(t => t.slug === slug);
 
     if (!tour) {
@@ -25,8 +27,9 @@ export async function generateMetadata({ params }) {
     };
 }
 
-export default function TourDetailPage({ params }) {
-    const { slug } = params;
+export default async function TourDetailPage({ params }) {
+    const resolvedParams = await params;
+    const { slug } = resolvedParams;
     const tour = toursActivitiesLib.find(t => t.slug === slug);
 
     if (!tour) {
@@ -42,97 +45,5 @@ export default function TourDetailPage({ params }) {
         );
     }
 
-    return (
-        <div className={styles.page}>
-            <Header />
-
-            <div className={styles.hero}>
-                <img src={tour.image} alt={tour.title} className={styles.heroImage} />
-                <div className={styles.heroOverlay}></div>
-                <div className={styles.heroContent}>
-                    <h1 className={styles.title}>{tour.title}</h1>
-                    <div className={styles.breadcrumbs}>
-                        <Link href="/">Home</Link> &gt; <Link href="/tours">Tours</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
-                    </div>
-                    <div className={styles.badges}>
-                        <span className={styles.badge}>{tour.location}</span>
-                        <span className={styles.badge}>{tour.duration}</span>
-                    </div>
-                    <div className={styles.meta}>
-                        <span className={styles.rating}>★ {tour.rating} ({tour.reviews} reviews)</span>
-                        <span className={styles.price}>From €{tour.price}</span>
-                    </div>
-                </div>
-            </div>
-
-            <div className={styles.content}>
-                <div className={styles.mainCol}>
-                    <section className={styles.section}>
-                        <h2>Description</h2>
-                        <p>{tour.fullDescription}</p>
-                    </section>
-
-                    <section className={styles.section}>
-                        <h2>Highlights</h2>
-                        <ul className={styles.highlightsList}>
-                            {tour.highlights.map((h, i) => (
-                                <li key={i}>{h}</li>
-                            ))}
-                        </ul>
-                    </section>
-
-                    <section className={styles.section}>
-                        <h2>Itinerary</h2>
-                        <div className={styles.itinerary}>
-                            {tour.itinerary.map((item, i) => (
-                                <div key={i} className={styles.itineraryItem}>
-                                    <div className={styles.itineraryDay}>
-                                        {item.day ? `Day ${item.day}` : item.time}
-                                    </div>
-                                    <div className={styles.itineraryContent}>
-                                        <h3>{item.title || item.activity}</h3>
-                                        <p>{item.content}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                </div>
-
-                <aside className={styles.sidebar}>
-                    <div className={styles.bookingCard}>
-                        <h3>Book This Tour</h3>
-                        <div className={styles.bookingPrice}>
-                            <span className={styles.priceAmount}>€{tour.price}</span>
-                            <span className={styles.priceUnit}>per person</span>
-                        </div>
-                        <button className={styles.bookBtn}>Book Now</button>
-
-                        <div className={styles.inclusions}>
-                            <h4>Included</h4>
-                            <ul>
-                                {tour.included.map((item, i) => (
-                                    <li key={i} className={styles.includedItem}>✓ {item}</li>
-                                ))}
-                            </ul>
-                            {tour.excluded && tour.excluded.length > 0 && (
-                                <>
-                                    <h4>Excluded</h4>
-                                    <ul>
-                                        {tour.excluded.map((item, i) => (
-                                            <li key={i} className={styles.excludedItem}>✕ {item}</li>
-                                        ))}
-                                    </ul>
-                                </>
-                            )}
-                        </div>
-                    </div>
-
-                    <Link href="/filter" className={styles.backLink}>
-                        ← Back to all tours
-                    </Link>
-                </aside>
-            </div>
-        </div>
-    );
+    return <TourTemplate tour={tour} />;
 }

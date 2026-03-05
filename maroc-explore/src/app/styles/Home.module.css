@@ -25,7 +25,7 @@
 .heroOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(6, 78, 59, 0.85), rgba(6, 78, 59, 0.7), rgba(6, 78, 59, 0.9));
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
   z-index: 1;
 }
 
@@ -48,12 +48,14 @@
   text-align: center;
   color: white;
   padding: 2rem;
-  margin-top: 60px; /* Added margin for mobile to prevent header overlap */
+  margin-top: 60px;
+  /* Added margin for mobile to prevent header overlap */
 }
 
 @media (min-width: 768px) {
   .heroContent {
-    margin-top: -40px; /* Original negative margin for desktop */
+    margin-top: -40px;
+    /* Original negative margin for desktop */
   }
 }
 
@@ -62,11 +64,13 @@
   font-size: 2.8rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  margin-top: 2rem; /* Extra top margin for mobile */
+  margin-top: 2rem;
+  /* Extra top margin for mobile */
   letter-spacing: -0.02em;
   line-height: 1.1;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  order: -2; /* Move title to top on mobile */
+  order: -2;
+  /* Move title to top on mobile */
 }
 
 @media (min-width: 768px) {
@@ -74,7 +78,8 @@
     font-size: 6rem;
     margin-bottom: 2rem;
     margin-top: 0;
-    order: 0; /* Reset order for desktop */
+    order: 0;
+    /* Reset order for desktop */
   }
 }
 
@@ -110,13 +115,15 @@
   max-width: 1000px;
   margin: 0 auto 2rem;
   padding: 0 1rem;
-  order: -1; /* Search bar second on mobile */
+  order: -1;
+  /* Search bar second on mobile */
 }
 
 @media (min-width: 768px) {
   .searchWrapper {
     margin: 0 auto 2.5rem;
-    order: 0; /* Reset order for desktop */
+    order: 0;
+    /* Reset order for desktop */
   }
 }
 
@@ -178,7 +185,7 @@
 
 .pillLabel svg {
   stroke: currentColor;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 /* Pill Value - NO PADDING, STARTS FROM LEFT */
@@ -209,7 +216,7 @@
   transform: translateX(-50%);
   background: white;
   border-radius: 16px;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0,0,0,0.05);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(0, 0, 0, 0.05);
   border: 2px solid #e5e7eb;
   overflow: hidden;
   z-index: 100;
@@ -225,6 +232,7 @@
     opacity: 0;
     transform: translateX(-50%) translateY(-10px) scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
@@ -354,49 +362,52 @@
   .hero {
     min-height: 700px;
   }
-  
+
   .heroTitle {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    margin-top: 3rem; /* Extra space from header */
+    margin-top: 3rem;
+    /* Extra space from header */
   }
-  
+
   .heroContent {
-    margin-top: 80px; /* Push content down to avoid header */
+    margin-top: 80px;
+    /* Push content down to avoid header */
     padding: 1rem;
-    justify-content: flex-start; /* Align to top instead of center */
+    justify-content: flex-start;
+    /* Align to top instead of center */
     padding-top: 2rem;
   }
-  
+
   .searchWrapper {
     margin-bottom: 1rem;
     margin-top: 0.5rem;
   }
-  
+
   .searchPill {
     flex-direction: column;
     border-radius: 24px;
     padding: 12px;
     gap: 4px;
   }
-  
+
   .pillSection {
     width: 100%;
   }
-  
+
   .pillContent {
     padding: 14px 18px;
     flex-direction: row;
     align-items: center;
     gap: 12px;
   }
-  
+
   .pillLabel {
     margin-bottom: 0;
     font-size: 0.8rem;
     min-width: 100px;
   }
-  
+
   .pillValue {
     flex: 1;
     text-align: right;
@@ -404,21 +415,21 @@
     padding-left: 0;
     margin-left: 0;
   }
-  
+
   .pillDivider {
     width: 100%;
     height: 2px;
     background: linear-gradient(to right, transparent, #e5e7eb, transparent);
     margin: 4px 0;
   }
-  
+
   .pillSearchButton {
     width: 100%;
     height: 52px;
     border-radius: 9999px;
     margin-top: 8px;
   }
-  
+
   .pillDropdown {
     position: fixed;
     top: auto;
@@ -432,29 +443,31 @@
     animation: slideUp 0.3s ease;
     z-index: 200;
     border: none;
-    box-shadow: 0 -10px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.2);
   }
-  
+
   @keyframes slideUp {
     from {
       transform: translateY(100%);
     }
+
     to {
       transform: translateY(0);
     }
   }
-  
+
   .pillDropdownList {
     max-height: calc(70vh - 60px);
   }
-  
+
   /* Hero buttons closer together on mobile */
   .heroButtons {
     margin-top: 1rem;
     gap: 0.75rem;
   }
-  
-  .primaryButton, .secondaryButton {
+
+  .primaryButton,
+  .secondaryButton {
     padding: 0.875rem 1.5rem;
     font-size: 1rem;
   }
@@ -465,17 +478,18 @@
   display: flex;
   gap: 1.25rem;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
   order: 0;
 }
 
 .primaryButton {
-  background-color: #ffffff;
+  background-color: #6ee7b7;
   color: #064e3b;
   padding: 1rem 2.5rem;
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.1rem;
   border: none;
   cursor: pointer;
@@ -486,7 +500,7 @@
 }
 
 .primaryButton:hover {
-  background-color: #d1fae5;
+  background-color: #34d399;
   transform: translateY(-3px) scale(1.05);
   box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.3);
 }
@@ -496,9 +510,9 @@
   color: white;
   padding: 1rem 2.5rem;
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 1.1rem;
-  border: 3px solid rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.8);
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
@@ -529,9 +543,12 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-12px);
   }
@@ -556,10 +573,13 @@
 }
 
 @keyframes pulse {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
+
   50% {
     opacity: 0.5;
     transform: translateY(6px);
@@ -584,7 +604,7 @@
   text-align: center;
   color: #064e3b;
   margin-bottom: 2rem;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 @media (min-width: 768px) {
@@ -763,7 +783,7 @@
   color: #065f46;
   backdrop-filter: blur(4px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 2px solid rgba(255,255,255,0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .tourContent {
@@ -852,6 +872,7 @@
     border-radius: 24px;
   }
 }
+
 /* Search Button - BOLDER */
 .pillSearchButton:hover {
   transform: scale(1.05);
@@ -941,29 +962,29 @@
   .whyChooseCompact {
     padding: 1.5rem 1rem;
   }
-  
+
   .whyChooseCompactContainer {
     gap: 1.5rem;
     justify-content: center;
   }
-  
+
   .whyChooseItem {
     flex-direction: row;
     gap: 0.75rem;
     min-width: 140px;
   }
-  
+
   .whyChooseIcon {
     width: 48px;
     height: 48px;
     border-radius: 12px;
   }
-  
+
   .whyChooseIcon svg {
     width: 24px;
     height: 24px;
   }
-  
+
   .whyChooseText {
     font-size: 0.85rem;
   }
@@ -975,12 +996,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  
+
   .whyChooseItem {
     flex-direction: column;
     gap: 0.5rem;
   }
 }
+
 /* What We Do Section */
 .whatWeDoSection {
   padding: 100px 24px;
@@ -1130,7 +1152,7 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
   transition: left 0.5s;
 }
 
@@ -1233,21 +1255,21 @@
     grid-template-columns: 1fr;
     gap: 60px;
   }
-  
+
   .whatWeDoGallery {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 150px);
   }
-  
+
   .gallerylarge {
     grid-column: span 2;
     grid-row: span 2;
   }
-  
+
   .gallerytall {
     grid-row: span 2;
   }
-  
+
   .gallerywide {
     grid-column: span 2;
   }
@@ -1257,13 +1279,13 @@
   .whatWeDoSection {
     padding: 60px 20px;
   }
-  
+
   .whatWeDoGallery {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(5, 200px);
     gap: 12px;
   }
-  
+
   .gallerylarge,
   .gallerytall,
   .gallerywide,
@@ -1271,11 +1293,11 @@
     grid-column: span 1;
     grid-row: span 1;
   }
-  
+
   .whatWeDoFeatures {
     gap: 12px;
   }
-  
+
   .whatWeDoFeature {
     font-size: 14px;
     padding: 10px 14px;
@@ -1366,7 +1388,7 @@
   direction: rtl;
 }
 
-.alternatingRowReversed > * {
+.alternatingRowReversed>* {
   direction: ltr;
 }
 
@@ -1597,23 +1619,23 @@
     grid-template-columns: 1fr;
     min-height: auto;
   }
-  
+
   .alternatingRowReversed {
     direction: ltr;
   }
-  
+
   .alternatingImageCol {
     min-height: 400px;
   }
-  
+
   .alternatingContentCol {
     padding: 60px 40px;
   }
-  
+
   .alternatingDestinationName {
     font-size: 32px;
   }
-  
+
   .alternatingHeader {
     padding: 60px 24px;
   }
@@ -1623,25 +1645,25 @@
   .alternatingImageCol {
     min-height: 300px;
   }
-  
+
   .alternatingContentCol {
     padding: 40px 24px;
   }
-  
+
   .alternatingDestinationName {
     font-size: 28px;
     margin-bottom: 28px;
   }
-  
+
   .alternatingBlock {
     margin-bottom: 24px;
   }
-  
+
   .alternatingBlock p {
     font-size: 14px;
     line-height: 1.8;
   }
-  
+
   .alternatingImageOverlay {
     padding: 40px 24px 30px;
   }
@@ -1684,7 +1706,7 @@
   transform: translateY(-50%);
   width: 1px;
   height: 60px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .statNumber {
@@ -2033,19 +2055,19 @@
     gap: 40px 20px;
     padding: 40px 20px;
   }
-  
+
   .statItem:nth-child(2)::after {
     display: none;
   }
-  
+
   .testimonialsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .testimonialCardLarge {
     padding: 35px;
   }
-  
+
   .testimonialTitle {
     font-size: 24px;
   }
@@ -2056,42 +2078,43 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
-  
+
   .statItem::after {
     display: none !important;
   }
-  
+
   .statNumber {
     font-size: 36px;
   }
-  
+
   .testimonialsGrid {
     grid-template-columns: 1fr;
     padding-bottom: 60px;
   }
-  
+
   .testimonialCardLarge {
     padding: 25px;
   }
-  
+
   .testimonialHeader {
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
-  
+
   .testimonialTitle {
     font-size: 20px;
   }
-  
+
   .testimonialText {
     font-size: 15px;
   }
-  
+
   .communityHeader {
     padding: 60px 24px 40px;
   }
 }
+
 /* FAQ Section */
 .faqSection {
   padding: 100px 24px;
@@ -2219,16 +2242,16 @@
   .faqSection {
     padding: 60px 20px;
   }
-  
+
   .faqQuestion {
     font-size: 16px;
     padding: 20px 0;
   }
-  
+
   .faqItemActive .faqAnswer {
     padding-bottom: 20px;
   }
-  
+
   .faqAnswer p {
     font-size: 14px;
     line-height: 1.8;

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Compass, Facebook, Instagram, Twitter, Mail, MapPin, Phone } from 'lucide-react';
+import Image from 'next/image';
+import { Facebook, Instagram, Twitter, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
 import styles from './Footer.module.css';
 
 const Footer = () => {
@@ -13,20 +14,22 @@ const Footer = () => {
                 {/* Brand Section */}
                 <div className={styles.footerBrand}>
                     <Link href="/" className={styles.logo}>
-                        <div className={styles.logoIconWrapper}>
-                            <Compass className={styles.logoIcon} />
-                        </div>
-                        <div className={styles.logoText}>
-                            <span className={styles.logoTitle}>MAROC<span className={styles.logoHighlight}>EXPLORE</span></span>
-                        </div>
+                        <Image
+                            src="/images/logo-marocexplore.avif"
+                            alt="Maroc Explore Logo"
+                            width={180}
+                            height={60}
+                            className={styles.logoImage}
+                        />
                     </Link>
                     <p className={styles.brandDescription}>
                         Experience the authentic magic of Morocco. From the sweeping dunes of the Sahara to the bustling medinas, we craft unforgettable journeys tailored just for you.
                     </p>
                     <div className={styles.socialLinks}>
-                        <a href="#" className={styles.socialIcon}><Facebook size={20} /></a>
-                        <a href="#" className={styles.socialIcon}><Instagram size={20} /></a>
-                        <a href="#" className={styles.socialIcon}><Twitter size={20} /></a>
+                        <a href="https://facebook.com" target="_blank" className={styles.socialIcon}><Facebook size={20} /></a>
+                        <a href="https://instagram.com" target="_blank" className={styles.socialIcon}><Instagram size={20} /></a>
+                        <a href="https://twitter.com" target="_blank" className={styles.socialIcon}><Twitter size={20} /></a>
+                        <a href="https://wa.me/212675576139" target="_blank" className={styles.socialIcon}><MessageCircle size={20} /></a>
                     </div>
                 </div>
 
@@ -63,7 +66,7 @@ const Footer = () => {
                         </li>
                         <li>
                             <Phone size={18} className={styles.contactIcon} />
-                            <span>+212 622283559</span>
+                            <span>+212 675576139</span>
                         </li>
                         <li>
                             <Mail size={18} className={styles.contactIcon} />

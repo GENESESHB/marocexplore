@@ -30,33 +30,12 @@
     color: white;
 }
 
-.logoIconWrapper {
-    background: #6ee7b7;
-    border-radius: 50%;
-    padding: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.logoIcon {
-    color: #064e3b;
-}
-
-.logoText {
-    display: flex;
-    flex-direction: column;
-}
-
-.logoTitle {
-    font-family: var(--font-cinzel, serif);
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-}
-
-.logoHighlight {
-    color: #6ee7b7;
+.logoImage {
+    height: 4rem;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    margin-bottom: 0.5rem;
 }
 
 .brandDescription {
@@ -74,19 +53,22 @@
 
 .socialIcon {
     color: white;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.6rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .socialIcon:hover {
     background-color: #6ee7b7;
     color: #064e3b;
-    transform: translateY(-3px);
+    border-color: #6ee7b7;
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(110, 231, 183, 0.4);
 }
 
 /* Links Sections */
