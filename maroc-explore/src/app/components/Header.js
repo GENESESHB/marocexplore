@@ -70,12 +70,15 @@ const Header = () => {
             <Image
               src="/images/logo-marocexplore-v2.png"
               alt="Maroc Explore Logo"
-              width={180}
+              width={60}
               height={60}
               className={`${styles.logoImage} ${isScrolled ? styles.logoImageScrolled : styles.logoImageTransparent}`}
               priority
               unoptimized={true}
             />
+            <span className={`${styles.logoText} ${isScrolled ? styles.logoTextScrolled : styles.logoTextTransparent}`}>
+              Maroc Explore
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

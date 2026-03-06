@@ -65,7 +65,7 @@ export default function CulturePage() {
                 <div className={styles.intro}>
                     <h2>The Heart of Morocco</h2>
                     <p>
-                        Morocco's culture is a unique blend of Arab, Amazigh, African, and European influences. It is a land where ancient history is living, and hospitality is a sacred duty. We invite you to explore the depth and beauty of our heritage.
+                        Morocco&apos;s culture is a unique blend of Arab, Amazigh, African, and European influences. It is a land where ancient history is living, and hospitality is a sacred duty. We invite you to explore the depth and beauty of our heritage.
                     </p>
                 </div>
 

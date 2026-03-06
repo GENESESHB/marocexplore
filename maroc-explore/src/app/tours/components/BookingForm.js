@@ -148,7 +148,7 @@ export default function BookingForm({ tourTitle, price }) {
                     </div>
                 )}
 
-                <p className={styles.noChargeText}>You won't be charged yet.</p>
+                <p className={styles.noChargeText}>You won&apos;t be charged yet.</p>
             </form>
         </div>
     );

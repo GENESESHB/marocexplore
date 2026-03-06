@@ -144,7 +144,7 @@ export default function TourTemplate({ tour }) {
 
                             {/* Inclusions & Exclusions */}
                             <section className={styles.section}>
-                                <h2>What's Included</h2>
+                                <h2>What&apos;s Included</h2>
                                 <div className={styles.inExGrid}>
                                     <div className={styles.inclusions}>
                                         <ul className={styles.checkList}>
@@ -229,7 +229,7 @@ export default function TourTemplate({ tour }) {
                                             </div>
                                         </div>
                                         <h4>An absolute dream experience!</h4>
-                                        <p>"Every detail was perfectly organized. Our guide was incredibly knowledgeable and the accommodation exceeded all our expectations. Definitely the highlight of our trip to Morocco."</p>
+                                        <p>&quot;Every detail was perfectly organized. Our guide was incredibly knowledgeable and the accommodation exceeded all our expectations. Definitely the highlight of our trip to Morocco.&quot;</p>
                                     </div>
                                     <div className={styles.reviewCard}>
                                         <div className={styles.reviewHeader}>
@@ -249,7 +249,7 @@ export default function TourTemplate({ tour }) {
                                             </div>
                                         </div>
                                         <h4>Authentic and well-paced</h4>
-                                        <p>"We saw so much without feeling rushed. The meals included were delicious and truly authentic. I highly recommend Maroc Explore for anyone wanting to see the real Morocco."</p>
+                                        <p>&quot;We saw so much without feeling rushed. The meals included were delicious and truly authentic. I highly recommend Maroc Explore for anyone wanting to see the real Morocco.&quot;</p>
                                     </div>
                                 </div>
                             </section>

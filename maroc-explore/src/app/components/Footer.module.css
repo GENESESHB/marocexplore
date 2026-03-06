@@ -32,11 +32,16 @@
 }
 
 .logoImage {
-    height: 4rem;
+    height: 3.5rem;
     width: auto;
     object-fit: contain;
-    filter: brightness(0) invert(1);
     margin-bottom: 0.5rem;
+}
+
+.logoText {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
 }
 
 .brandDescription {
@@ -73,6 +78,13 @@
 }
 
 /* Links Sections */
+.footerLinks,
+.footerContact {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .footerHeading {
     font-family: var(--font-cinzel, serif);
     font-size: 1.25rem;

@@ -17,14 +17,15 @@ const Footer = () => {
                         <Image
                             src="/images/logo-marocexplore-v2.png"
                             alt="Maroc Explore Logo"
-                            width={180}
+                            width={60}
                             height={60}
                             className={styles.logoImage}
                             unoptimized={true}
                         />
+                        <span className={styles.logoText}>Maroc Explore</span>
                     </Link>
                     <p className={styles.brandDescription}>
-                        Experience the authentic magic of Morocco. From the sweeping dunes of the Sahara to the bustling medinas, we craft unforgettable journeys tailored just for you.
+                        {"Experience the authentic magic of Morocco. From the sweeping dunes of the Sahara to the bustling medinas, we craft unforgettable journeys tailored just for you."}
                     </p>
                     <div className={styles.socialLinks}>
                         <a href="https://facebook.com" target="_blank" className={styles.socialIcon}><Facebook size={20} /></a>

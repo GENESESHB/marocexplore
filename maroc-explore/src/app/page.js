@@ -664,10 +664,17 @@ export default function Home() {
 
           <div className={styles.heroButtons}>
             <button className={styles.primaryButton} onClick={handleSearch}>
-              Explore Tours
+              <span>Explore Tours</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
             </button>
             <button className={styles.secondaryButton}>
-              Watch Video
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <span>Watch Video</span>
             </button>
           </div>
         </div>
@@ -699,16 +706,10 @@ export default function Home() {
             </h2>
             <div className={styles.whatWeDoText}>
               <p>
-                At <strong>Morocco Explore</strong>, we transform travel dreams into reality.
-                From the golden dunes of the Sahara to the blue-washed streets of Chefchaouen,
-                we curate immersive experiences that connect you with Morocco's rich tapestry
-                of culture, history, and natural beauty.
+                At <strong>Morocco Explore</strong>, we transform travel dreams into reality. From the golden dunes of the Sahara to the blue-washed streets of Chefchaouen, we curate immersive experiences that connect you with Morocco&apos;s rich tapestry of culture, history, and natural beauty.
               </p>
               <p>
-                Our expert local guides reveal hidden gems beyond the tourist trails—
-                whether it's sipping mint tea with Berber families, exploring ancient
-                kasbahs, or riding camels into the sunset. Every journey is thoughtfully
-                designed to create lasting memories.
+                Our expert local guides reveal hidden gems beyond the tourist trails—whether it&apos;s sipping mint tea with Berber families, exploring ancient kasbahs, or riding camels into the sunset. Every journey is thoughtfully designed to create lasting memories.
               </p>
             </div>
             <div className={styles.whatWeDoFeatures}>
@@ -865,7 +866,7 @@ export default function Home() {
               <svg viewBox="0 0 24 24" fill="currentColor" className={styles.tripAdvisorIcon}>
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
               </svg>
-              <span>TripAdvisor Traveler's Choice 2024</span>
+              <span>TripAdvisor Traveler&apos;s Choice 2024</span>
             </div>
             <h2 className={styles.communityTitle}>Happy Travelers Share Their Stories</h2>
             <p className={styles.communitySubtitle}>
