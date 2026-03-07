@@ -813,6 +813,20 @@
         flex-direction: column;
         gap: 20px;
     }
+
+    .reviewsSummary {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .reviewScoreBox {
+        text-align: left;
+    }
+
+    .reviewBars {
+        width: 100%;
+    }
 }
 
 /* Community Section CTA styling adapted for Tour Template */
