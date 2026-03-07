@@ -40,9 +40,9 @@ const Header = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className={`${styles.topBar} ${isScrolled ? styles.topBarHidden : styles.topBarVisible}`}>
-        <div className={styles.topBarContent}>
-          <div className={styles.topBarLeft}>
+      <div suppressHydrationWarning className={`${styles.topBar} ${isScrolled ? styles.topBarHidden : styles.topBarVisible}`}>
+        <div suppressHydrationWarning className={styles.topBarContent}>
+          <div suppressHydrationWarning className={styles.topBarLeft}>
             <span className={styles.topBarItem}>
               <Phone size={14} />
               <span>+212 675576139</span>
@@ -52,7 +52,7 @@ const Header = () => {
               <span>Marrakech, Morocco</span>
             </span>
           </div>
-          <div className={styles.topBarRight}>
+          <div suppressHydrationWarning className={styles.topBarRight}>
             <button className={styles.langButton}>EN</button>
             <span className={styles.langDivider}>|</span>
             <button className={styles.langButton}>FR</button>
@@ -64,7 +64,7 @@ const Header = () => {
 
       {/* Main Header */}
       <header className={`${styles.mainHeader} ${isScrolled ? styles.mainHeaderScrolled : styles.mainHeaderTop}`}>
-        <div className={styles.headerContent}>
+        <div suppressHydrationWarning className={styles.headerContent}>
           {/* Logo */}
           <Link href="/" className={styles.logo}>
             <Image
@@ -84,7 +84,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className={styles.desktopNav}>
             {navItems.map((item, index) => (
-              <div key={index} className={styles.navItem}>
+              <div suppressHydrationWarning key={index} className={styles.navItem}>
                 <Link
                   href={item.href}
                   className={`${styles.navLink} ${isScrolled ? styles.navLinkScrolled : styles.navLinkTransparent}`}
@@ -97,7 +97,7 @@ const Header = () => {
           </nav>
 
           {/* Right Actions */}
-          <div className={styles.rightActions}>
+          <div suppressHydrationWarning className={styles.rightActions}>
             <a
               href="https://facebook.com"
               target="_blank"
@@ -148,10 +148,10 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
-          <div className={styles.mobileMenuContent}>
+        <div suppressHydrationWarning className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+          <div suppressHydrationWarning className={styles.mobileMenuContent}>
             {navItems.map((item, index) => (
-              <div key={index} className={styles.mobileNavItem}>
+              <div suppressHydrationWarning key={index} className={styles.mobileNavItem}>
                 <Link
                   href={item.href}
                   className={styles.mobileNavLink}
@@ -163,7 +163,7 @@ const Header = () => {
             ))}
 
             {/* Social Links in Mobile Menu */}
-            <div className={styles.mobileSocialLinks}>
+            <div suppressHydrationWarning className={styles.mobileSocialLinks}>
               <a
                 href="https://facebook.com"
                 target="_blank"

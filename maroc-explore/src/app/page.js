@@ -472,35 +472,35 @@ export default function Home() {
       />
 
       {/* Hero Section with Header Inside */}
-      <div className={styles.hero}>
+      <div suppressHydrationWarning className={styles.hero}>
         {/* Background Image */}
-        <div className={styles.heroBackground}>
+        <div suppressHydrationWarning className={styles.heroBackground}>
           <img
             src="/images/maroc_explore-img/chefchaouen/chefchaouen-culter-blue-city-tours.avif"
             alt="Morocco Landscape"
             className={styles.heroBgImage}
           />
-          <div className={styles.heroOverlay}></div>
+          <div suppressHydrationWarning className={styles.heroOverlay}></div>
         </div>
 
         {/* Header Inside Hero */}
-        <div className={styles.headerWrapper}>
+        <div suppressHydrationWarning className={styles.headerWrapper}>
           <Header />
         </div>
 
         {/* Hero Content */}
-        <div className={styles.heroContent}>
+        <div suppressHydrationWarning className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
             Explore <span className={styles.heroHighlight}>Morocco</span>
           </h1>
 
           {/* Pill Search Bar - Now under the title */}
-          <div className={styles.searchWrapper}>
-            <div className={styles.searchPill}>
+          <div suppressHydrationWarning className={styles.searchWrapper}>
+            <div suppressHydrationWarning className={styles.searchPill}>
 
               {/* Destination */}
-              <div className={styles.pillSection} ref={destRef}>
-                <div
+              <div suppressHydrationWarning className={styles.pillSection} ref={destRef}>
+                <div suppressHydrationWarning
                   className={styles.pillContent}
                   onClick={() => {
                     setIsDestOpen(!isDestOpen);
@@ -508,7 +508,7 @@ export default function Home() {
                     setIsActivityOpen(false);
                   }}
                 >
-                  <div className={styles.pillLabel}>
+                  <div suppressHydrationWarning className={styles.pillLabel}>
                     <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -521,11 +521,11 @@ export default function Home() {
                 </div>
 
                 {isDestOpen && (
-                  <div className={styles.pillDropdown}>
-                    <div className={styles.pillDropdownHeader}>Select City</div>
-                    <div className={styles.pillDropdownList}>
+                  <div suppressHydrationWarning className={styles.pillDropdown}>
+                    <div suppressHydrationWarning className={styles.pillDropdownHeader}>Select City</div>
+                    <div suppressHydrationWarning className={styles.pillDropdownList}>
                       {destinations.map((dest) => (
-                        <div
+                        <div suppressHydrationWarning
                           key={dest.id}
                           className={`${styles.pillDropdownItem} ${selectedDestination === dest.id ? styles.pillDropdownItemActive : ''}`}
                           onClick={() => {
@@ -546,11 +546,11 @@ export default function Home() {
                 )}
               </div>
 
-              <div className={styles.pillDivider}></div>
+              <div suppressHydrationWarning className={styles.pillDivider}></div>
 
               {/* Duration */}
-              <div className={styles.pillSection} ref={durationRef}>
-                <div
+              <div suppressHydrationWarning className={styles.pillSection} ref={durationRef}>
+                <div suppressHydrationWarning
                   className={styles.pillContent}
                   onClick={() => {
                     setIsDurationOpen(!isDurationOpen);
@@ -558,7 +558,7 @@ export default function Home() {
                     setIsActivityOpen(false);
                   }}
                 >
-                  <div className={styles.pillLabel}>
+                  <div suppressHydrationWarning className={styles.pillLabel}>
                     <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -570,11 +570,11 @@ export default function Home() {
                 </div>
 
                 {isDurationOpen && (
-                  <div className={styles.pillDropdown}>
-                    <div className={styles.pillDropdownHeader}>Select Duration</div>
-                    <div className={styles.pillDropdownList}>
+                  <div suppressHydrationWarning className={styles.pillDropdown}>
+                    <div suppressHydrationWarning className={styles.pillDropdownHeader}>Select Duration</div>
+                    <div suppressHydrationWarning className={styles.pillDropdownList}>
                       {durations.map((dur) => (
-                        <div
+                        <div suppressHydrationWarning
                           key={dur.value}
                           className={`${styles.pillDropdownItem} ${duration === dur.value ? styles.pillDropdownItemActive : ''}`}
                           onClick={() => {
@@ -582,7 +582,7 @@ export default function Home() {
                             setIsDurationOpen(false);
                           }}
                         >
-                          <div className={styles.pillDropdownInfo}>
+                          <div suppressHydrationWarning className={styles.pillDropdownInfo}>
                             <span className={styles.pillDropdownText}>{dur.label}</span>
                             <span className={styles.pillDropdownSubtext}>{dur.days}</span>
                           </div>
@@ -598,11 +598,11 @@ export default function Home() {
                 )}
               </div>
 
-              <div className={styles.pillDivider}></div>
+              <div suppressHydrationWarning className={styles.pillDivider}></div>
 
               {/* Activity Type */}
-              <div className={styles.pillSection} ref={activityRef}>
-                <div
+              <div suppressHydrationWarning className={styles.pillSection} ref={activityRef}>
+                <div suppressHydrationWarning
                   className={styles.pillContent}
                   onClick={() => {
                     setIsActivityOpen(!isActivityOpen);
@@ -610,7 +610,7 @@ export default function Home() {
                     setIsDurationOpen(false);
                   }}
                 >
-                  <div className={styles.pillLabel}>
+                  <div suppressHydrationWarning className={styles.pillLabel}>
                     <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
@@ -622,11 +622,11 @@ export default function Home() {
                 </div>
 
                 {isActivityOpen && (
-                  <div className={styles.pillDropdown}>
-                    <div className={styles.pillDropdownHeader}>Select Activity Type</div>
-                    <div className={styles.pillDropdownList}>
+                  <div suppressHydrationWarning className={styles.pillDropdown}>
+                    <div suppressHydrationWarning className={styles.pillDropdownHeader}>Select Activity Type</div>
+                    <div suppressHydrationWarning className={styles.pillDropdownList}>
                       {activityTypes.map((act) => (
-                        <div
+                        <div suppressHydrationWarning
                           key={act.id}
                           className={`${styles.pillDropdownItem} ${activityType === act.id ? styles.pillDropdownItemActive : ''}`}
                           onClick={() => {
@@ -662,7 +662,7 @@ export default function Home() {
             Authentic journeys through ancient medinas, golden deserts, and vibrant culture
           </p>
 
-          <div className={styles.heroButtons}>
+          <div suppressHydrationWarning className={styles.heroButtons}>
             <button className={styles.primaryButton} onClick={handleSearch}>
               <span>Explore Tours</span>
               <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -684,10 +684,10 @@ export default function Home() {
 
       {/* Why Choose Us - Compact Section */}
       <section className={styles.whyChooseCompact}>
-        <div className={styles.whyChooseCompactContainer}>
+        <div suppressHydrationWarning className={styles.whyChooseCompactContainer}>
           {whyChooseItems.map((item, index) => (
-            <div key={index} className={styles.whyChooseItem}>
-              <div className={styles.whyChooseIcon}>
+            <div suppressHydrationWarning key={index} className={styles.whyChooseItem}>
+              <div suppressHydrationWarning className={styles.whyChooseIcon}>
                 {item.icon}
               </div>
               <span className={styles.whyChooseText}>{item.text}</span>
@@ -698,13 +698,13 @@ export default function Home() {
 
       {/* What We Do Section */}
       <section className={styles.whatWeDoSection} ref={whatWeDoRef}>
-        <div className={styles.whatWeDoContainer}>
-          <div className={styles.whatWeDoContent}>
+        <div suppressHydrationWarning className={styles.whatWeDoContainer}>
+          <div suppressHydrationWarning className={styles.whatWeDoContent}>
             <span className={styles.whatWeDoSubtitle}>Discover Morocco</span>
             <h2 className={styles.whatWeDoTitle}>
               We Craft <span className={styles.whatWeDoHighlight}>Unforgettable</span> Journeys
             </h2>
-            <div className={styles.whatWeDoText}>
+            <div suppressHydrationWarning className={styles.whatWeDoText}>
               <p>
                 At <strong>Morocco Explore</strong>, we transform travel dreams into reality. From the golden dunes of the Sahara to the blue-washed streets of Chefchaouen, we curate immersive experiences that connect you with Morocco&apos;s rich tapestry of culture, history, and natural beauty.
               </p>
@@ -712,22 +712,22 @@ export default function Home() {
                 Our expert local guides reveal hidden gems beyond the tourist trails—whether it&apos;s sipping mint tea with Berber families, exploring ancient kasbahs, or riding camels into the sunset. Every journey is thoughtfully designed to create lasting memories.
               </p>
             </div>
-            <div className={styles.whatWeDoFeatures}>
-              <div className={styles.whatWeDoFeature}>
+            <div suppressHydrationWarning className={styles.whatWeDoFeatures}>
+              <div suppressHydrationWarning className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <span>Handpicked Experiences</span>
               </div>
-              <div className={styles.whatWeDoFeature}>
+              <div suppressHydrationWarning className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
                 <span>24/7 Local Support</span>
               </div>
-              <div className={styles.whatWeDoFeature}>
+              <div suppressHydrationWarning className={styles.whatWeDoFeature}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />
@@ -740,15 +740,15 @@ export default function Home() {
             </button>
           </div>
 
-          <div className={styles.whatWeDoGallery}>
+          <div suppressHydrationWarning className={styles.whatWeDoGallery}>
             {galleryImages.map((image, index) => (
-              <div
+              <div suppressHydrationWarning
                 key={index}
                 data-index={index}
                 className={`${styles.galleryItem} ${styles[`gallery${image.span}`]} ${visibleImages.includes(index) ? styles.galleryItemVisible : ''}`}
               >
                 <img src={image.src} alt={image.alt} />
-                <div className={styles.galleryOverlay}>
+                <div suppressHydrationWarning className={styles.galleryOverlay}>
                   <span>{image.alt}</span>
                 </div>
               </div>
@@ -759,8 +759,8 @@ export default function Home() {
 
       {/* Alternating Destinations Section */}
       <section className={styles.alternatingDestinationsSection}>
-        <div className={styles.alternatingContainer}>
-          <div className={styles.alternatingHeader}>
+        <div suppressHydrationWarning className={styles.alternatingContainer}>
+          <div suppressHydrationWarning className={styles.alternatingHeader}>
             <span className={styles.alternatingSubtitle}>Explore Morocco</span>
             <h2 className={styles.alternatingTitle}>Discover Our Destinations</h2>
             <p className={styles.alternatingDescription}>
@@ -774,31 +774,31 @@ export default function Home() {
               className={`${styles.alternatingRow} ${index % 2 === 1 ? styles.alternatingRowReversed : ''}`}
             >
               {/* Image Column */}
-              <div className={styles.alternatingImageCol}>
-                <div className={styles.alternatingImageWrapper}>
+              <div suppressHydrationWarning className={styles.alternatingImageCol}>
+                <div suppressHydrationWarning className={styles.alternatingImageWrapper}>
                   <img src={dest.image} alt={`${dest.name} Morocco`} loading="lazy" />
-                  <div className={styles.alternatingImageOverlay}>
+                  <div suppressHydrationWarning className={styles.alternatingImageOverlay}>
                     <span className={styles.alternatingTagline}>{dest.tagline}</span>
                   </div>
                 </div>
               </div>
 
               {/* Content Column */}
-              <div className={styles.alternatingContentCol}>
-                <div className={styles.alternatingContent}>
+              <div suppressHydrationWarning className={styles.alternatingContentCol}>
+                <div suppressHydrationWarning className={styles.alternatingContent}>
                   <h3 className={styles.alternatingDestinationName}>{dest.name}</h3>
 
-                  <div className={styles.alternatingBlock}>
+                  <div suppressHydrationWarning className={styles.alternatingBlock}>
                     <h4>Historical Heritage</h4>
                     <p>{dest.history}</p>
                   </div>
 
-                  <div className={styles.alternatingBlock}>
+                  <div suppressHydrationWarning className={styles.alternatingBlock}>
                     <h4>Amazigh Culture</h4>
                     <p>{dest.amazigh}</p>
                   </div>
 
-                  <div className={styles.alternatingActivities}>
+                  <div suppressHydrationWarning className={styles.alternatingActivities}>
                     <h4>What Travelers Can Do</h4>
                     <ul>
                       {dest.activities.map((activity, idx) => (
@@ -812,9 +812,9 @@ export default function Home() {
                     </ul>
                   </div>
 
-                  <div className={styles.alternatingActivityLinks}>
+                  <div suppressHydrationWarning className={styles.alternatingActivityLinks}>
                     <h4>Available Activities</h4>
-                    <div className={styles.alternatingActivityTags}>
+                    <div suppressHydrationWarning className={styles.alternatingActivityTags}>
                       {dest.activityLinks.map((actId, idx) => {
                         const actLabel = activityTypes.find(a => a.id === actId)?.label;
                         return (
@@ -848,12 +848,12 @@ export default function Home() {
 
       {/* Community & Testimonials Section */}
       <section className={styles.communitySection} ref={testimonialsRef}>
-        <div className={styles.communityContainer}>
+        <div suppressHydrationWarning className={styles.communityContainer}>
 
           {/* Stats Bar */}
-          <div className={styles.statsBar}>
+          <div suppressHydrationWarning className={styles.statsBar}>
             {stats.map((stat, index) => (
-              <div key={index} className={styles.statItem}>
+              <div suppressHydrationWarning key={index} className={styles.statItem}>
                 <span className={styles.statNumber}>{stat.number}</span>
                 <span className={styles.statLabel}>{stat.label}</span>
               </div>
@@ -861,8 +861,8 @@ export default function Home() {
           </div>
 
           {/* Section Header */}
-          <div className={styles.communityHeader}>
-            <div className={styles.tripAdvisorBadge}>
+          <div suppressHydrationWarning className={styles.communityHeader}>
+            <div suppressHydrationWarning className={styles.tripAdvisorBadge}>
               <svg viewBox="0 0 24 24" fill="currentColor" className={styles.tripAdvisorIcon}>
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
               </svg>
@@ -875,21 +875,21 @@ export default function Home() {
           </div>
 
           {/* Featured Testimonial */}
-          <div className={styles.featuredTestimonial}>
-            <div className={styles.testimonialCardLarge}>
-              <div className={styles.testimonialHeader}>
-                <div className={styles.testimonialAuthor}>
+          <div suppressHydrationWarning className={styles.featuredTestimonial}>
+            <div suppressHydrationWarning className={styles.testimonialCardLarge}>
+              <div suppressHydrationWarning className={styles.testimonialHeader}>
+                <div suppressHydrationWarning className={styles.testimonialAuthor}>
                   <img
                     src={testimonials[activeTestimonial].avatar}
                     alt={testimonials[activeTestimonial].name}
                     className={styles.testimonialAvatar}
                   />
-                  <div className={styles.testimonialMeta}>
+                  <div suppressHydrationWarning className={styles.testimonialMeta}>
                     <h4>{testimonials[activeTestimonial].name}</h4>
                     <span>{testimonials[activeTestimonial].location}</span>
                   </div>
                 </div>
-                <div className={styles.testimonialRating}>
+                <div suppressHydrationWarning className={styles.testimonialRating}>
                   {[...Array(5)].map((_, i) => (
                     <svg key={i} width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -899,7 +899,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className={styles.testimonialBadge}>
+              <div suppressHydrationWarning className={styles.testimonialBadge}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                 </svg>
@@ -910,7 +910,7 @@ export default function Home() {
 
               <p className={styles.testimonialText}>{testimonials[activeTestimonial].text}</p>
 
-              <div className={styles.testimonialHighlights}>
+              <div suppressHydrationWarning className={styles.testimonialHighlights}>
                 {testimonials[activeTestimonial].highlights.map((highlight, idx) => (
                   <span key={idx} className={styles.highlightTag}>
                     {highlight}
@@ -918,14 +918,14 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className={styles.testimonialFooter}>
+              <div suppressHydrationWarning className={styles.testimonialFooter}>
                 <span className={styles.tripType}>{testimonials[activeTestimonial].tripType}</span>
                 <span className={styles.testimonialDate}>{testimonials[activeTestimonial].date}</span>
               </div>
             </div>
 
             {/* Testimonial Navigation */}
-            <div className={styles.testimonialNavigation}>
+            <div suppressHydrationWarning className={styles.testimonialNavigation}>
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
@@ -938,18 +938,18 @@ export default function Home() {
           </div>
 
           {/* Testimonials Grid */}
-          <div className={styles.testimonialsGrid}>
+          <div suppressHydrationWarning className={styles.testimonialsGrid}>
             {testimonials.map((testimonial, index) => (
               <article
                 key={testimonial.id}
                 className={`${styles.testimonialCard} ${activeTestimonial === index ? styles.testimonialCardActive : ''}`}
                 onClick={() => setActiveTestimonial(index)}
               >
-                <div className={styles.testimonialCardHeader}>
+                <div suppressHydrationWarning className={styles.testimonialCardHeader}>
                   <img src={testimonial.avatar} alt={testimonial.name} className={styles.testimonialCardAvatar} />
-                  <div className={styles.testimonialCardMeta}>
+                  <div suppressHydrationWarning className={styles.testimonialCardMeta}>
                     <h5>{testimonial.name}</h5>
-                    <div className={styles.testimonialCardRating}>
+                    <div suppressHydrationWarning className={styles.testimonialCardRating}>
                       {[...Array(5)].map((_, i) => (
                         <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
@@ -965,7 +965,7 @@ export default function Home() {
           </div>
 
           {/* CTA */}
-          <div className={styles.communityCta}>
+          <div suppressHydrationWarning className={styles.communityCta}>
             <p>Join 50,000+ happy travelers who discovered authentic Morocco with us</p>
             <button className={styles.communityCtaButton} onClick={handleSearch}>
               Start Your Journey
@@ -976,8 +976,8 @@ export default function Home() {
 
       {/* FAQ Section with Schema.org */}
       <section className={styles.faqSection} aria-label="Frequently Asked Questions">
-        <div className={styles.faqContainer}>
-          <div className={styles.faqHeader}>
+        <div suppressHydrationWarning className={styles.faqContainer}>
+          <div suppressHydrationWarning className={styles.faqHeader}>
             <span className={styles.faqSubtitle}>FAQ</span>
             <h2 className={styles.faqTitle}>Common Questions</h2>
             <p className={styles.faqDescription}>
@@ -985,9 +985,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.faqList}>
+          <div suppressHydrationWarning className={styles.faqList}>
             {faqData.map((faq, index) => (
-              <div
+              <div suppressHydrationWarning
                 key={index}
                 className={`${styles.faqItem} ${activeFaq === index ? styles.faqItemActive : ''}`}
               >
@@ -1001,7 +1001,7 @@ export default function Home() {
                     <polyline points="6 9 12 15 18 9" />
                   </svg>
                 </button>
-                <div
+                <div suppressHydrationWarning
                   className={styles.faqAnswer}
                 >
                   <p>{faq.answer}</p>

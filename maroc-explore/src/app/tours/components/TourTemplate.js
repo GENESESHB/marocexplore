@@ -1,3 +1,6 @@
+'use client';
+
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import BookingForm from './BookingForm';
@@ -5,29 +8,36 @@ import { Clock, MapPin, Calendar, Circle, Star, Check, X } from 'lucide-react';
 import styles from './TourTemplate.module.css';
 
 export default function TourTemplate({ tour }) {
+    const [activeTestimonial, setActiveTestimonial] = useState(0);
+    const [activeFaq, setActiveFaq] = useState(null);
+
+    const toggleFaq = (index) => {
+        setActiveFaq(activeFaq === index ? null : index);
+    };
+
     if (!tour) return null;
 
     return (
-        <div className={styles.page}>
+        <div suppressHydrationWarning className={styles.page}>
             <Header />
 
             {/* Hero Cover Section */}
-            <div className={styles.hero}>
+            <div suppressHydrationWarning className={styles.hero}>
                 <img src={tour.image} alt={tour.title} className={styles.heroImage} />
-                <div className={styles.heroOverlay}></div>
-                <div className={styles.heroContent}>
+                <div suppressHydrationWarning className={styles.heroOverlay}></div>
+                <div suppressHydrationWarning className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>{tour.title}</h1>
-                    <div className={styles.breadcrumbs}>
+                    <div suppressHydrationWarning className={styles.breadcrumbs}>
                         <Link href="/">Home</Link> &gt; <Link href="/tours">Tours</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
                     </div>
                 </div>
             </div>
 
             {/* Header Meta Section */}
-            <div className={styles.headerMetaSection}>
-                <div className={styles.container}>
-                    <div className={styles.headerMeta}>
-                        <div className={styles.rating}>
+            <div suppressHydrationWarning className={styles.headerMetaSection}>
+                <div suppressHydrationWarning className={styles.container}>
+                    <div suppressHydrationWarning className={styles.headerMeta}>
+                        <div suppressHydrationWarning className={styles.rating}>
                             <Star className={styles.tripAdvisorBubble} fill="#f97316" color="#f97316" size={18} />
                             <Star className={styles.tripAdvisorBubble} fill="#f97316" color="#f97316" size={18} />
                             <Star className={styles.tripAdvisorBubble} fill="#f97316" color="#f97316" size={18} />
@@ -37,7 +47,7 @@ export default function TourTemplate({ tour }) {
                             <span className={styles.reviewCount}>({tour.reviews} reviews)</span>
 
                         </div>
-                        <div className={styles.location}>
+                        <div suppressHydrationWarning className={styles.location}>
                             <MapPin size={18} />
                             <span>{tour.location}, Morocco</span>
                         </div>
@@ -47,17 +57,17 @@ export default function TourTemplate({ tour }) {
             </div>
 
             {/* Photo Gallery (TripAdvisor Style) */}
-            <div className={styles.gallerySection}>
-                <div className={styles.container}>
-                    <div className={styles.galleryGrid}>
-                        <div className={styles.mainImage}>
+            <div suppressHydrationWarning className={styles.gallerySection}>
+                <div suppressHydrationWarning className={styles.container}>
+                    <div suppressHydrationWarning className={styles.galleryGrid}>
+                        <div suppressHydrationWarning className={styles.mainImage}>
                             <img src={tour.gallery?.[0] || tour.image} alt={`${tour.title} main view`} />
                         </div>
-                        <div className={styles.sideImages}>
-                            <div className={styles.topImage}>
+                        <div suppressHydrationWarning className={styles.sideImages}>
+                            <div suppressHydrationWarning className={styles.topImage}>
                                 <img src={tour.gallery?.[1] || tour.image} alt={`${tour.title} secondary view`} />
                             </div>
-                            <div className={styles.bottomImage}>
+                            <div suppressHydrationWarning className={styles.bottomImage}>
                                 <img src={tour.gallery?.[2] || tour.image} alt={`${tour.title} detail view`} />
                             </div>
                         </div>
@@ -66,41 +76,41 @@ export default function TourTemplate({ tour }) {
             </div>
 
             {/* Main Content Layout */}
-            <div className={styles.mainContent}>
-                <div className={styles.container}>
+            <div suppressHydrationWarning className={styles.mainContent}>
+                <div suppressHydrationWarning className={styles.container}>
 
                     {/* Full-width Overview */}
                     <section className={`${styles.section} ${styles.fullWidthOverview}`}>
                         <h2>Overview</h2>
-                        <div className={styles.overviewContent}>
+                        <div suppressHydrationWarning className={styles.overviewContent}>
                             <p>{tour.fullDescription}</p>
                         </div>
                     </section>
 
-                    <div className={styles.layoutGrid}>
+                    <div suppressHydrationWarning className={styles.layoutGrid}>
 
                         {/* Left Column - Details */}
-                        <div className={styles.detailsColumn}>
+                        <div suppressHydrationWarning className={styles.detailsColumn}>
 
                             {/* Quick Info Bar */}
-                            <div className={styles.quickInfoBox}>
-                                <div className={styles.infoItem}>
+                            <div suppressHydrationWarning className={styles.quickInfoBox}>
+                                <div suppressHydrationWarning className={styles.infoItem}>
                                     <Clock size={24} className={styles.infoIcon} />
-                                    <div>
+                                    <div suppressHydrationWarning>
                                         <h4>Duration</h4>
                                         <p>{tour.duration}</p>
                                     </div>
                                 </div>
-                                <div className={styles.infoItem}>
+                                <div suppressHydrationWarning className={styles.infoItem}>
                                     <Calendar size={24} className={styles.infoIcon} />
-                                    <div>
+                                    <div suppressHydrationWarning>
                                         <h4>Availability</h4>
                                         <p>{tour.availability || 'Daily'}</p>
                                     </div>
                                 </div>
-                                <div className={styles.infoItem}>
+                                <div suppressHydrationWarning className={styles.infoItem}>
                                     <MapPin size={24} className={styles.infoIcon} />
-                                    <div>
+                                    <div suppressHydrationWarning>
                                         <h4>Locations</h4>
                                         <p style={{ fontSize: '0.9rem', marginTop: '4px' }}><strong>Pick-up:</strong> {tour.departurePoint}</p>
                                         <p style={{ fontSize: '0.9rem' }}><strong>Drop-off:</strong> {tour.returnPoint}</p>
@@ -122,14 +132,14 @@ export default function TourTemplate({ tour }) {
                             {tour.itinerary && tour.itinerary.length > 0 && (
                                 <section className={styles.section}>
                                     <h2>What to Expect</h2>
-                                    <div className={styles.itineraryWrapper}>
+                                    <div suppressHydrationWarning className={styles.itineraryWrapper}>
                                         {tour.itinerary.map((item, i) => (
-                                            <div key={i} className={styles.itineraryItem}>
-                                                <div className={styles.itineraryMarker}>
-                                                    <div className={styles.markerDot}></div>
-                                                    {i < tour.itinerary.length - 1 && <div className={styles.markerLine}></div>}
+                                            <div suppressHydrationWarning key={i} className={styles.itineraryItem}>
+                                                <div suppressHydrationWarning className={styles.itineraryMarker}>
+                                                    <div suppressHydrationWarning className={styles.markerDot}></div>
+                                                    {i < tour.itinerary.length - 1 && <div suppressHydrationWarning className={styles.markerLine}></div>}
                                                 </div>
-                                                <div className={styles.itineraryContent}>
+                                                <div suppressHydrationWarning className={styles.itineraryContent}>
                                                     <span className={styles.timeLabel}>
                                                         {item.day ? `Day ${item.day}` : item.time}
                                                     </span>
@@ -145,8 +155,8 @@ export default function TourTemplate({ tour }) {
                             {/* Inclusions & Exclusions */}
                             <section className={styles.section}>
                                 <h2>What&apos;s Included</h2>
-                                <div className={styles.inExGrid}>
-                                    <div className={styles.inclusions}>
+                                <div suppressHydrationWarning className={styles.inExGrid}>
+                                    <div suppressHydrationWarning className={styles.inclusions}>
                                         <ul className={styles.checkList}>
                                             {tour.included?.map((item, i) => (
                                                 <li key={i} className={styles.includedItem}>
@@ -158,7 +168,7 @@ export default function TourTemplate({ tour }) {
                                     </div>
 
                                     {tour.excluded && tour.excluded.length > 0 && (
-                                        <div className={styles.exclusions}>
+                                        <div suppressHydrationWarning className={styles.exclusions}>
                                             <ul className={styles.crossList}>
                                                 {tour.excluded.map((item, i) => (
                                                     <li key={i} className={styles.excludedItem}>
@@ -172,87 +182,93 @@ export default function TourTemplate({ tour }) {
                                 </div>
                             </section>
 
-                            {/* Guest Reviews Example */}
-                            <section className={styles.section}>
-                                <h2>Guest Reviews</h2>
-                                <div className={styles.reviewsSummary}>
-                                    <div className={styles.reviewScoreBox}>
-                                        <span className={styles.bigScore}>{tour.rating}</span>
-                                        <span className={styles.outOf}>/ 5</span>
-                                        <p>Based on {tour.reviews} reviews</p>
-                                    </div>
-                                    <div className={styles.reviewBars}>
-                                        <div className={styles.reviewBarRow}>
-                                            <span>Excellent</span>
-                                            <div className={styles.bar}><div className={styles.fillExcellent} style={{ width: '85%' }}></div></div>
-                                            <span>{Math.floor(tour.reviews * 0.85)}</span>
-                                        </div>
-                                        <div className={styles.reviewBarRow}>
-                                            <span>Very Good</span>
-                                            <div className={styles.bar}><div className={styles.fillVeryGood} style={{ width: '10%' }}></div></div>
-                                            <span>{Math.floor(tour.reviews * 0.10)}</span>
-                                        </div>
-                                        <div className={styles.reviewBarRow}>
-                                            <span>Average</span>
-                                            <div className={styles.bar}><div className={styles.fillAverage} style={{ width: '4%' }}></div></div>
-                                            <span>{Math.floor(tour.reviews * 0.04)}</span>
-                                        </div>
-                                        <div className={styles.reviewBarRow}>
-                                            <span>Poor</span>
-                                            <div className={styles.bar}><div className={styles.fillPoor} style={{ width: '1%' }}></div></div>
-                                            <span>{Math.floor(tour.reviews * 0.01)}</span>
-                                        </div>
-                                        <div className={styles.reviewBarRow}>
-                                            <span>Terrible</span>
-                                            <div className={styles.bar}><div className={styles.fillTerrible} style={{ width: '0%' }}></div></div>
-                                            <span>0</span>
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
 
-                                <div className={styles.reviewCards}>
-                                    <div className={styles.reviewCard}>
-                                        <div className={styles.reviewHeader}>
-                                            <div className={styles.reviewerInfo}>
-                                                <div className={styles.reviewerAvatar}>SM</div>
-                                                <div>
-                                                    <h4>Sarah Jenkins</h4>
-                                                    <span>London, UK • Reviewed 2 weeks ago</span>
-                                                </div>
-                                            </div>
-                                            <div className={styles.reviewStars}>
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                            </div>
-                                        </div>
-                                        <h4>An absolute dream experience!</h4>
-                                        <p>&quot;Every detail was perfectly organized. Our guide was incredibly knowledgeable and the accommodation exceeded all our expectations. Definitely the highlight of our trip to Morocco.&quot;</p>
-                                    </div>
-                                    <div className={styles.reviewCard}>
-                                        <div className={styles.reviewHeader}>
-                                            <div className={styles.reviewerInfo}>
-                                                <div className={styles.reviewerAvatar}>MT</div>
-                                                <div>
-                                                    <h4>Marco Tari</h4>
-                                                    <span>Milan, Italy • Reviewed last month</span>
-                                                </div>
-                                            </div>
-                                            <div className={styles.reviewStars}>
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                                <Star size={14} fill="#f97316" color="#f97316" />
-                                            </div>
-                                        </div>
-                                        <h4>Authentic and well-paced</h4>
-                                        <p>&quot;We saw so much without feeling rushed. The meals included were delicious and truly authentic. I highly recommend Maroc Explore for anyone wanting to see the real Morocco.&quot;</p>
+                        {/* Right Column - Booking Form Widget */}
+                        <div suppressHydrationWarning className={styles.sidebarColumn}>
+                            <div suppressHydrationWarning className={styles.stickyWidget}>
+                                <BookingForm tourTitle={tour.title} price={tour.price} />
+
+                                <div suppressHydrationWarning className={styles.widgetFooter}>
+                                    <div suppressHydrationWarning className={styles.supportBox}>
+                                        <h4>Need help booking?</h4>
+                                        <p>Call us or WhatsApp</p>
+                                        <a href="tel:+212675576139">+212 675576139</a>
                                     </div>
                                 </div>
-                            </section>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            {/* Full-Width Bottom Sections */}
+            <div suppressHydrationWarning className={styles.bottomSectionsWrapper}>
+                <div suppressHydrationWarning className={styles.bottomSectionsContainer}>
+                            {/* Guest Reviews */}
+                            {tour.reviewsList && tour.reviewsList.length > 0 && (
+                                <section className={styles.section}>
+                                    <h2>Guest Reviews</h2>
+                                    <div suppressHydrationWarning className={styles.reviewsSummary}>
+                                        <div suppressHydrationWarning className={styles.reviewScoreBox}>
+                                            <span className={styles.bigScore}>{Math.max(...tour.reviewsList.map(r => r.rating || 5)).toFixed(1)}</span>
+                                            <span className={styles.outOf}>/ 5</span>
+                                            <p>Based on {tour.reviews} reviews</p>
+                                        </div>
+                                        <div suppressHydrationWarning className={styles.reviewBars} style={{ marginTop: '10px' }}>
+                                            <div suppressHydrationWarning className={styles.reviewBarRow}>
+                                                <span>Excellent</span>
+                                                <div suppressHydrationWarning className={styles.bar}><div suppressHydrationWarning className={styles.fillExcellent} style={{ width: '85%' }}></div></div>
+                                                <span>{Math.floor(tour.reviews * 0.85)}</span>
+                                            </div>
+                                            <div suppressHydrationWarning className={styles.reviewBarRow}>
+                                                <span>Very Good</span>
+                                                <div suppressHydrationWarning className={styles.bar}><div suppressHydrationWarning className={styles.fillVeryGood} style={{ width: '10%' }}></div></div>
+                                                <span>{Math.floor(tour.reviews * 0.10)}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Testimonial Navigation */}
+                                    <div suppressHydrationWarning className={styles.testimonialNavigation}>
+                                        {tour.reviewsList.map((_, idx) => (
+                                            <button
+                                                key={idx}
+                                                className={`${styles.navDot} ${activeTestimonial === idx ? styles.navDotActive : ''}`}
+                                                onClick={() => setActiveTestimonial(idx)}
+                                                aria-label={`Go to testimonial ${idx + 1}`}
+                                            />
+                                        ))}
+                                    </div>
+
+                                    {/* Testimonials Grid */}
+                                    <div suppressHydrationWarning className={styles.testimonialsGrid}>
+                                        {tour.reviewsList.map((testimonial, index) => (
+                                            <article
+                                                key={testimonial.id || index}
+                                                className={`${styles.testimonialCard} ${activeTestimonial === index ? styles.testimonialCardActive : ''}`}
+                                                onClick={() => setActiveTestimonial(index)}
+                                            >
+                                                <div suppressHydrationWarning className={styles.testimonialCardHeader}>
+                                                    <img src={testimonial.avatar} alt={testimonial.name} className={styles.testimonialCardAvatar} />
+                                                    <div suppressHydrationWarning className={styles.testimonialCardMeta}>
+                                                        <h5>{testimonial.name}</h5>
+                                                        <div suppressHydrationWarning className={styles.testimonialCardRating}>
+                                                            {[...Array(testimonial.rating || 5)].map((_, i) => (
+                                                                <Star key={i} size={14} fill="#00af87" color="#00af87" />
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p className={styles.testimonialCardPreview}>{testimonial.title}</p>
+                                                <span className={styles.testimonialCardExperience}>{testimonial.experience} • Reviewed recently</span>
+
+                                                <p style={{ marginTop: '15px', color: '#4b5563', fontSize: '14px', lineHeight: '1.6' }}>"{testimonial.text}"</p>
+                                            </article>
+                                        ))}
+                                    </div>
+                                </section>
+                            )}
 
                             {/* Additional Info */}
                             <section className={styles.section}>
@@ -266,25 +282,54 @@ export default function TourTemplate({ tour }) {
                                 </ul>
                             </section>
 
-                        </div>
+                            {/* FAQ Section */}
+                            {tour.faqs && tour.faqs.length > 0 && (
+                                <section className={styles.faqSection} aria-label="Frequently Asked Questions">
+                                    <div suppressHydrationWarning className={styles.faqContainer}>
+                                        <div suppressHydrationWarning className={styles.faqHeader}>
+                                            <span className={styles.faqSubtitle}>FAQ</span>
+                                            <h2 className={styles.faqTitle}>Common Questions</h2>
+                                            <p className={styles.faqDescription}>
+                                                Everything you need to know about the {tour.title}
+                                            </p>
+                                        </div>
 
-                        {/* Right Column - Booking Form Widget */}
-                        <div className={styles.sidebarColumn}>
-                            <div className={styles.stickyWidget}>
-                                <BookingForm tourTitle={tour.title} price={tour.price} />
-
-                                <div className={styles.widgetFooter}>
-                                    <div className={styles.supportBox}>
-                                        <h4>Need help booking?</h4>
-                                        <p>Call us or WhatsApp</p>
-                                        <a href="tel:+212675576139">+212 675576139</a>
+                                        <div suppressHydrationWarning className={styles.faqList}>
+                                            {tour.faqs.map((faq, index) => (
+                                                <div suppressHydrationWarning
+                                                    key={index}
+                                                    className={`${styles.faqItem} ${activeFaq === index ? styles.faqItemActive : ''}`}
+                                                >
+                                                    <button
+                                                        className={styles.faqQuestion}
+                                                        onClick={() => toggleFaq(index)}
+                                                        aria-expanded={activeFaq === index}
+                                                    >
+                                                        {faq.question}
+                                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                                            <polyline points="6 9 12 15 18 9" />
+                                                        </svg>
+                                                    </button>
+                                                    <div suppressHydrationWarning className={styles.faqAnswer}>
+                                                        <p>{faq.answer}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </section>
+                            )}
 
-                    </div>
+                            {/* CTA */}
+                            <div suppressHydrationWarning className={styles.communityCta}>
+                                <p>Join 50,000+ happy travelers who discovered authentic Morocco with us</p>
+                                <button className={styles.communityCtaButton} onClick={() => window.scrollTo({ top: 300, behavior: 'smooth' })}>
+                                    Start Your Journey
+                                </button>
+                            </div>
+
                 </div>
+            </div>
             </div>
         </div>
     );

@@ -9,10 +9,10 @@ import styles from './Footer.module.css';
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-            <div className={styles.footerContainer}>
+            <div suppressHydrationWarning className={styles.footerContainer}>
 
                 {/* Brand Section */}
-                <div className={styles.footerBrand}>
+                <div suppressHydrationWarning className={styles.footerBrand}>
                     <Link href="/" className={styles.logo}>
                         <Image
                             src="/images/logo-marocexplore-v2.png"
@@ -27,7 +27,7 @@ const Footer = () => {
                     <p className={styles.brandDescription}>
                         {"Experience the authentic magic of Morocco. From the sweeping dunes of the Sahara to the bustling medinas, we craft unforgettable journeys tailored just for you."}
                     </p>
-                    <div className={styles.socialLinks}>
+                    <div suppressHydrationWarning className={styles.socialLinks}>
                         <a href="https://facebook.com" target="_blank" className={styles.socialIcon}><Facebook size={20} /></a>
                         <a href="https://instagram.com" target="_blank" className={styles.socialIcon}><Instagram size={20} /></a>
                         <a href="https://twitter.com" target="_blank" className={styles.socialIcon}><Twitter size={20} /></a>
@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
 
                 {/* Quick Links Section */}
-                <div className={styles.footerLinks}>
+                <div suppressHydrationWarning className={styles.footerLinks}>
                     <h3 className={styles.footerHeading}>Quick Links</h3>
                     <ul className={styles.linkList}>
                         <li><Link href="/">Home</Link></li>
@@ -48,9 +48,9 @@ const Footer = () => {
                 </div>
 
                 {/* Popular Tours Section */}
-                <div className={styles.footerLinks}>
+                <div suppressHydrationWarning className={styles.footerLinks}>
                     <h3 className={styles.footerHeading}>Popular Tours</h3>
-                    <div className={styles.twoColumnList}>
+                    <div suppressHydrationWarning className={styles.twoColumnList}>
                         <ul className={styles.linkList} style={{ flex: 1 }}>
                             <li><Link href="/tours/sahara-desert-expedition">Sahara Desert Expedition</Link></li>
                             <li><Link href="/tours/marrakech-medina-tour">Marrakech Medina Tour</Link></li>
@@ -73,7 +73,7 @@ const Footer = () => {
                 </div>
 
                 {/* Contact Section */}
-                <div className={styles.footerContact}>
+                <div suppressHydrationWarning className={styles.footerContact}>
                     <h3 className={styles.footerHeading}>Contact Us</h3>
                     <ul className={styles.contactList}>
                         <li>
@@ -94,10 +94,10 @@ const Footer = () => {
             </div>
 
             {/* Copyright */}
-            <div className={styles.footerBottom}>
-                <div className={styles.footerBottomContent}>
+            <div suppressHydrationWarning className={styles.footerBottom}>
+                <div suppressHydrationWarning className={styles.footerBottomContent}>
                     <p>&copy; {new Date().getFullYear()} Maroc Explore. All rights reserved.</p>
-                    <div className={styles.legalLinks}>
+                    <div suppressHydrationWarning className={styles.legalLinks}>
                         <Link href="#">Privacy Policy</Link>
                         <Link href="#">Terms of Service</Link>
                     </div>

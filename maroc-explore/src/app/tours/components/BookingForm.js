@@ -39,16 +39,16 @@ export default function BookingForm({ tourTitle, price }) {
     };
 
     return (
-        <div className={styles.bookingFormContainer}>
+        <div suppressHydrationWarning className={styles.bookingFormContainer}>
             <h3 className={styles.bookingFormTitle}>Book this Tour</h3>
 
-            <div className={styles.priceContainer}>
+            <div suppressHydrationWarning className={styles.priceContainer}>
                 <span className={styles.priceValue}>€{price}</span>
                 <span className={styles.priceUnit}>per person</span>
             </div>
 
             <form onSubmit={handleSubmit} className={styles.form}>
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label>Tour</label>
                     <input
                         type="text"
@@ -58,7 +58,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="date">Travel Date *</label>
                     <input
                         type="date"
@@ -70,7 +70,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="travelers">Number of Travelers *</label>
                     <input
                         type="number"
@@ -84,7 +84,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="name">Full Name *</label>
                     <input
                         type="text"
@@ -97,7 +97,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="email">Email Address *</label>
                     <input
                         type="email"
@@ -110,7 +110,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="phone">Phone / WhatsApp</label>
                     <input
                         type="tel"
@@ -122,7 +122,7 @@ export default function BookingForm({ tourTitle, price }) {
                     />
                 </div>
 
-                <div className={styles.formGroup}>
+                <div suppressHydrationWarning className={styles.formGroup}>
                     <label htmlFor="message">Special Requirements (Optional)</label>
                     <textarea
                         id="message"
@@ -143,7 +143,7 @@ export default function BookingForm({ tourTitle, price }) {
                 </button>
 
                 {status === 'success' && (
-                    <div className={styles.successMessage}>
+                    <div suppressHydrationWarning className={styles.successMessage}>
                         Thank you! We have received your request and will contact you shortly to confirm availability.
                     </div>
                 )}
