@@ -985,20 +985,16 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.faqList} itemScope itemType="https://schema.org/FAQPage">
+          <div className={styles.faqList}>
             {faqData.map((faq, index) => (
               <div
                 key={index}
                 className={`${styles.faqItem} ${activeFaq === index ? styles.faqItemActive : ''}`}
-                itemScope
-                itemProp="mainEntity"
-                itemType="https://schema.org/Question"
               >
                 <button
                   className={styles.faqQuestion}
                   onClick={() => toggleFaq(index)}
                   aria-expanded={activeFaq === index}
-                  itemProp="name"
                 >
                   {faq.question}
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -1007,11 +1003,8 @@ export default function Home() {
                 </button>
                 <div
                   className={styles.faqAnswer}
-                  itemScope
-                  itemProp="acceptedAnswer"
-                  itemType="https://schema.org/Answer"
                 >
-                  <p itemProp="text">{faq.answer}</p>
+                  <p>{faq.answer}</p>
                 </div>
               </div>
             ))}

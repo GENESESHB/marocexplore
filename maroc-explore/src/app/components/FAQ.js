@@ -35,8 +35,25 @@ export default function FAQ({ customFaqs, title = "Frequently Asked Questions", 
         setActiveFaq(activeFaq === index ? null : index);
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": displayFaqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": faq.answer
+            }
+        }))
+    };
+
     return (
         <section className={styles.faqSection} aria-label="Frequently Asked Questions">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+            />
             <div className={styles.faqContainer}>
                 <div className={styles.faqHeader}>
                     <span className={styles.faqSubtitle}>{title}</span>
@@ -46,33 +63,24 @@ export default function FAQ({ customFaqs, title = "Frequently Asked Questions", 
                     </p>
                 </div>
 
-                <div className={styles.faqList} itemScope itemType="https://schema.org/FAQPage">
+                <div className={styles.faqList}>
                     {displayFaqs.map((faq, index) => (
                         <div
                             key={index}
                             className={`${styles.faqItem} ${activeFaq === index ? styles.faqItemActive : ''}`}
-                            itemScope
-                            itemProp="mainEntity"
-                            itemType="https://schema.org/Question"
                         >
                             <button
                                 className={styles.faqQuestion}
                                 onClick={() => toggleFaq(index)}
                                 aria-expanded={activeFaq === index}
-                                itemProp="name"
                             >
                                 {faq.question}
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                     <polyline points="6 9 12 15 18 9" />
                                 </svg>
                             </button>
-                            <div
-                                className={styles.faqAnswer}
-                                itemScope
-                                itemProp="acceptedAnswer"
-                                itemType="https://schema.org/Answer"
-                            >
-                                <p itemProp="text">{faq.answer}</p>
+                            <div className={styles.faqAnswer}>
+                                <p>{faq.answer}</p>
                             </div>
                         </div>
                     ))}

@@ -130,7 +130,7 @@ const Header = () => {
                 Book Now
                 <span className={styles.bookButtonArrow}>→</span>
               </span>
-              <div className={styles.bookButtonOverlay}></div>
+              <span className={styles.bookButtonOverlay}></span>
             </Link>
           </div>
 
