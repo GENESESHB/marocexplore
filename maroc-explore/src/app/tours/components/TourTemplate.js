@@ -19,6 +19,30 @@ export default function TourTemplate({ tour }) {
 
     return (
         <div suppressHydrationWarning className={styles.page}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'TouristAttraction',
+                        name: tour.title,
+                        description: tour.fullDescription || tour.description,
+                        image: `https://marocexplore.com${tour.image}`,
+                        offers: {
+                            '@type': 'Offer',
+                            price: tour.price,
+                            priceCurrency: 'USD',
+                            availability: 'https://schema.org/InStock',
+                            url: `https://marocexplore.com/tours/${tour.slug}`
+                        },
+                        aggregateRating: tour.reviews ? {
+                            '@type': 'AggregateRating',
+                            ratingValue: tour.rating,
+                            reviewCount: tour.reviews,
+                        } : undefined,
+                    })
+                }}
+            />
             <Header />
 
             {/* Hero Cover Section */}
