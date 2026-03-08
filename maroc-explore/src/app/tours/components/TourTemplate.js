@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import BookingForm from './BookingForm';
+import SeoContentBlock from './SeoContentBlock';
 import { Clock, MapPin, Calendar, Circle, Star, Check, X } from 'lucide-react';
 import styles from './TourTemplate.module.css';
 
@@ -287,7 +288,7 @@ export default function TourTemplate({ tour }) {
                                                 <p className={styles.testimonialCardPreview}>{testimonial.title}</p>
                                                 <span className={styles.testimonialCardExperience}>{testimonial.experience} • Reviewed recently</span>
 
-                                                <p style={{ marginTop: '15px', color: '#4b5563', fontSize: '14px', lineHeight: '1.6' }}>"{testimonial.text}"</p>
+                                                <p style={{ marginTop: '15px', color: '#4b5563', fontSize: '14px', lineHeight: '1.6' }}>&quot;{testimonial.text}&quot;</p>
                                             </article>
                                         ))}
                                     </div>
@@ -351,6 +352,9 @@ export default function TourTemplate({ tour }) {
                                     Start Your Journey
                                 </button>
                             </div>
+
+                            {/* Dynamic SEO Block for 1000 words & keywords */}
+                            <SeoContentBlock tour={tour} />
 
                 </div>
             </div>
