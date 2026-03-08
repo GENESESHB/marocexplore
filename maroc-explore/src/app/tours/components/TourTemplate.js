@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import BookingForm from './BookingForm';
-import SeoContentBlock from './SeoContentBlock';
 import { Clock, MapPin, Calendar, Circle, Star, Check, X } from 'lucide-react';
 import styles from './TourTemplate.module.css';
 
@@ -173,6 +172,18 @@ export default function TourTemplate({ tour }) {
                                                 </div>
                                             </div>
                                         ))}
+                                    </div>
+
+                                    <div suppressHydrationWarning style={{ marginTop: '30px', padding: '20px', backgroundColor: '#f0fdf4', border: '1px solid #bbf7d0', borderRadius: '12px', display: 'flex', gap: '15px', alignItems: 'flex-start' }}>
+                                        <div style={{ backgroundColor: '#22c55e', color: 'white', padding: '8px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                                            <Check size={20} />
+                                        </div>
+                                        <div>
+                                            <h4 style={{ margin: '0 0 8px 0', color: '#166534', fontSize: '1.1rem', fontWeight: '700' }}>Expertly Crafted Experience</h4>
+                                            <p style={{ margin: 0, color: '#15803d', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                                Every segment of the <strong>{tour.title}</strong> has been meticulously planned by our local Moroccan experts. We strike the perfect balance of thrilling discovery, cultural immersion, and relaxing free time. Let us handle the complex logistics, driving, and timings so you can simply focus on making unforgettable memories in <strong>{tour.location}</strong>.
+                                            </p>
+                                        </div>
                                     </div>
                                 </section>
                             )}
@@ -352,9 +363,6 @@ export default function TourTemplate({ tour }) {
                                     Start Your Journey
                                 </button>
                             </div>
-
-                            {/* Dynamic SEO Block for 1000 words & keywords */}
-                            <SeoContentBlock tour={tour} />
 
                 </div>
             </div>

@@ -100,11 +100,11 @@ export const toursActivitiesLib = [
                 description: 'Navigate the labyrinthine streets of the old medina, visit historic palaces, and experience the vibrant souks.',
                 fullDescription: 'Discover the "Red City" with our expert local guides. This immersive walking tour takes you through the heart of Marrakech\'s Medina, a UNESCO World Heritage site. You will uncover hidden architectural gems that most independent visitors completely miss. Enjoy the sights, sounds, and smells without the stress of getting lost!',
                 itinerary: [
-                        { time: '09:00', activity: 'Meet your expert local guide at the iconic Koutoubia Mosque.' },
-                        { time: '10:30', activity: 'Visit the stunning 19th-century Bahia Palace.' },
-                        { time: '12:00', activity: 'Walk through the historical Jewish Quarter (Mellah).' },
-                        { time: '14:30', activity: 'Immersive Guided Souk Walk. Learn to bargain effectively.' },
-                        { time: '16:30', activity: 'Emerge into the legendary Jemaa el-Fnaa square as the evening vibe starts.' }
+                        { time: '09:00', activity: 'Meet your expert local guide at the iconic Koutoubia Mosque.', content: 'Start your day in the shadow of the breathtaking 12th-century Koutoubia Minaret, where your registered historian guide will provide a brief overview of the city’s founding and structural history.' },
+                        { time: '10:30', activity: 'Visit the stunning 19th-century Bahia Palace.', content: 'Wander through the sprawling courtyards and intricate zellige-tiled rooms of this grand palace, once home to the Grand Vizier and his harem.' },
+                        { time: '12:00', activity: 'Walk through the historical Jewish Quarter (Mellah).', content: 'Discover a different architectural style and trading history as you explore the Mellah, including a visit to the historic Lazama Synagogue and the mesmerizing spice markets.' },
+                        { time: '14:30', activity: 'Immersive Guided Souk Walk. Learn to bargain effectively.', content: 'Dive into the labyrinthine alleys of the artisan souks. Visit the leather workers, copper beaters, and textile weavers, while learning the cultural etiquette of friendly haggling.' },
+                        { time: '16:30', activity: 'Emerge into the legendary Jemaa el-Fnaa square as the evening vibe starts.', content: 'Conclude your tour at the world-famous square just as the food stalls are being set up and the acrobats, musicians, and storytellers begin their nightly performances.' }
                 ],
                 highlights: ['Skip-the-line at Bahia Palace', 'Expert Navigation of Souks', 'Avoid Tourist Traps', 'Jemaa el-Fnaa Evening Vibe'],
                 included: ['Certified Local Guide', 'Entrance fees to Bahia Palace', 'Traditional Mint Tea & Pastry Tasting'],
@@ -251,10 +251,10 @@ export const toursActivitiesLib = [
                 description: 'Learn the ancient art of Henna (tatoige) with a local Nakacha in a traditional riad.',
                 fullDescription: 'Henna (tatoige) is more than just body art; it\'s a symbolic tradition used to celebrate special occasions and protect against the "evil eye." You will deeply benefit from this meaningful cultural exchange in a private, relaxing riad setting.',
                 itinerary: [
-                        { time: '10:00 AM', activity: 'Welcome arrival at a quiet luxurios Riad setting hidden from the medina chaos.' },
-                        { time: '10:30 AM', activity: 'Educational Workshop: The Nakacha plains the deep-rooted history, and patterns.' },
-                        { time: '11:00 AM', activity: 'Application Session: Receive a professional, freehand design.' },
-                        { time: '12:30 PM', activity: 'Drying Time & Tasting: Enjoy tasting Traditional Moroccan Sweets.' }
+                        { time: '10:00 AM', activity: 'Welcome arrival at a quiet luxurios Riad setting hidden from the medina chaos.', content: 'Step off the bustling streets and into a serene, private riad courtyard decorated with lush plants and calming water features to center yourself.' },
+                        { time: '10:30 AM', activity: 'Educational Workshop: The Nakacha plains the deep-rooted history, and patterns.', content: 'Learn about the spiritual significance of henna in Moroccan culture, how the organic paste is made from crushed leaves, and the specific meanings behind Berber geometric symbols.' },
+                        { time: '11:00 AM', activity: 'Application Session: Receive a professional, freehand design.', content: 'Watch in awe as the master Nakacha (artist) freehands a beautiful, customized design on your hands or feet using a 100% natural, chemical-free henna paste sequence.' },
+                        { time: '12:30 PM', activity: 'Drying Time & Tasting: Enjoy tasting Traditional Moroccan Sweets.', content: 'While your henna dries and sets its rich earthy color, relax with complimentary freshly brewed mint tea and an assortment of premium honey-drenched almond pastries.' }
                 ],
                 highlights: ['Meaningful Cultural Exchange', 'Organic, Safe Henna', 'Traditional Moroccan Pastries'],
                 included: ['All Organic Henna Materials', 'Private Riad Access', 'Mint Tea and Premium Pastries', 'Professional Nakacha (Artist)'],
@@ -328,10 +328,10 @@ export const toursActivitiesLib = [
                 description: 'Master the art of folding Msemen and filling Briwate in a genuine family kitchen.',
                 fullDescription: 'Join a welcoming Moroccan family in their home for an immersive, hands-on cooking experience. You will discover the secrets of making "Msemen" (layer crepes) and "Briouats" (stuffed pastries).',
                 itinerary: [
-                        { time: '10:00 AM', activity: 'Arrival at the Host Family Kitchen in Fes medina.' },
-                        { time: '10:30 AM', activity: 'Masterclass Part 1: Secret Dough Preparation for Msemen.' },
-                        { time: '11:30 AM', activity: 'Masterclass Part 2: Flavor Balancing and Stuffing Briwates.' },
-                        { time: '01:00 PM', activity: 'Shared Degustation: Sit down to enjoy the delicious fruits of your labor.' }
+                        { time: '10:00 AM', activity: 'Arrival at the Host Family Kitchen in Fes medina.', content: 'You will be warmly welcomed into a real family home inside the historic medina, instantly breaking the ice with traditional dates and milk hospitality.' },
+                        { time: '10:30 AM', activity: 'Masterclass Part 1: Secret Dough Preparation for Msemen.', content: 'Get your hands floury as you learn the exact kneading techniques and butter-folding secrets required to create the perfect multi-layered, flaky Msemen crepe.' },
+                        { time: '11:30 AM', activity: 'Masterclass Part 2: Flavor Balancing and Stuffing Briwates.', content: 'Mix savory spices, local herbs, and quality fillings before learning the intricate triangular folding method to perfectly seal your Briwate pastries before frying.' },
+                        { time: '01:00 PM', activity: 'Shared Degustation: Sit down to enjoy the delicious fruits of your labor.', content: 'Gather around the family table to devour your freshly cooked, golden-crisp creations alongside endless pours of sweet Moroccan mint tea and engaging conversation.' }
                 ],
                 highlights: ['Take Home Secret Recipes', 'Genuine Family Interaction', 'Delicious Lunch Included'],
                 included: ['All Fresh Ingredients', 'Use of Cooking Equipment', 'A Full Meal of your creations'],
@@ -406,10 +406,10 @@ export const toursActivitiesLib = [
                 description: 'Be an honored guest at a traditional Moroccan wedding or Sbou (naming ceremony).',
                 fullDescription: 'Moroccan celebrations are legendary for their extravagance, music, and food. You will uniquely benefit from rare, exclusive access to a genuine Moroccan celebration alongside a local family. This is not a staged show for tourists, but a real life event!',
                 itinerary: [
-                        { time: '07:00 PM', activity: 'Pick-up and transfer to a specialized boutique for Costume Fitting (Kaftans or Djellabas).' },
-                        { time: '08:00 PM', activity: 'Arrival at the Venue & Grand Welcome Ceremony with milk and stuffed dates.' },
-                        { time: '09:30 PM', activity: 'Immerse deeply in the festivities: Live Music, Dancing, and Cultural Rites.' },
-                        { time: '11:00 PM', activity: 'Grand Feast: Sit down to enjoy a lavish, multi-course traditional Moroccan banquet.' }
+                        { time: '07:00 PM', activity: 'Pick-up and transfer to a specialized boutique for Costume Fitting (Kaftans or Djellabas).', content: 'Start the evening by selecting a stunning, authentic Moroccan Kaftan or Djellaba from a premium boutique rental so you can blend in perfectly with the local guests.' },
+                        { time: '08:00 PM', activity: 'Arrival at the Venue & Grand Welcome Ceremony with milk and stuffed dates.', content: 'Arrive at the beautifully decorated celebration hall and be greeted with the traditional symbol of Moroccan purity and hospitality: sweet almond-stuffed dates and orange blossom milk.' },
+                        { time: '09:30 PM', activity: 'Immerse deeply in the festivities: Live Music, Dancing, and Cultural Rites.', content: 'Join the energetic dancing circle alongside family members to the rhythmic beats of a live Chaabi band, witnessing unique cultural rites like henna ceremonies or the Amaria lifting.' },
+                        { time: '11:00 PM', activity: 'Grand Feast: Sit down to enjoy a lavish, multi-course traditional Moroccan banquet.', content: 'Feast like royalty on massive, communal plates of slow-cooked meat Tagines, sweet-and-savory Pastilla pies, and seasonal fruits, served late into the magical night.' }
                 ],
                 highlights: ['Exclusive Inside Access', 'Real Authentic Event', 'Traditional Attire Provided', 'Multi-course Festive Feast'],
                 included: ['Premium Traditional Outfit Rental', 'Massive Feast/Dinner', 'Local Guide/Cultural Interpreter', 'Private Transport'],
@@ -483,10 +483,10 @@ export const toursActivitiesLib = [
                 description: 'Wander through the picturesque blue-washed streets and discover the artistic spirit of Chefchaouen.',
                 fullDescription: 'Immerse yourself in the tranquil atmosphere of Chefchaouen, the famous Blue Pearl of Morocco. Our local guide will lead you through winding alleys adorned with colorful pots, artisanal shops, and unique Andalusian-style architecture.',
                 itinerary: [
-                        { time: '10:00', activity: 'Meet your guide at the Kasbah entrance in Outa el Hammam square.' },
-                        { time: '11:00', activity: 'Explore the vivid blue streets and hidden architectural marvels perfect for photography.' },
-                        { time: '13:00', activity: 'Stop for a locally sourced goat cheese and olive tasting.' },
-                        { time: '15:00', activity: 'Visit the Spanish Mosque for panoramic views over the entire valley.' }
+                        { time: '10:00', activity: 'Meet your guide at the Kasbah entrance in Outa el Hammam square.', content: 'Your local guide will greet you beneath the red-walled 15th-century Kasbah, providing historical context on the town’s founding by Moorish exiles from Spain.' },
+                        { time: '11:00', activity: 'Explore the vivid blue streets and hidden architectural marvels perfect for photography.', content: 'Wander deeper into the stunning azure alleyways, passing intricate doorways, colorful plant pots, and discovering hidden artisan workshops while learning taking the perfect photos.' },
+                        { time: '13:00', activity: 'Stop for a locally sourced goat cheese and olive tasting.', content: 'Pause to sample the region’s famous creamy goat cheese (Jben) paired with local mountain honey, fresh olives, and crusty bread in a quiet, shaded square.' },
+                        { time: '15:00', activity: 'Visit the Spanish Mosque for panoramic views over the entire valley.', content: 'Embark on a gentle 30-minute hillside hike out of the medina to the abandoned Spanish Mosque, the absolute best vantage point to see the entire blue city glowing against the Rif Mountains.' }
                 ],
                 highlights: ['Photographic Blue Alleys', 'Local Artisan Workshops', 'Panoramic Views', 'Goat Cheese Tasting'],
                 included: ['Local Expert Guide', 'Cheese & Olive Tasting', 'Entrance to the Kasbah'],
@@ -560,10 +560,10 @@ export const toursActivitiesLib = [
                 description: 'Enjoy the refreshing breeze, historical ramparts, and vibrant arts scene of coastal Essaouira.',
                 fullDescription: 'Escape to the laid-back coastal city of Essaouira, known for its strong winds, ancient ramparts, and thriving arts community. Stroll along the historical Skala de la Ville walls where scenes of Game of Thrones were filmed, and indulge in some of the freshest seafood in Morocco.',
                 itinerary: [
-                        { time: '10:00', activity: 'Meet near the port and observe the bustling morning fish market and iconic blue boats.' },
-                        { time: '11:30', activity: 'Walk along the dramatic ocean ramparts (Skala) and hear tales of historic pirates.' },
-                        { time: '13:00', activity: 'Enjoy a freshly grilled seafood lunch right by the ocean.' },
-                        { time: '15:00', activity: 'Wander the artsy medina and discover local Thuya wood carvers.' }
+                        { time: '10:00', activity: 'Meet near the port and observe the bustling morning fish market and iconic blue boats.', content: 'Witness the chaotic but fascinating daily life of local fishermen hauling in their morning catch amidst a sea of iconic, bright blue wooden fishing boats and squawking seagulls.' },
+                        { time: '11:30', activity: 'Walk along the dramatic ocean ramparts (Skala) and hear tales of historic pirates.', content: 'Stroll atop the imposing 18th-century sea walls armed with brass cannons. Feel the powerful trade winds and learn about the city’s history as a fortified Portuguese trading post.' },
+                        { time: '13:00', activity: 'Enjoy a freshly grilled seafood lunch right by the ocean.', content: 'Sit down at an open-air portside stall where you can personally select your fish, which is then grilled over charcoal right in front of you and served with fresh salad and bread.' },
+                        { time: '15:00', activity: 'Wander the artsy medina and discover local Thuya wood carvers.', content: 'Explore the relaxed, grid-patterned medina, stopping into artist galleries and smelling the distinctive aroma of rare Thuya wood being masterfully carved into intricate puzzle boxes.' }
                 ],
                 highlights: ['Skala Ramparts', 'Fresh Fish Market', 'Thuya Wood Carvers', 'Relaxed Coastal Vibe'],
                 included: ['Guided Tour', 'Seafood Lunch', 'Port Entry'],
@@ -637,10 +637,10 @@ export const toursActivitiesLib = [
                 description: 'Step back into the medieval era in the world’s largest car-free urban zone.',
                 fullDescription: 'A guided journey through Fes El Bali is truly a form of time travel. The intricate 9,000 alleys can be overwhelming, but our expert historian guide will navigate you through ancient madrasas, vibrant souks, and the legendary Chouara Tannery safely and insightfully.',
                 itinerary: [
-                        { time: '09:00', activity: 'Begin at the majestic Blue Gate, entering the medieval medina.' },
-                        { time: '10:30', activity: 'Visit the exquisitely detailed Bou Inania Madrasa and Al-Qarawiyyin University.' },
-                        { time: '12:30', activity: 'Experience the pungent but spectacular Chouara Tannery.' },
-                        { time: '14:30', activity: 'Explore the Nejjarine Museum of Wooden Arts and localized artisan guilds.' }
+                        { time: '09:00', activity: 'Begin at the majestic Blue Gate, entering the medieval medina.', content: 'Step through the iconic Bab Boujloud, transitioning instantly from the modern world into a bustling, car-free labyrinth functioning much like it did in the 9th century.' },
+                        { time: '10:30', activity: 'Visit the exquisitely detailed Bou Inania Madrasa and Al-Qarawiyyin University.', content: 'Marvel at the pinnacle of Marinid architecture at Bou Inania, then view the exterior of Al-Qarawiyyin, continuously operating as the oldest existing educational institution in the world.' },
+                        { time: '12:30', activity: 'Experience the pungent but spectacular Chouara Tannery.', content: 'Climb up to a leather shop terrace for a striking view over the ancient stone vessels filled with natural dyes where men scrape and color skins using centuries-old methods.' },
+                        { time: '14:30', activity: 'Explore the Nejjarine Museum of Wooden Arts and localized artisan guilds.', content: 'Wander through specialized quarters where copper beaters, silk weavers, and ceramicists work, capping the day off at a beautifully restored caravanserai turned woodworking museum.' }
                 ],
                 highlights: ['Chouara Tannery Views', 'Al-Qarawiyyin Mosque', 'Expert Navigation', 'Medieval Architecture'],
                 included: ['Expert Historian Guide', 'Entrance Fees to Madrasas', 'Mint Tea at Tannery Overlook'],
@@ -714,10 +714,10 @@ export const toursActivitiesLib = [
                 description: 'Catch the optimal waves of the Atlantic coastline and bask in the endless Moroccan sun.',
                 fullDescription: 'Whether you are a beginner looking to catch your first wave or an experienced surfer chasing the perfect swell, Agadir’s coastline offers something for everyone. Dive into the Moroccan surf culture with top-notch local instructors.',
                 itinerary: [
-                        { time: '09:00', activity: 'Morning pickup and transfer to the premier surf spot of Taghazout.' },
-                        { time: '10:00', activity: 'Safety briefing and a 2-hour guided surf lesson with professional instructors.' },
-                        { time: '12:30', activity: 'Beachside lunch featuring fresh local produce and relaxing by the ocean.' },
-                        { time: '14:00', activity: 'Free surf session or optional camel ride near the beach before returning.' }
+                        { time: '09:00', activity: 'Morning pickup and transfer to the premier surf spot of Taghazout.', content: 'Enjoy a scenic coastal drive north from Agadir to the laid-back bohemian village of Taghazout, internationally renowned for having some of the most consistent surf breaks in North Africa.' },
+                        { time: '10:00', activity: 'Safety briefing and a 2-hour guided surf lesson with professional instructors.', content: 'Suit up and learn the basics of ocean safety, paddling, and popping up on the sand before hitting the white water waves with hands-on, encouraging instruction from local pros.' },
+                        { time: '12:30', activity: 'Beachside lunch featuring fresh local produce and relaxing by the ocean.', content: 'Recharge under the Moroccan sun with a freshly prepared lunch right on the beach, featuring seasonal fruits, local seafood, and refreshing mint tea.' },
+                        { time: '14:00', activity: 'Free surf session or optional camel ride near the beach before returning.', content: 'Spend the afternoon practicing your newly acquired surfing skills on your own, or opt for a relaxing, picturesque camel ride along the sandy shores before heading back.' }
                 ],
                 highlights: ['Professional Surf Coaching', 'Taghazout Beach', 'Beachside Relaxing', 'Surfing Equipment Provided'],
                 included: ['Surfboard & Wetsuit Rental', '2-Hour Lesson', 'Beach Lunch', 'Transport from Marina'],
@@ -791,9 +791,9 @@ export const toursActivitiesLib = [
                 description: 'Discover the Hollywood of Africa by visiting grand film studios and ancient kasbahs.',
                 fullDescription: 'Ouarzazate has been the spectacular backdrop for numerous Hollywood blockbusters. This tour takes you behind the scenes of famous sets and through the historically rich Kasbah Taourirt, blending real history with cinematic grandiosity.',
                 itinerary: [
-                        { time: '10:00', activity: 'Tour the colossal Atlas Film Studios, seeing sets from Gladiator, Cleopatra, and more.' },
-                        { time: '11:30', activity: 'Explore the majestic 19th-century Kasbah Taourirt, with its intricate clay architecture.' },
-                        { time: '13:00', activity: 'Enjoy mint tea with panoramic views over the surrounding barren plateau and High Atlas.' }
+                        { time: '10:00', activity: 'Tour the colossal Atlas Film Studios, seeing sets from Gladiator, Cleopatra, and more.', content: 'Walk amidst massive, decaying movie sets built in the middle of the desert. Feel the cinematic history as your guide details exactly where iconic movie scenes were shot over the decades.' },
+                        { time: '11:30', activity: 'Explore the majestic 19th-century Kasbah Taourirt, with its intricate clay architecture.', content: 'Step out of Hollywood fiction and into actual Moroccan history. Navigate the dizzying array of staircases, painted ceilings, and maze-like passageways of this former Glaoui stronghold.' },
+                        { time: '13:00', activity: 'Enjoy mint tea with panoramic views over the surrounding barren plateau and High Atlas.', content: 'Conclude the historical tour by ascending to a rooftop terrace for a warming glass of mint tea, overlooking the lush palm groves contrasting against the stark High Atlas Mountains.' }
                 ],
                 highlights: ['Atlas Film Studios', 'Kasbah Taourirt', 'Cinematic Backdrops', 'Panoramic Atlas Views'],
                 included: ['Studio & Kasbah Entrance Fees', 'Expert Studio Guide', 'Mint Tea'],
@@ -867,10 +867,10 @@ export const toursActivitiesLib = [
                 description: 'Explore the monumental gates, granaries, and the peaceful ambiance of the Ismaili capital.',
                 fullDescription: 'Often overshadowed by Fes, Meknes offers a calmer but equally impressive Imperial city experience. Marvel at the grand Bab Mansour gate, explore the massive Royal Granaries, and appreciate the 17th-century ambition of Sultan Moulay Ismail.',
                 itinerary: [
-                        { time: '09:00', activity: 'Start at the magnificent Bab Mansour, considered one of North Africa’s finest gates.' },
-                        { time: '10:00', activity: 'Explore the Mausoleum of Moulay Ismail and the vast Heri es-Souani granaries.' },
-                        { time: '11:30', activity: 'Walk through the old medina and the lively Lahdim Square.' },
-                        { time: '13:00', activity: 'Optional transfer to the nearby Roman ruins of Volubilis.' }
+                        { time: '09:00', activity: 'Start at the magnificent Bab Mansour, considered one of North Africa’s finest gates.', content: 'Stand in awe beneath the towering arches and vibrant zellige tiles of Bab Mansour, learning about the immense ambition of Sultan Moulay Ismail who built it in the 17th century.' },
+                        { time: '10:00', activity: 'Explore the Mausoleum of Moulay Ismail and the vast Heri es-Souani granaries.', content: 'Visit the peaceful resting place of the great Sultan and then wander through the massive vaulted cellars of his granaries, designed to feed an army and 12,000 royal horses.' },
+                        { time: '11:30', activity: 'Walk through the old medina and the lively Lahdim Square.', content: 'Experience the calm, unhurried pace of the Meknes medina before emerging into Lahdim Square, a mini-Jemaa el-Fnaa bustling with storytellers, musicians, and fresh olive stalls.' },
+                        { time: '13:00', activity: 'Optional transfer to the nearby Roman ruins of Volubilis.', content: 'If you choose to extend your tour, enjoy a scenic drive to the nearby UNESCO-listed Roman ruins of Volubilis, famous for its incredibly preserved floor mosaics dating back to 300 AD.' }
                 ],
                 highlights: ['Grand Bab Mansour Gate', 'Royal Granaries', 'Quiet Medina Vibe', 'Moulay Ismail Mausoleum'],
                 included: ['Entrance Fees', 'Local Guide'],
@@ -944,10 +944,10 @@ export const toursActivitiesLib = [
                 description: 'Discover the elegant blend of Islamic tradition and modernism in the capital city of Rabat.',
                 fullDescription: 'Rabat is a UNESCO World Heritage site known for its clean avenues and rich heritage. Visit the unfinished Hassan Tower, the regal Mausoleum of Mohammed V, and lose yourself in the Andalusian charm of the Kasbah of the Udayas overlooking the Atlantic.',
                 itinerary: [
-                        { time: '09:30', activity: 'Visit the iconic Hassan Tower and the exquisitely decorated Mausoleum of Mohammed V.' },
-                        { time: '11:00', activity: 'Explore the ancient Roman and Merinid ruins at the Chellah necropolis.' },
-                        { time: '13:00', activity: 'Stroll through the blue-and-white alleys of the Kasbah of the Udayas.' },
-                        { time: '14:30', activity: 'Relax with mint tea overlooking the Bou Regreg river and the ocean.' }
+                        { time: '09:30', activity: 'Visit the iconic Hassan Tower and the exquisitely decorated Mausoleum of Mohammed V.', content: 'Admire the massive, unfinished 12th-century minaret and walk among the 200 marble columns before entering the modern, visually stunning white marble tomb of the beloved late King.' },
+                        { time: '11:00', activity: 'Explore the ancient Roman and Merinid ruins at the Chellah necropolis.', content: 'Step out of the modern capital and into this peaceful, overgrown archaeological site where Roman pillars mix with medieval Islamic tombs, heavily guarded by resident nesting storks.' },
+                        { time: '13:00', activity: 'Stroll through the blue-and-white alleys of the Kasbah of the Udayas.', content: 'Wander through narrow, picturesque residential streets painted brilliantly in azure and white, offering a serene, village-like atmosphere completely isolated from the busy city outside its walls.' },
+                        { time: '14:30', activity: 'Relax with mint tea overlooking the Bou Regreg river and the ocean.', content: 'Find a shady spot at the famous Café Maure, sipping sugary mint tea and eating honey pastries while watching small rowboats navigate the mouth of the river emptying into the Atlantic.' }
                 ],
                 highlights: ['Hassan Tower', 'Chellah Necropolis', 'Kasbah of the Udayas', 'Ocean Views'],
                 included: ['Licensed Guide', 'Entrance Fees to Chellah'],
@@ -1021,10 +1021,10 @@ export const toursActivitiesLib = [
                 description: 'Experience the unique international vibe of Tanger, where the Mediterranean meets the Atlantic.',
                 fullDescription: 'Tanger has long been a haven for artists, writers, and spies. Discover its unique cosmopolitan history by exploring the Kasbah museum, enjoying panoramic views of Spain, and visiting the mythical Caves of Hercules.',
                 itinerary: [
-                        { time: '10:00', activity: 'Meet at Grand Socco and walk through the historic Kasbah district.' },
-                        { time: '12:00', activity: 'Visit the Kasbah Museum in the former Sultan’s palace.' },
-                        { time: '14:00', activity: 'Drive up to Cap Spartel, where the Mediterranean and Atlantic oceans meet.' },
-                        { time: '15:30', activity: 'Explore the magnificent Cave of Hercules with its Africa-shaped opening.' }
+                        { time: '10:00', activity: 'Meet at Grand Socco and walk through the historic Kasbah district.', content: 'Start your day at the vibrant roundabout that connects the new city with the old medina. Walk the same bohemian streets that once inspired legendary artists like Matisse and Burroughs.' },
+                        { time: '12:00', activity: 'Visit the Kasbah Museum in the former Sultan’s palace.', content: 'Explore the Dar el-Makhzen, a beautiful palace turned museum containing incredible mosaics and artifacts that trace Tanger’s complex history from its Phoenician roots to modern times.' },
+                        { time: '14:00', activity: 'Drive up to Cap Spartel, where the Mediterranean and Atlantic oceans meet.', content: 'Take a scenic coastal drive to the extreme northwestern tip of Africa. Stand at the picturesque lighthouse and look out over the turbulent waters where two massive oceans collide.' },
+                        { time: '15:30', activity: 'Explore the magnificent Cave of Hercules with its Africa-shaped opening.', content: 'Descend into these partially natural, partially man-made caves dripping with Greek mythology. The tour culminates at the famous ocean window naturally carved into the shape of the African continent.' }
                 ],
                 highlights: ['Cap Spartel Ocean Views', 'Cave of Hercules', 'Sultan’s Palace Museum', 'Cosmopolitan Vibe'],
                 included: ['Transport to Cap Spartel', 'Guide', 'Museum & Cave Entries'],
@@ -1098,10 +1098,10 @@ export const toursActivitiesLib = [
                 description: 'Delve into the rich indigenous heritage of the Amazigh (Berber) people in the Souss-Massa region.',
                 fullDescription: 'Step away from the tourist resorts and engage with local Amazigh communities. Learn about traditional weaving, Argan oil extraction, and ancient agricultural practices in a fulfilling, respectful cultural exchange.',
                 itinerary: [
-                        { time: '08:30', activity: 'Drive into the rural Anti-Atlas foothills surrounding Agadir.' },
-                        { time: '09:30', activity: 'Visit a Women’s Argan Oil Cooperative and learn the tedious hand-crushing process.' },
-                        { time: '11:00', activity: 'Walk through an ancient Amazigh village and see traditional mud-brick construction.' },
-                        { time: '12:30', activity: 'Share an authentic homemade Tagine and freshly baked bread with a local family.' }
+                        { time: '08:30', activity: 'Drive into the rural Anti-Atlas foothills surrounding Agadir.', content: 'Leave the modern beach resorts behind and travel up winding roads into the arid, rugged terrain of the Anti-Atlas mountains where traditional Berber life remains relatively unchanged.' },
+                        { time: '09:30', activity: 'Visit a Women’s Argan Oil Cooperative and learn the tedious hand-crushing process.', content: 'Meet the hardworking indigenous women who manually extract the world-famous "liquid gold" of Morocco. Watch the labor-intensive process of cracking nuts and grinding them on stone querns.' },
+                        { time: '11:00', activity: 'Walk through an ancient Amazigh village and see traditional mud-brick construction.', content: 'Stroll through a quiet, dusty village nestled in the foothills. Learn how the locals utilize sustainable, ancient mud-brick (pisé) techniques designed specifically to withstand the harsh desert climate.' },
+                        { time: '12:30', activity: 'Share an authentic homemade Tagine and freshly baked bread with a local family.', content: 'Conclude the tour by sitting barefoot on colorful carpets in a local family’s home. Tear off chunks of hot, stone-baked oven bread to scoop up a delicious, slow-simmered vegetable and meat Tagine.' }
                 ],
                 highlights: ['Argan Oil Cooperative', 'Authentic Amazigh Village', 'Homemade Tagine', 'Cultural Exchange'],
                 included: ['Transport', 'Lunch with a Local Family', 'Guide', 'Donation to Cooperative'],

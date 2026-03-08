@@ -12,7 +12,8 @@ export default function sitemap() {
         '/culture',
         '/about',
         '/contact',
-        '/filter'
+        '/filter',
+        '/blogs'
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date().toISOString(),
@@ -20,13 +21,21 @@ export default function sitemap() {
         priority: route === '' ? 1 : 0.8,
     }));
 
-    // Tour pages
-    const tourRoutes = toursActivitiesLib.map((tour) => ({
-        url: `${baseUrl}/tours/${tour.slug}`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'monthly',
-        priority: 0.9,
-    }));
+    // Tour & Blog pages
+    const dynamicRoutes = toursActivitiesLib.flatMap((tour) => [
+        {
+            url: `${baseUrl}/tours/${tour.slug}`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/blogs/${tour.slug}`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        }
+    ]);
 
-    return [...routes, ...tourRoutes];
+    return [...routes, ...dynamicRoutes];
 }
