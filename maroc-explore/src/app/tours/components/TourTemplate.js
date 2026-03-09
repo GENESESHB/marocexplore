@@ -24,10 +24,14 @@ export default function TourTemplate({ tour }) {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
                         '@context': 'https://schema.org',
-                        '@type': 'TouristAttraction',
+                        '@type': 'Product',
                         name: tour.title,
                         description: tour.fullDescription || tour.description,
                         image: `https://marocexplore.com${tour.image}`,
+                        brand: {
+                            '@type': 'Brand',
+                            name: 'Maroc Explore'
+                        },
                         offers: {
                             '@type': 'Offer',
                             price: tour.price,
