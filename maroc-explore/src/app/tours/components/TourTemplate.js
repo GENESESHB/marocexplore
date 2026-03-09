@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import BookingForm from './BookingForm';
-import { Clock, MapPin, Calendar, Circle, Star, Check, X } from 'lucide-react';
+import { Clock, MapPin, Calendar, Circle, Star, Check, X, Sparkles, Award, Globe } from 'lucide-react';
 import styles from './TourTemplate.module.css';
 
 export default function TourTemplate({ tour }) {
@@ -218,6 +218,66 @@ export default function TourTemplate({ tour }) {
                                 </div>
                             </section>
 
+                            {/* Premium Integrated SEO Content */}
+                            <section className={styles.seoRedesignSection}>
+                                <h2 style={{ fontSize: '2.2rem', fontWeight: '900', border: 'none', padding: '0', margin: '0 0 30px 0' }}>
+                                    {tour.title} <span style={{ color: '#0ea5e9' }}>2026</span>: The Ultimate Maroc Explore Travel Guide
+                                </h2>
+                                
+                                <div className={styles.premiumGlassContent}>
+                                    <p style={{ fontSize: '1.15rem', lineHeight: '1.8', color: '#334155', marginBottom: '24px' }}>
+                                        If you are looking for an unforgettable adventure in North Africa, the <strong>{tour.title}</strong> by <strong>Maroc Explore</strong> offers a magical experience that goes beyond the ordinary. In 2026, traveling to Morocco is easier and more rewarding than ever, and immersing yourself in a {tour.category} journey like this one will leave you with memories that last a lifetime.
+                                    </p>
+
+                                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '25px', margin: '40px 0' }}>
+                                        <div className={styles.seoProTip}>
+                                            <h3 style={{ color: '#166534', marginTop: '0', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                <Sparkles size={18} /> Maroc Explore Pro-Tip
+                                            </h3>
+                                            <p style={{ color: '#15803d', margin: '0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                                When visiting {tour.location}, always carry a light scarf. It&apos;s perfect for sudden desert breezes or visiting sacred sites with respect. Our local guides ensure you&apos;re always prepared for the unique climate of {tour.location}.
+                                            </p>
+                                        </div>
+                                        
+                                        <div className={styles.seoSustainableBox}>
+                                            <h3 style={{ color: '#0369a1', marginTop: '0', fontSize: '1.2rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                                                <Globe size={18} /> Sustainable Travel
+                                            </h3>
+                                            <p style={{ color: '#075985', margin: '0', fontSize: '0.95rem', lineHeight: '1.6' }}>
+                                                By choosing Maroc Explore, you support local cooperatives in {tour.location}. We prioritize eco-friendly transport and authentic stays that protect the delicate Moroccan ecosystem for future generations.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <p style={{ color: '#475569', lineHeight: '1.8', marginBottom: '30px' }}>
+                                        Morocco&apos;s rich history is woven into the very fabric of its bustling medinas, majestic kasbahs, and serene sweeping landscapes. Choosing the <strong>{tour.title}</strong> allows you to trace the footsteps of ancient trading caravans that once crossed these very lands. Throughout <strong>{tour.location}</strong>, you will find architectural marvels decorated with intricate zellige tilework and vibrant souks fragrant with spices.
+                                    </p>
+
+                                    <div className={styles.seoImageWrapper}>
+                                        <img 
+                                            src={tour.image} 
+                                            alt={`${tour.title} - Premium Morocco ${tour.category} Experience 2026`} 
+                                            style={{ width: '100%', height: '350px', objectFit: 'cover' }} 
+                                        />
+                                        <div className={styles.seoImageBadge}>
+                                            Authentic {tour.location} Moments
+                                        </div>
+                                    </div>
+
+                                    <h3 style={{ fontSize: '1.6rem', color: '#0f172a', margin: '40px 0 20px', fontWeight: '800' }}>What makes Maroc Explore different?</h3>
+                                    <p style={{ color: '#475569', lineHeight: '1.8', marginBottom: '30px' }}>
+                                        According to the official <a href="https://www.visitmorocco.com/fr" target="_blank" rel="noopener noreferrer" style={{ color: '#0ea5e9', textDecoration: 'none', borderBottom: '2px solid rgba(14, 165, 233, 0.2)' }}>Moroccan National Tourist Office</a>, tourism in this region emphasizes authentic encounters. This ethos is heavily embedded into the <strong>{tour.title}</strong>. Whether you are navigating intricate medinas or crossing golden dunes, every moment is crafted for authenticity.
+                                    </p>
+
+                                    <div className={styles.seoCommunityCta}>
+                                        <h4 style={{ fontSize: '1.4rem', margin: '0 0 10px', fontWeight: '800' }}>Join the Maroc Explore Community</h4>
+                                        <p style={{ color: '#cbd5e1', marginBottom: '25px', fontSize: '0.95rem' }}>Discover the soul of Morocco with our local experts.</p>
+                                        <Link href="/tours" className={styles.seoBrowseButton}>
+                                            Browse All 2026 Tours
+                                        </Link>
+                                    </div>
+                                </div>
+                            </section>
                         </div>
 
                         {/* Right Column - Booking Form Widget */}
@@ -363,6 +423,9 @@ export default function TourTemplate({ tour }) {
                                     Start Your Journey
                                 </button>
                             </div>
+
+
+
 
                 </div>
             </div>
