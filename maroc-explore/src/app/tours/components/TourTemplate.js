@@ -27,11 +27,25 @@ export default function TourTemplate({ tour }) {
                         '@type': 'Product',
                         name: tour.title,
                         description: tour.fullDescription || tour.description,
-                        image: `https://marocexplore.com${tour.image}`,
+                        image: [`https://marocexplore.com${tour.image}`],
+                        sku: tour.slug,
+                        mpn: `ME-${tour.slug.toUpperCase()}`,
                         brand: {
                             '@type': 'Brand',
                             name: 'Maroc Explore'
                         },
+                        review: tour.reviewsList?.[0] ? {
+                            '@type': 'Review',
+                            reviewRating: {
+                                '@type': 'Rating',
+                                ratingValue: tour.reviewsList[0].rating || 5,
+                                bestRating: 5
+                            },
+                            author: {
+                                '@type': 'Person',
+                                name: tour.reviewsList[0].name
+                            }
+                        } : undefined,
                         offers: {
                             '@type': 'Offer',
                             price: tour.price,
@@ -42,7 +56,7 @@ export default function TourTemplate({ tour }) {
                             hasMerchantReturnPolicy: {
                                 '@type': 'MerchantReturnPolicy',
                                 applicableCountry: 'MA',
-                                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnPeriod',
+                                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
                                 merchantReturnDays: 30,
                                 returnMethod: 'https://schema.org/ReturnByMail',
                                 returnFees: 'https://schema.org/FreeReturn'
@@ -57,6 +71,21 @@ export default function TourTemplate({ tour }) {
                                 shippingDestination: {
                                     '@type': 'DefinedRegion',
                                     addressCountry: 'MA'
+                                },
+                                deliveryTime: {
+                                    '@type': 'ShippingDeliveryTime',
+                                    handlingTime: {
+                                        '@type': 'QuantitativeValue',
+                                        minValue: 0,
+                                        maxValue: 0,
+                                        unitCode: 'DAY'
+                                    },
+                                    transitTime: {
+                                        '@type': 'QuantitativeValue',
+                                        minValue: 0,
+                                        maxValue: 0,
+                                        unitCode: 'DAY'
+                                    }
                                 }
                             }
                         },
