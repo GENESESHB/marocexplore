@@ -37,7 +37,28 @@ export default function TourTemplate({ tour }) {
                             price: tour.price,
                             priceCurrency: 'USD',
                             availability: 'https://schema.org/InStock',
-                            url: `https://marocexplore.com/tours/${tour.slug}`
+                            url: `https://marocexplore.com/tours/${tour.slug}`,
+                            priceValidUntil: '2026-12-31',
+                            hasMerchantReturnPolicy: {
+                                '@type': 'MerchantReturnPolicy',
+                                applicableCountry: 'MA',
+                                returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnPeriod',
+                                merchantReturnDays: 30,
+                                returnMethod: 'https://schema.org/ReturnByMail',
+                                returnFees: 'https://schema.org/FreeReturn'
+                            },
+                            shippingDetails: {
+                                '@type': 'OfferShippingDetails',
+                                shippingRate: {
+                                    '@type': 'MonetaryAmount',
+                                    value: 0,
+                                    currency: 'USD'
+                                },
+                                shippingDestination: {
+                                    '@type': 'DefinedRegion',
+                                    addressCountry: 'MA'
+                                }
+                            }
                         },
                         aggregateRating: tour.reviews ? {
                             '@type': 'AggregateRating',
