@@ -23,13 +23,13 @@ export default function TourTemplate({ tour }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify({
-                        '@context': 'https://schema.org',
+                        '@context': 'https://schema.org/',
                         '@type': 'Product',
                         name: tour.title,
                         description: tour.fullDescription || tour.description,
                         image: [`https://marocexplore.com${tour.image}`],
                         sku: tour.slug,
-                        mpn: `ME-${tour.slug.toUpperCase()}`,
+                        mpn: `ME-${tour.slug.toUpperCase().replace(/\s+/g, '-')}`,
                         brand: {
                             '@type': 'Brand',
                             name: 'Maroc Explore'
@@ -39,7 +39,8 @@ export default function TourTemplate({ tour }) {
                             reviewRating: {
                                 '@type': 'Rating',
                                 ratingValue: tour.reviewsList[0].rating || 5,
-                                bestRating: 5
+                                bestRating: 5,
+                                worstRating: 1
                             },
                             author: {
                                 '@type': 'Person',
@@ -78,13 +79,13 @@ export default function TourTemplate({ tour }) {
                                         '@type': 'QuantitativeValue',
                                         minValue: 0,
                                         maxValue: 0,
-                                        unitCode: 'DAY'
+                                        unitCode: 'd'
                                     },
                                     transitTime: {
                                         '@type': 'QuantitativeValue',
                                         minValue: 0,
                                         maxValue: 0,
-                                        unitCode: 'DAY'
+                                        unitCode: 'd'
                                     }
                                 }
                             }
@@ -93,6 +94,8 @@ export default function TourTemplate({ tour }) {
                             '@type': 'AggregateRating',
                             ratingValue: tour.rating,
                             reviewCount: tour.reviews,
+                            bestRating: 5,
+                            worstRating: 1
                         } : undefined,
                     })
                 }}
