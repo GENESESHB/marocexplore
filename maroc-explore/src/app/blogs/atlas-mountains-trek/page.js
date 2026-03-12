@@ -9,6 +9,9 @@ export function generateMetadata() {
         title: `Maroc Explore Guide: ${tour.title} in 2026`,
         description: `Read the official Maroc Explore 2026 guide for travelling to ${tour.location}. ${tour.description}`,
         keywords: ['Maroc Explore', 'Morocco tours 2026', tour.location, ...tour.highlights],
+                alternates: {
+            canonical: 'https://marocexplore.com/blogs/atlas-mountains-trek',
+        },
         openGraph: {
             title: `Maroc Explore Guide: ${tour.title}`,
             description: tour.description,

@@ -26,8 +26,39 @@ export default function BlogTemplate({ tour }) {
 
     if (!tour || !blogData) return <div style={{ padding: '100px', textAlign: 'center' }}>Blog content missing for slug: {tour?.slug}</div>;
 
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: tour.title,
+        description: tour.description,
+        image: tour.image,
+        author: {
+            '@type': 'Organization',
+            name: 'Maroc Explore',
+            url: 'https://marocexplore.com'
+        },
+        publisher: {
+            '@type': 'Organization',
+            name: 'Maroc Explore',
+            logo: {
+                '@type': 'ImageObject',
+                url: 'https://marocexplore.com/icon.png'
+            }
+        },
+        datePublished: '2026-01-01', // Default for now, can be improved if dates exist in data
+        dateModified: '2026-03-12',
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `https://marocexplore.com/blogs/${tour.slug}`
+        }
+    };
+
     return (
         <div className={styles.articleContainer}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Inject Premium Fonts */}
             <style jsx global>{`
                 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
