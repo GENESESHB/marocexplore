@@ -26,38 +26,72 @@ export default function BlogTemplate({ tour }) {
 
     if (!tour || !blogData) return <div style={{ padding: '100px', textAlign: 'center' }}>Blog content missing for slug: {tour?.slug}</div>;
 
-    const jsonLd = {
+    const baseUrl = 'https://marocexplore.com';
+    const postUrl = `${baseUrl}/blogs/${tour.slug}`;
+    const absoluteImage = tour.image.startsWith('http') ? tour.image : `${baseUrl}${tour.image}`;
+
+    const blogPostingJsonLd = {
         '@context': 'https://schema.org',
         '@type': 'BlogPosting',
         headline: tour.title,
         description: tour.description,
-        image: tour.image,
+        image: absoluteImage,
         author: {
             '@type': 'Organization',
             name: 'Maroc Explore',
-            url: 'https://marocexplore.com'
+            url: baseUrl
         },
         publisher: {
             '@type': 'Organization',
             name: 'Maroc Explore',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://marocexplore.com/icon.png'
+                url: `${baseUrl}/icon.png`
             }
         },
-        datePublished: '2026-01-01', // Default for now, can be improved if dates exist in data
+        datePublished: '2026-01-01',
         dateModified: '2026-03-12',
         mainEntityOfPage: {
             '@type': 'WebPage',
-            '@id': `https://marocexplore.com/blogs/${tour.slug}`
-        }
+            '@id': postUrl
+        },
+        articleBody: blogData.htmlContent.replace(/<[^>]*>?/gm, '').substring(0, 1000) // Plain text snippet
+    };
+
+    const breadcrumbJsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: baseUrl
+            },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Blogs',
+                item: `${baseUrl}/blogs`
+            },
+            {
+                '@type': 'ListItem',
+                position: 3,
+                name: tour.title,
+                item: postUrl
+            }
+        ]
     };
 
     return (
         <div className={styles.articleContainer}>
             <script
                 type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             {/* Inject Premium Fonts */}
             <style jsx global>{`
