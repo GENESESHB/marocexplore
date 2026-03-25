@@ -97,7 +97,7 @@ function FilterContent() {
   const hasActiveFilters = filters.destination || filters.duration || filters.activity || filters.q;
 
   return (
-    <div className={styles.page}>
+    <div suppressHydrationWarning className={styles.page}>
       <Header />
 
       {/* FULL WIDTH HERO */}

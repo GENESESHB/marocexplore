@@ -1,10 +1,11 @@
 import { toursActivitiesLib } from './lib/toursActivitiesLib';
+import { toursActivitiesLibFr } from './lib/toursActivitiesLibFr';
 
 export default function sitemap() {
     const baseUrl = 'https://marocexplore.com'; // Replace with actual production URL
 
-    // Base routes
-    const routes = [
+    // Base English routes
+    const enRoutes = [
         '',
         '/tours',
         '/destinations',
@@ -21,8 +22,26 @@ export default function sitemap() {
         priority: route === '' ? 1 : 0.8,
     }));
 
-    // Tour & Blog pages
-    const dynamicRoutes = toursActivitiesLib.flatMap((tour) => [
+    // Base French routes
+    const frRoutes = [
+        '/fr',
+        '/fr/circuits',
+        '/fr/destinations',
+        '/fr/experiences',
+        '/fr/culture',
+        '/fr/a-propos',
+        '/fr/contact',
+        '/fr/recherche',
+        '/fr/blog'
+    ].map((route) => ({
+        url: `${baseUrl}${route}`,
+        lastModified: new Date().toISOString(),
+        changeFrequency: 'weekly',
+        priority: route === '/fr' ? 1 : 0.8,
+    }));
+
+    // Dynamic English Tour & Blog pages
+    const enDynamicRoutes = toursActivitiesLib.flatMap((tour) => [
         {
             url: `${baseUrl}/tours/${tour.slug}`,
             lastModified: new Date().toISOString(),
@@ -37,5 +56,21 @@ export default function sitemap() {
         }
     ]);
 
-    return [...routes, ...dynamicRoutes];
+    // Dynamic French Tour & Blog pages
+    const frDynamicRoutes = toursActivitiesLibFr.flatMap((tour) => [
+        {
+            url: `${baseUrl}/fr/circuits/${tour.slug}`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'monthly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/fr/blog/${tour.slug}`,
+            lastModified: new Date().toISOString(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        }
+    ]);
+
+    return [...enRoutes, ...frRoutes, ...enDynamicRoutes, ...frDynamicRoutes];
 }

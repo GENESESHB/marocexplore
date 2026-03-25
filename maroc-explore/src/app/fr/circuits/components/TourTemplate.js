@@ -34,17 +34,17 @@ export default function TourTemplate({ tour }) {
                             '@type': 'Brand',
                             name: 'Maroc Explore'
                         },
-                        review: tour.avisList?.[0] ? {
+                        review: tour.reviewsList?.[0] ? {
                             '@type': 'Review',
                             reviewRating: {
                                 '@type': 'Rating',
-                                ratingValue: tour.avisList[0].rating || 5,
+                                ratingValue: tour.reviewsList[0].rating || 5,
                                 bestRating: 5,
                                 worstRating: 1
                             },
                             author: {
                                 '@type': 'Person',
-                                name: tour.avisList[0].name
+                                name: tour.reviewsList[0].name
                             }
                         } : undefined,
                         offers: {
@@ -90,10 +90,10 @@ export default function TourTemplate({ tour }) {
                                 }
                             }
                         },
-                        aggregateRating: tour.avis ? {
+                        aggregateRating: tour.reviews ? {
                             '@type': 'AggregateRating',
                             ratingValue: tour.rating,
-                            reviewCount: tour.avis,
+                            reviewCount: tour.reviews,
                             bestRating: 5,
                             worstRating: 1
                         } : undefined,

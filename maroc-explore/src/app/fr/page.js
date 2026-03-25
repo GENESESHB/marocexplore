@@ -180,21 +180,21 @@ export default function Home() {
     if (searchQuery) params.set('q', searchQuery);
     if (selectedCategory !== 'all') params.set('category', selectedCategory);
 
-    router.push(`/filter?${params.toString()}`);
+    router.push(`/fr/recherche?${params.toString()}`);
   };
 
   const handleDestinationClick = (destId) => {
     setSelectedDestination(destId);
     const params = new URLSearchParams();
     params.set('destination', destId);
-    router.push(`/filter?${params.toString()}`);
+    router.push(`/fr/recherche?${params.toString()}`);
   };
 
   const handleActivityFilter = (activityId) => {
     setActivityType(activityId);
     const params = new URLSearchParams();
     params.set('activity', activityId);
-    router.push(`/filter?${params.toString()}`);
+    router.push(`/fr/recherche?${params.toString()}`);
   };
 
   const toggleFaq = (index) => {
