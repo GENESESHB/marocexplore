@@ -2,6 +2,17 @@ import Header from '@/app/components/Header';
 import styles from './Culture.module.css';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'Moroccan & Amazigh Culture - Maroc Explore',
     description: 'Immerse yourself in the rich tapestry of Moroccan culture. Learn about Amazigh heritage, traditional crafts, music, and culinary traditions.',
 };

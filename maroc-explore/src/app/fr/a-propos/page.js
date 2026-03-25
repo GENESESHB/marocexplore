@@ -4,6 +4,17 @@ import FAQ from '@/app/components/FAQ';
 import styles from './About.module.css';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'About Us - Maroc Explore',
     description: 'Learn about Maroc Explorez, our mission to provide Authentique Moroccan Expériences, and our dedicated team of local experts.',
 };

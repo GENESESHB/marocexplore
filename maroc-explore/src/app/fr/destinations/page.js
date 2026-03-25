@@ -3,6 +3,17 @@ import Header from '@/app/components/Header';
 import styles from './Destinations.module.css';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'Destinations Marocaines - Découvrez Marrakech, Fès, le Sahara & Plus | Maroc Explore',
     description: 'Découvrez les diverses régions du Maroc. Des villes impériales de Marrakech et Fès aux dunes dorées du Sahara et à la perle bleue de Chefchaouen.',
 };

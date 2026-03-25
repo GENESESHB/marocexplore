@@ -5,6 +5,17 @@ import styles from './Contact.module.css';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'Contactez-nous - Maroc Explore',
     description: 'Get in touch with Maroc Explorez for any inquiries, custom tour requests, or support. We are here to help you plan your perfect Moroccan adventure.',
 };

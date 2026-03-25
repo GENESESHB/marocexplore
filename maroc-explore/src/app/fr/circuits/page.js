@@ -6,6 +6,17 @@ import styles from './page.module.css';
 import { MapPin, Clock, SlidersHorizontal, Sun } from 'lucide-react';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'Tous les Circuits & Expériences - Maroc Explore',
     description: "Parcourez notre collection complète de circuits et d\\'activités authentiques au Maroc. Du Sahara au Haut Atlas, en passant par les médinas.",
 };

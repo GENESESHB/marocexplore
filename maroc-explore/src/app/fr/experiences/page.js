@@ -3,6 +3,17 @@ import Header from '@/app/components/Header';
 import styles from './Experiences.module.css';
 
 export const metadata = {
+  keywords: [
+    "Maroc Explore", 
+    "Maroc Explore circuits", 
+    "voyage Maroc Explore", 
+    "circuits authentiques au Maroc", 
+    "excursions désert Sahara", 
+    "guide local Maroc Explore", 
+    "vacances au Maroc", 
+    "découvrir le Maroc",
+    "agence de voyage Maroc"
+  ],
     title: 'Moroccan Travel Expériences - Maroc Explore',
     description: 'Explorez our curated Moroccan travel Expériences. From desert expeditions and mountain treks to coastal escapes and luxury retreats.',
 };
