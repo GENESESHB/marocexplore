@@ -12,12 +12,26 @@ import {
   Twitter,
   MessageCircle
 } from 'lucide-react';
+import { usePathname, useRouter } from 'next/navigation';
+import { translatePath } from '@/app/lib/routeMapper';
 import Image from 'next/image';
 import styles from '../styles/Header.module.css';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const isFrench = pathname.startsWith('/fr');
+
+  const switchLanguage = (lang) => {
+    if (lang === 'fr' && !isFrench) {
+      router.push(translatePath(pathname, 'fr'));
+    } else if (lang === 'en' && isFrench) {
+      router.push(translatePath(pathname, 'en'));
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,14 +42,14 @@ const Header = () => {
   }, []);
 
   const navItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Tours', href: '/tours' },
-    { label: 'Destinations', href: '/destinations' },
-    { label: 'Experiences', href: '/experiences' },
-    { label: 'Culture', href: '/culture' },
-    { label: 'Blogs', href: '/blogs' },
-    { label: 'About', href: '/about' },
-    { label: 'Contact', href: '/contact' }
+    { label: isFrench ? 'Accueil' : 'Home', href: isFrench ? '/fr' : '/' },
+    { label: isFrench ? 'Circuits' : 'Tours', href: isFrench ? '/fr/circuits' : '/tours' },
+    { label: isFrench ? 'Destinations' : 'Destinations', href: isFrench ? '/fr/destinations' : '/destinations' },
+    { label: isFrench ? 'Expériences' : 'Experiences', href: isFrench ? '/fr/experiences' : '/experiences' },
+    { label: isFrench ? 'Culture' : 'Culture', href: isFrench ? '/fr/culture' : '/culture' },
+    { label: isFrench ? 'Blog' : 'Blogs', href: isFrench ? '/fr/blog' : '/blogs' },
+    { label: isFrench ? 'À Propos' : 'About', href: isFrench ? '/fr/a-propos' : '/about' },
+    { label: isFrench ? 'Contact' : 'Contact', href: isFrench ? '/fr/contact' : '/contact' }
   ];
 
   return (
@@ -54,11 +68,21 @@ const Header = () => {
             </span>
           </div>
           <div suppressHydrationWarning className={styles.topBarRight}>
-            <button className={styles.langButton}>EN</button>
+            <button 
+              className={`${styles.langButton} ${!isFrench ? styles.langActive : ''}`}
+              onClick={() => switchLanguage('en')}
+              style={{ fontWeight: !isFrench ? 'bold' : 'normal' }}
+            >
+              EN
+            </button>
             <span className={styles.langDivider}>|</span>
-            <button className={styles.langButton}>FR</button>
-            <span className={styles.langDivider}>|</span>
-            <button className={styles.langButton}>ES</button>
+            <button 
+              className={`${styles.langButton} ${isFrench ? styles.langActive : ''}`}
+              onClick={() => switchLanguage('fr')}
+              style={{ fontWeight: isFrench ? 'bold' : 'normal' }}
+            >
+              FR
+            </button>
           </div>
         </div>
       </div>
@@ -126,9 +150,9 @@ const Header = () => {
               <MessageCircle size={18} />
             </a>
 
-            <Link href="/filter" className={styles.bookButton}>
+            <Link href={isFrench ? "/fr/recherche" : "/filter"} className={styles.bookButton}>
               <span className={styles.bookButtonContent}>
-                Book Now
+                {isFrench ? 'Réserver' : 'Book Now'}
                 <span className={styles.bookButtonArrow}>→</span>
               </span>
               <span className={styles.bookButtonOverlay}></span>
@@ -185,8 +209,8 @@ const Header = () => {
               </a>
             </div>
 
-            <Link href="/filter" className={styles.mobileBookButton} onClick={() => setIsMobileMenuOpen(false)}>
-              Book Your Journey
+            <Link href={isFrench ? "/fr/recherche" : "/filter"} className={styles.mobileBookButton} onClick={() => setIsMobileMenuOpen(false)}>
+              {isFrench ? 'Réserver Votre Voyage' : 'Book Your Journey'}
             </Link>
           </div>
         </div>

@@ -1,4 +1,11 @@
-'use client';
+const fs = require('fs');
+const path = require('path');
+
+const footerPath = path.join(__dirname, 'src', 'app', 'components', 'Footer.js');
+let footerContent = fs.readFileSync(footerPath, 'utf8');
+
+// We will inject the usePathname and translatePath logic
+const newFooterContent = `'use client';
 
 import React from 'react';
 import Link from 'next/link';
@@ -117,3 +124,7 @@ const Footer = () => {
 };
 
 export default Footer;
+`;
+
+fs.writeFileSync(footerPath, newFooterContent);
+console.log('Footer successfully translated and linked to routeMapper!');

@@ -1,0 +1,104 @@
+.page {
+    min-height: 100vh;
+    background: white;
+}
+
+.hero {
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+        url('/images/maroc_explore-img/merzouga/maroc-explore-marzouga-desert-trips.avif') center/cover;
+    color: white;
+    padding: 160px 20px 100px;
+    text-align: center;
+}
+
+.heroContent h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.heroContent p {
+    font-size: 1.25rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.expGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.expCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.expCard:nth-child(even) {
+    direction: rtl;
+}
+
+.expCard:nth-child(even) .cardContent {
+    direction: ltr;
+}
+
+.cardImage {
+    height: 400px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cardContent h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.cardContent p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #0f172a;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background: #f97316;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .expCard {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .expCard:nth-child(even) {
+        direction: ltr;
+    }
+}

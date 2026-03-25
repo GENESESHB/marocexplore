@@ -1,0 +1,141 @@
+.page {
+    min-height: 100vh;
+    background: #fdfcfb;
+}
+
+.hero {
+    background: linear-gradient(rgba(124, 45, 18, 0.7), rgba(124, 45, 18, 0.7)),
+        url('/images/maroc_explore-img/fes/maroc-explore-fes-dar-debagh.avif') center/cover;
+    color: white;
+    padding: 160px 20px 100px;
+    text-align: center;
+}
+
+.heroContent h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 20px;
+}
+
+.heroContent p {
+    font-size: 1.25rem;
+    color: #fed7aa;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.intro h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0f172a;
+}
+
+.intro p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cultureGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 120px;
+}
+
+.cultureCard {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.cultureCard:hover {
+    transform: translateY(-10px);
+}
+
+.cardImage {
+    height: 250px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 30px;
+}
+
+.cardContent h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+.cardContent p {
+    line-height: 1.7;
+    color: #475569;
+}
+
+.callout {
+    background: #0f172a;
+    color: white;
+    padding: 80px 40px;
+    border-radius: 32px;
+    text-align: center;
+}
+
+.callout h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.callout p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta {
+    display: inline-block;
+    padding: 16px 32px;
+    background: #f97316;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.cta:hover {
+    background: #ea580c;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.2);
+}
+
+@media (max-width: 768px) {
+
+    .intro h2,
+    .callout h2 {
+        font-size: 2rem;
+    }
+}
