@@ -30,7 +30,7 @@ export default function ExperiencesPage() {
         {
             id: 'mountain',
             title: 'Treks dans les Montagnes de l\'Atlas',
-            description: 'Breathtaking landscapes, terraced valleys, and traditional Berber villages in North Africa\'s highest peaks.',
+            description: 'Paysages à couper le souffle, vallées en terrasses et villages berbères traditionnels dans les plus hauts sommets d’Afrique du Nord',
             image: '/images/maroc_explore-img/chefchaouen/BLUE_city_trips_travel-morocco.avif',
             activity: 'adventure'
         },
