@@ -96,7 +96,7 @@ export default function ExperiencesPage() {
                                 <h3>{exp.title}</h3>
                                 <p>{exp.description}</p>
                                 <div className={styles.cardFooter}>
-                                    <Link href={`/filter?activity=${exp.activity}`} className={styles.cta}>
+                                    <Link href={`/fr/recherche?activity=${exp.activity}`} className={styles.cta}>
                                         Voir les Circuits
                                     </Link>
                                 </div>

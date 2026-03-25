@@ -4,7 +4,7 @@ import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/app/components/Header';
-import { toursActivitiesLib, getFilteredTours } from '@/app/lib/toursActivitiesLib';
+import { toursActivitiesLibFr as toursActivitiesLib, getFilteredToursFr as getFilteredTours } from '@/app/lib/toursActivitiesLibFr';
 import styles from './FilterPage.module.css';
 
 function FilterContent() {
@@ -159,7 +159,7 @@ function FilterContent() {
           )}
 
           {/* Back to Home - NOW AT BOTTOM */}
-          <Link href="/" className={styles.backLinkBottom}>
+          <Link href="/fr" className={styles.backLinkBottom}>
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -312,7 +312,7 @@ function FilterContent() {
                   <div className={styles.cardImage}>
                     <img src={tour.image} alt={tour.title} />
                     <div className={styles.cardOverlay}>
-                      <Link href={`/tours/${tour.slug}`} className={styles.viewBtn}>View Details</Link>
+                      <Link href={`/fr/circuits/${tour.slug}`} className={styles.viewBtn}>Voir les Détails</Link>
                     </div>
                     <span className={styles.durationTag}>{tour.duration}</span>
                     <span className={styles.priceTag}>€{tour.price}</span>
@@ -337,7 +337,7 @@ function FilterContent() {
                         <strong>{tour.rating}</strong>
                         <small>({tour.reviews})</small>
                       </div>
-                      <Link href={`/tours/${tour.slug}`} className={styles.bookBtn}>Book Now</Link>
+                      <Link href={`/fr/circuits/${tour.slug}`} className={styles.bookBtn}>Réserver</Link>
                     </div>
                   </div>
                 </div>

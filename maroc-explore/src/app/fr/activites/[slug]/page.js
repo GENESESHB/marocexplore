@@ -70,7 +70,7 @@ export default function ActivityPage({ params }) {
                 <div className={styles.notFound}>
                     <h1>Activity Not Found</h1>
                     <p>Sorry, the activity category you are looking for does not exist.</p>
-                    <Link href="/filter" className={styles.backBtn}>Explore All Tours</Link>
+                    <Link href="/fr/recherche" className={styles.backBtn}>Explorer Tous les Circuits</Link>
                 </div>
             </div>
         );
@@ -91,7 +91,7 @@ export default function ActivityPage({ params }) {
             <div className={styles.content}>
                 <div className={styles.gridHeader}>
                     <h2>Available {slug} tours ({tours.length})</h2>
-                    <Link href="/filter" className={styles.allLink}>View all tours →</Link>
+                    <Link href="/fr/recherche" className={styles.allLink}>Voir tous les circuits →</Link>
                 </div>
 
                 <div className={styles.toursGrid}>
@@ -108,7 +108,7 @@ export default function ActivityPage({ params }) {
                                 </div>
                                 <h3>{tour.title}</h3>
                                 <p>{tour.description}</p>
-                                <Link href={`/tours/${tour.slug}`} className={styles.detailsBtn}>
+                                <Link href={`/fr/circuits/${tour.slug}`} className={styles.detailsBtn}>
                                     View Details
                                 </Link>
                             </div>
@@ -119,7 +119,7 @@ export default function ActivityPage({ params }) {
                 {tours.length === 0 && (
                     <div className={styles.empty}>
                         <p>No {slug} tours available at the moment. Please check back later or explore other activities.</p>
-                        <Link href="/filter" className={styles.exploreBtn}>Explore Other Tours</Link>
+                        <Link href="/fr/recherche" className={styles.exploreBtn}>Explorer d'Autres Circuits</Link>
                     </div>
                 )}
             </div>

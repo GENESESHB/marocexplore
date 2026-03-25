@@ -1571,3 +1571,22 @@ export const toursActivitiesLibFr = [
         ]
     }
 ];
+
+
+export const getFilteredToursFr = (filters) => {
+        const { destination, duration, activity, category, q } = filters;
+
+        return toursActivitiesLibFr.filter(tour => {
+                const matchesSearch = !q ||
+                        tour.title.toLowerCase().includes(q.toLowerCase()) ||
+                        tour.location.toLowerCase().includes(q.toLowerCase()) ||
+                        tour.description.toLowerCase().includes(q.toLowerCase());
+
+                const matchesCategory = !category || category === 'all' || tour.category === category || tour.category.toLowerCase() === category.toLowerCase();
+                const matchesDuration = !duration || tour.durationDays === parseInt(duration);
+                const matchesDestination = !destination || tour.location.toLowerCase() === destination.toLowerCase();
+                const matchesActivity = !activity || tour.activity === activity;
+
+                return matchesSearch && matchesCategory && matchesDuration && matchesDestination && matchesActivity;
+        });
+};

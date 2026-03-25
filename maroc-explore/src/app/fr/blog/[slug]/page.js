@@ -65,7 +65,7 @@ export default async function BlogPost({ params }) {
                         <div className={styles.ctaBox}>
                             <h3>Ready to Write Your Own Travel Story?</h3>
                             <p>Don&apos;t just read about <strong>{tour.location}</strong>. Experience the magic for yourself with the expertly guided <strong>{tour.title}</strong> expedition.</p>
-                            <Link href={`/tours/${tour.slug}`} className={styles.bookButton}>View Tour & Book Now</Link>
+                            <Link href={`/fr/circuits/${tour.slug}`} className={styles.bookButton}>Voir le Circuit et Réserver</Link>
                         </div>
                     </section>
                 </main>
@@ -83,7 +83,7 @@ export default async function BlogPost({ params }) {
                             <img src={tour.image} alt={`Book ${tour.title} with Maroc Explore`} />
                             <h5>{tour.title}</h5>
                             <p>{tour.duration} • {tour.location}</p>
-                            <Link href={`/tours/${tour.slug}`}>See Details</Link>
+                            <Link href={`/fr/circuits/${tour.slug}`}>Voir les Détails</Link>
                         </div>
                     </div>
                 </aside>

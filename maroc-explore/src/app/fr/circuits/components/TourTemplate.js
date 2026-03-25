@@ -109,7 +109,7 @@ export default function TourTemplate({ tour }) {
                 <div suppressHydrationWarning className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>{tour.title}</h1>
                     <div suppressHydrationWarning className={styles.breadcrumbs}>
-                        <Link href="/">Accueil</Link> &gt; <Link href="/tours">Circuits</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
+                        <Link href="/fr">Accueil</Link> &gt; <Link href="/fr/circuits">Circuits</Link> &gt; <span>{tour.location}</span> &gt; <span className={styles.activeCrumb}>{tour.title}</span>
                     </div>
                 </div>
             </div>
