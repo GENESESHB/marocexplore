@@ -58,7 +58,7 @@ export default function ToursPage() {
                                 <div className={styles.durationBadge}>
                                     <Clock size={14} /> {tour.duration}
                                 </div>
-                                <img src={tour.image} alt={tour.title} />
+                                <img src={tour.image} alt={`${tour.title} - ${tour.location} - circuit ${tour.category ? tour.category.toLowerCase() : 'maroc'} - Maroc Explore 2026`} />
                             </div>
 
                             <div className={styles.cardContent}>

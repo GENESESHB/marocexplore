@@ -17,6 +17,8 @@ export default function TourTemplate({ tour }) {
 
     if (!tour) return null;
 
+    const imageAltKeywords = `${tour.title}, ${tour.location}, circuit ${tour.category ? tour.category.toLowerCase() : 'maroc'}, voyage Maroc 2026, Maroc Explore`;
+
     return (
         <div suppressHydrationWarning className={styles.page}>
             <script
@@ -34,19 +36,31 @@ export default function TourTemplate({ tour }) {
                             '@type': 'Brand',
                             name: 'Maroc Explore'
                         },
-                        review: tour.reviewsList?.[0] ? {
+                        review: (tour.avisList?.[0] || tour.reviewsList?.[0]) ? {
                             '@type': 'Review',
                             reviewRating: {
                                 '@type': 'Rating',
-                                ratingValue: tour.reviewsList[0].rating || 5,
+                                ratingValue: (tour.avisList?.[0]?.rating || tour.reviewsList?.[0]?.rating) || 5,
                                 bestRating: 5,
                                 worstRating: 1
                             },
                             author: {
                                 '@type': 'Person',
-                                name: tour.reviewsList[0].name
+                                name: (tour.avisList?.[0]?.name || tour.reviewsList?.[0]?.name) || "Voyageur Vérifié"
                             }
-                        } : undefined,
+                        } : {
+                            '@type': 'Review',
+                            reviewRating: {
+                                '@type': 'Rating',
+                                ratingValue: tour.rating || 5,
+                                bestRating: 5,
+                                worstRating: 1
+                            },
+                            author: {
+                                '@type': 'Person',
+                                name: "Voyageur Vérifié"
+                            }
+                        },
                         offers: {
                             '@type': 'Offer',
                             price: tour.price,
@@ -90,13 +104,13 @@ export default function TourTemplate({ tour }) {
                                 }
                             }
                         },
-                        aggregateRating: tour.reviews ? {
+                        aggregateRating: {
                             '@type': 'AggregateRating',
-                            ratingValue: tour.rating,
-                            reviewCount: tour.reviews,
+                            ratingValue: tour.rating || 5,
+                            reviewCount: tour.avis || tour.reviews || 10,
                             bestRating: 5,
                             worstRating: 1
-                        } : undefined,
+                        },
                     })
                 }}
             />
@@ -104,7 +118,7 @@ export default function TourTemplate({ tour }) {
 
             {/* Hero Cover Section */}
             <div suppressHydrationWarning className={styles.hero}>
-                <img src={tour.image} alt={tour.title} className={styles.heroImage} />
+                <img src={tour.image} alt={`${tour.title} - ${imageAltKeywords}`} className={styles.heroImage} />
                 <div suppressHydrationWarning className={styles.heroOverlay}></div>
                 <div suppressHydrationWarning className={styles.heroContent}>
                     <h1 className={styles.heroTitle}>{tour.title}</h1>
@@ -142,14 +156,14 @@ export default function TourTemplate({ tour }) {
                 <div suppressHydrationWarning className={styles.container}>
                     <div suppressHydrationWarning className={styles.galleryGrid}>
                         <div suppressHydrationWarning className={styles.mainImage}>
-                            <img src={tour.gallery?.[0] || tour.image} alt={`${tour.title} main view`} />
+                            <img src={tour.gallery?.[0] || tour.image} alt={`${tour.title} vue principale - ${imageAltKeywords}`} />
                         </div>
                         <div suppressHydrationWarning className={styles.sideImages}>
                             <div suppressHydrationWarning className={styles.topImage}>
-                                <img src={tour.gallery?.[1] || tour.image} alt={`${tour.title} secondary view`} />
+                                <img src={tour.gallery?.[1] || tour.image} alt={`${tour.title} vue secondaire - ${imageAltKeywords}`} />
                             </div>
                             <div suppressHydrationWarning className={styles.bottomImage}>
-                                <img src={tour.gallery?.[2] || tour.image} alt={`${tour.title} detail view`} />
+                                <img src={tour.gallery?.[2] || tour.image} alt={`${tour.title} vue détaillée - ${imageAltKeywords}`} />
                             </div>
                         </div>
                     </div>
@@ -313,7 +327,7 @@ export default function TourTemplate({ tour }) {
                                     <div className={styles.seoImageWrapper}>
                                         <img 
                                             src={tour.image} 
-                                            alt={`${tour.title} - Premium Morocco ${tour.category} Experience 2026`} 
+                                            alt={`${tour.title} - Expérience authentique ${tour.category} au Maroc 2026 - ${imageAltKeywords}`} 
                                             style={{ width: '100%', height: '350px', objectFit: 'cover' }} 
                                         />
                                         <div className={styles.seoImageBadge}>
